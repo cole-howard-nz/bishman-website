@@ -5,12 +5,14 @@ import { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Button } from './ui/button'
 import { Label } from './ui/label'
+import { redirect, useRouter } from 'next/navigation'
 
 interface AuthFormProps {
   type: 'login' | 'signup'
 }
 
 const AuthForm = ({ ...props }: AuthFormProps) => {
+  const router = useRouter()
   const [email, setEmail] = useState<string>("")
   const [password, setPassword] = useState<string>("")
   const [confirmPassword, setConfirmPassword] = useState<string>("")
@@ -29,6 +31,8 @@ const AuthForm = ({ ...props }: AuthFormProps) => {
         await login(email, password)
       else
         await signup(email, password)
+      router.refresh()
+      redirect('/')
     } catch (error) {
       console.error(error)
     }
