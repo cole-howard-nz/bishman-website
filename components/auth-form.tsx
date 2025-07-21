@@ -14,12 +14,28 @@ const AuthForm = ({ ...props }: AuthFormProps) => {
   const [email, setEmail] = useState<string>("")
   const [password, setPassword] = useState<string>("")
   const [confirmPassword, setConfirmPassword] = useState<string>("")
-
-  const action: () => Promise<void> = props.type === 'login' ? login : signup
   const header: string = props.type === 'login' ? 'Login' : 'Sign Up'
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (props.type === 'signup' && password !== confirmPassword) {
+      alert("Passwords do not match")
+      return
+    }
+
+    try {
+      if (props.type === 'login')
+        await login(email, password)
+      else
+        await signup(email, password)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
-    <form action={ action }>
+    <form onSubmit={ handleSubmit }>
       <h1>{ header }</h1>
         <Label htmlFor='email'>Email</Label>
         <Input 

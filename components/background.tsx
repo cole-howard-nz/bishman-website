@@ -1,3 +1,9 @@
+/*
+ * Legacy (Unused)
+ * Decided against this blue blur background idea.
+ */
+
+
 import React from 'react'
 
 const Background = () => {

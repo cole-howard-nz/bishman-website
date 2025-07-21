@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Background from "@/components/background";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -29,8 +28,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
-        <Background />
-
         <Navbar />
         {children}
         <Footer />
