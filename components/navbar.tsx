@@ -1,10 +1,7 @@
 import React from 'react'
 import { Button } from './ui/button'
-import { Avatar, AvatarFallback } from './ui/avatar'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from './ui/dropdown-menu'
-import Link from 'next/link'
-import LogoutButton from './log-out-button'
 import { createClient } from '@/lib/supabase/server'
+import AdminDropdown from './admin-dropdown'
 
 const Navbar = async () => {
   const supabase = await createClient()
@@ -16,7 +13,7 @@ const Navbar = async () => {
   return (
     <header 
       className='flex justify-between items-center w-[100dvw] p-16 m-auto'>
-        <img className='w-48' src="/logo.svg" alt="Bishman Logo" />
+        <img className='w-36' src="/logo.svg" alt="Bishman Logo" />
 
         <ul className='flex items-center justify-center gap-4'>
           <li>Page</li>
@@ -26,21 +23,7 @@ const Navbar = async () => {
 
         <div className='flex items-center justify-center gap-4'>
           { user && 
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Avatar>
-                  <AvatarFallback>A</AvatarFallback>
-                </Avatar>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem className='cursor-pointer'>
-                  <Link href='/panel'>Admin Panel</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className='cursor-pointer'>
-                  <LogoutButton />
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <AdminDropdown />
           }
           <Button>Contact Us</Button>
         </div>
