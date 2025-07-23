@@ -11,6 +11,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        brand: {
+          DEFAULT: '#0E55B1', 
+          hover: '#1B6AD0',  
+          light: '#E6F0FA',  
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
