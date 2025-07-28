@@ -1,8 +1,11 @@
+import ProjectShowcase from "@/components/project-showcase"
+import { projects } from "@/lib/temp-data"
+
 const Home = () => {
   return (
-    <div>
-      <p>Test</p>
-    </div>
+    <section>
+      <ProjectShowcase header={ 'Some message to showcase these projects' } projects={ projects } />
+    </section>
   )
 }
 

@@ -28,10 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased w-[98dvw] py-2 m-auto text-[#1c1d1f] bg-[#edf1fc]`}>
+      <body className={`${geistSans.className} antialiased w-[98dvw] py-2 m-auto text-[#1c1d1f] bg-[#bdcdf4] flex flex-col min-h-screen`}>
         <HeroSection />
-        
-        {children}
+        <section className='my-16 flex-grow'>
+          {children}
+        </section>
         <Footer />
       </body>
     </html>
