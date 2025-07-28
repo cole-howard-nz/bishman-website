@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import HeroSection from "@/components/hero-section";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -27,9 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
-        <Navbar />
-        {children}
+      <body className={`${geistSans.className} antialiased w-[98dvw] py-2 m-auto text-[#1c1d1f] bg-[#bdcdf4] flex flex-col min-h-screen`}>
+        <HeroSection />
+        <section className='my-16 flex-grow'>
+          {children}
+        </section>
         <Footer />
       </body>
     </html>

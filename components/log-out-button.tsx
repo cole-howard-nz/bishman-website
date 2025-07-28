@@ -1,6 +1,7 @@
 'use client'
 
 import { createClient } from '@/lib/supabase/client'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
@@ -15,7 +16,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <p onClick={ logout }>Logout</p>
+    <Image className='cursor-pointer' onClick={ logout } src='/logout.svg' width={ 22 } height={ 22 } alt='Logout'/>
   )
 }
 

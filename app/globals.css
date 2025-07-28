@@ -4,14 +4,18 @@
 
 @layer base {
   :root {
+    --button: #152d51;
+    --button-hover: #284d85;
+
+
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 222.2 47.4% 11.2%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 215 85% 37%;
+    --primary-foreground: 210 40% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -64,5 +68,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .bg-button {
+    background-color: var(--button);
+  }
+  .bg-button-hover {
+    background-color: var(--button-hover);
   }
 }
