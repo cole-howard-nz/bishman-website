@@ -1,5 +1,4 @@
 import { Team } from '@/lib/types'
-import Image from 'next/image'
 import React from 'react'
 
 interface TeamMemberTile {

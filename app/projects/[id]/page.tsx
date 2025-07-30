@@ -5,13 +5,14 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
 type ProjectPageProps = {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-const ProjectPage = ({ params }: ProjectPageProps) => {
-  const projectId = Number(params.id)
+const ProjectPage = async ({ params }: ProjectPageProps) => {
+  const { id } = await params
+  const projectId = Number(id)
   const project = projects.find(p => p.id === projectId)
 
   if (isNaN(projectId) || !project) {

@@ -33,9 +33,11 @@ const Navbar = async () => {
           </>
         )}
 
-        <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
-          Contact Us
-        </Button>
+        <Link href="/contacts">
+          <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
+            Contact Us
+          </Button>
+        </Link>
       </div>
     </header>
   )

@@ -2,8 +2,8 @@ import React from 'react'
 import Navbar from './navbar'
 
 const HeroSection = () => {
-  let title = 'Bishman Limited'
-  let subtitle = 'Solutions for all your electrical needs'
+  const title = 'Bishman Limited'
+  const subtitle = 'Solutions for all your electrical needs'
 
   return (
     <section className='border-[#051123] border-1 rounded-xl bg-[url(/skytower.png)] bg-center bg-cover p-6 h-[98dvh] flex flex-col'>

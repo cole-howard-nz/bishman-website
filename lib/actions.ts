@@ -13,6 +13,7 @@ export const signup = async (email: string, password: string) => {
     if (error) throw error
     redirect("/login")
   } catch (error: unknown) {
+    console.error(error)
   } finally {}
     
   return
@@ -28,6 +29,7 @@ export const login = async (email: string, password: string) => {
     })
     if (error) throw error
   } catch (error: unknown) {
+    console.error(error)
   } finally {}
 
   return

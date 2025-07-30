@@ -12,11 +12,25 @@ import {
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
+type StatusFilter = 'All' | 'Complete' | 'Ongoing'
+type SortOrder = 'Newest' | 'Oldest' | 'A-Z' | 'Z-A'
+
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('')
-  const [statusFilter, setStatusFilter] = useState<'All' | 'Complete' | 'Ongoing'>('All')
-  const [sortOrder, setSortOrder] = useState<'Newest' | 'Oldest' | 'A-Z' | 'Z-A'>('Newest')
-  const [showFilters, setShowFilters] = useState(false)
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('All')
+  const [sortOrder, setSortOrder] = useState<SortOrder>('Newest')
+
+  const handleStatusChange = (value: string) => {
+    if (value === 'All' || value === 'Complete' || value === 'Ongoing') {
+      setStatusFilter(value as StatusFilter)
+    }
+  }
+
+  const handleSortChange = (value: string) => {
+    if (value === 'Newest' || value === 'Oldest' || value === 'A-Z' || value === 'Z-A') {
+      setSortOrder(value as SortOrder)
+    }
+  }
 
   const filteredProjects = allProjects
     .filter(project => {
@@ -57,7 +71,7 @@ const Projects = () => {
             <div className="grid gap-4">
               <div className="space-y-2">
                 <Label>Status</Label>
-                <Select value={statusFilter} onValueChange={(val: any) => setStatusFilter(val as any)}>
+                <Select value={statusFilter} onValueChange={handleStatusChange}>
                   <SelectTrigger className="bg-[#152d51] border-none text-white">
                     <SelectValue placeholder="Select status" />
                   </SelectTrigger>
@@ -71,7 +85,7 @@ const Projects = () => {
 
               <div className="space-y-2">
                 <Label>Sort By</Label>
-                <Select value={sortOrder} onValueChange={(val) => setSortOrder(val as any)}>
+                <Select value={sortOrder} onValueChange={handleSortChange}>
                   <SelectTrigger className="bg-[#152d51] border-none text-white">
                     <SelectValue placeholder="Sort projects" />
                   </SelectTrigger>
