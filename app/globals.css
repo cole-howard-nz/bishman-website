@@ -68,6 +68,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   .bg-button {
     background-color: var(--button);

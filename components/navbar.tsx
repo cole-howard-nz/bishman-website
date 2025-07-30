@@ -12,7 +12,7 @@ const Navbar = async () => {
   const user = data?.claims
 
   return (
-    <header className="relative w-[90%] flex justify-between items-center bg-gradient-to-br from-[#bdcdf4] via-[#758bc7] to-[#8ca6e9]  border-[#758bc7] border-1  shadow-sm p-2 px-4 m-auto rounded-[12px] z-10">
+    <header className="relative w-[90%] flex justify-between items-center bg-gradient-to-br from-[#8ca6e9] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1 shadow-sm p-2 px-4 m-auto rounded-[12px] z-10">
       <ul className="flex items-center gap-4">
         <NavList />
       </ul>
@@ -33,9 +33,11 @@ const Navbar = async () => {
           </>
         )}
 
-        <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
-          Contact Us
-        </Button>
+        <Link href="/contacts">
+          <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
+            Contact Us
+          </Button>
+        </Link>
       </div>
     </header>
   )

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
 
@@ -28,9 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased w-[98dvw] py-2 m-auto text-[#1c1d1f] bg-[#bdcdf4] flex flex-col min-h-screen`}>
+      <body className={`${geistSans.className} antialiased w-[98dvw] py-2 overflow-x-hidden m-auto text-[#1c1d1f] bg-[#bdcdf4] flex flex-col min-h-screen`}>
         <HeroSection />
-        <section className='my-16 flex-grow'>
+        <section className='flex-grow my-4'>
           {children}
         </section>
         <Footer />

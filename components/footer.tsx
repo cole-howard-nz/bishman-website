@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-      <footer className="relative bg-gradient-to-br from-[#bdcdf4] via-[#758bc7] to-[#bdcdf4] border-[#758bc7] border-1  text-white rounded-2xl flex justify-between p-6 h-72">
+      <footer className="relative bg-gradient-to-br from-[#8ca6e9] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1  text-white rounded-2xl flex justify-between p-6 h-72">
         <div className='flex flex-col justify-between gap-4'>
           <div>
             <Link href="/">
@@ -15,10 +15,12 @@ const Footer = () => {
           
 
           <div className='text-[#cccdd0] text-sm flex items-center gap-4'>
-            <Button className="bg-[#3D70BC] hover:bg-[#3D70BC] p-6 hover:shadow-xl font-normal rounded-[8px] text-lg">
-              Contact Us
-            </Button>
-
+            <Link href="/contacts">
+              <Button className="bg-[#3D70BC] hover:bg-[#3D70BC] p-6 hover:shadow-xl font-normal rounded-[8px] text-lg">
+                Contact Us
+              </Button>
+            </Link>
+            
             <div>
               <p>2 Hotunui Drive, Mount Wellington, Auckland 1060</p>
               <p>&copy; BISHMAN LIMITED { new Date().getFullYear() }</p>
