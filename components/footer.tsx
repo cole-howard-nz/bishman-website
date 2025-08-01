@@ -5,11 +5,11 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-      <footer className="relative bg-gradient-to-br from-[#8ca6e9] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1  text-white rounded-2xl flex justify-between p-6 h-72">
+      <footer className="relative bg-gradient-to-br from-[#9bb5f7] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1 text-white rounded-2xl flex justify-between p-6 h-72">
         <div className='flex flex-col justify-between gap-4'>
           <div>
             <Link href="/">
-              <Image src="/logo.svg" width={164} height={164} alt="Bishman Logo" />
+              <Image src="/bishman_black.svg" width={164} height={164} alt="Bishman Logo" />
             </Link>
           </div>
           
@@ -21,7 +21,7 @@ const Footer = () => {
               </Button>
             </Link>
             
-            <div>
+            <div className='flex flex-col gap-1'>
               <p>2 Hotunui Drive, Mount Wellington, Auckland 1060</p>
               <p>&copy; BISHMAN LIMITED { new Date().getFullYear() }</p>
             </div>

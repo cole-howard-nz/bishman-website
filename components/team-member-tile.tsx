@@ -1,20 +1,27 @@
 import { Team } from '@/lib/types'
 import React from 'react'
+import Image from 'next/image'
 
-interface TeamMemberTile {
+interface TeamMemberTileProps {
   member: Team
 }
 
-const TeamMemberTile = ({ member }: TeamMemberTile) => {
+const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
   return (
-    <div className='flex flex-col gap-2'>
-      <div className='flex flex-col space-y-2 m-auto p-2 rounded-[12px] bg-gradient-to-br from-[#b2c6f8] via-[#758bc7] to-[#8ca6e9] border-[#758bc7] border-1'>
-        <span className='bg-transparent w-64 h-96' style={{ clipPath: 'circle()' }}></span>
+    <div className="w-[22rem] h-[30rem] bg-[#7395f1] rounded-xl shadow-sm p-4 text-center flex flex-col justify-between">
+      <div className="w-full h-3/4 relative rounded-lg overflow-hidden">
+        <Image
+          src={ '/Gibby.webp' }
+          layout="fill"
+          objectFit="cover"
+          alt={member.name}
+        />
       </div>
 
-      <div className='flex flex-col items-center justify-center leading-3'>
-        <h3 className='font-bold text-xl'>{ member.name }</h3>
-        <p className='font-light text-[#3e6cb4]'>{ member.role }</p>
+      <div className="text-left mt-6 text-gray-100 ">
+        <h3 className="font-semibold text-lg leading-tight">{member.name}</h3>
+        <p className="text-sm font-medium">{member.role}</p>
+        <p className="text-sm mt-2 line-clamp-3">{member.blurb}</p>
       </div>
     </div>
   )

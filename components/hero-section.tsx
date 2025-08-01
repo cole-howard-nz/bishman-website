@@ -11,8 +11,8 @@ const HeroSection = () => {
       
       <div className='flex-1 flex items-center justify-center flex-col text-[#f0f1f1] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.93)]'>
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-semibold pb-2">{ title }</h2>
-          <p className="text-sm">{ subtitle }</p>
+          <h2 className="text-5xl font-semibold pb-2">{ title }</h2>
+          <p className="text-xl">{ subtitle }</p>
         </div>
       </div>
     </section>

@@ -17,11 +17,11 @@ const ClientCarousel = ({ clients }: ClientCarouselProps) => {
   return (
     <Carousel
       opts={{ align: "start" }}
-      className="w-full">
+      className="w-full rounded-[12px] bg-gradient-to-br p-2 from-[#b2c6f8] via-[#758bc7] to-[#8ca6e9]  border-[#758bc7] border-1">
       <CarouselContent>
         { clients.map(client => 
           <CarouselItem key={ client.id } className="md:basis-1/2 lg:basis-1/3">
-            <Card className="h-60 bg-gradient-to-br from-[#b2c6f8] via-[#758bc7] to-[#8ca6e9]  border-[#758bc7] border-1">
+            <Card className="h-60 bg-black/10  border-[#758bc7] border-1">
               <CardContent className="flex flex-col items-center justify-center text-white space-y-4">
                 <section className='flex items-center justify-between w-full'>
                   <div className='flex items-center gap-2'>

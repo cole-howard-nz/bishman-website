@@ -36,8 +36,43 @@ export const projects: Project[] = [
     isComplete: false,
     location: "Remote",
     blurb: "Launching a targeted campaign across social and search platforms."
+  },
+  {
+    id: 5,
+    name: "AI Chatbot Integration",
+    startDate: "2025-04-05",
+    isComplete: false,
+    location: "Dunedin, NZ",
+    blurb: "Integrating an AI-powered chatbot to handle customer support queries."
+  },
+  {
+    id: 6,
+    name: "Cloud Infrastructure Setup",
+    startDate: "2025-01-15",
+    finishDate: "2025-02-28",
+    isComplete: true,
+    location: "Hamilton, NZ",
+    blurb: "Deployed scalable cloud infrastructure using AWS for better availability."
+  },
+  {
+    id: 7,
+    name: "Employee Training Portal",
+    startDate: "2025-03-22",
+    isComplete: false,
+    location: "Tauranga, NZ",
+    blurb: "Developing an internal web portal for staff onboarding and training."
+  },
+  {
+    id: 8,
+    name: "Cybersecurity Audit",
+    startDate: "2025-02-01",
+    finishDate: "2025-02-18",
+    isComplete: true,
+    location: "Napier, NZ",
+    blurb: "Comprehensive audit of internal systems to identify and patch vulnerabilities."
   }
-]
+];
+
 
 export const services: Service[] = [
   {
@@ -96,25 +131,30 @@ export const team: Team[] = [
     id: 1,
     name: "Jake Thomson",
     role: Role.Electrician,
+    blurb: "Over 8 years of hands-on experience with residential and commercial electrical systems.",
   },
   {
     id: 2,
     name: "Sarah Lin",
     role: Role.Office,
+    blurb: "Coordinates day-to-day operations with a background in administrative management and logistics.",
   },
   {
     id: 3,
     name: "Mark Patel",
     role: Role.Management,
+    blurb: "Leads with over 15 years of industry leadership in electrical and infrastructure projects.",
   },
   {
     id: 4,
     name: "Emily Nguyen",
     role: Role.Electrician,
+    blurb: "Specializes in smart home systems and energy-efficient electrical solutions.",
   },
   {
     id: 5,
     name: "James Walker",
     role: Role.Management,
+    blurb: "Brings a decade of project oversight, focusing on safety and timely delivery.",
   },
 ];

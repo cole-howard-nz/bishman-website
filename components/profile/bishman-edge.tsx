@@ -19,7 +19,7 @@ const BishmanEdge = () => {
           </Link>
         </div>
         
-        <div className="w-1/2 pl-2 flex flex-col justify-between min-h-72 text-[#f0f1f1]">
+        <div className="w-1/2 pl-2 flex flex-col justify-between min-h-96 text-[#f0f1f1]">
           <p>Message</p>
           <Link href="/contacts">
             <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm w-full">

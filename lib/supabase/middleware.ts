@@ -40,7 +40,7 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   if (
-    request.nextUrl.pathname !== "/" &&
+    request.nextUrl.pathname === "panel" &&
     !user &&
     !request.nextUrl.pathname.startsWith("/auth")
   ) {

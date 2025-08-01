@@ -12,14 +12,14 @@ const Navbar = async () => {
   const user = data?.claims
 
   return (
-    <header className="relative w-[90%] flex justify-between items-center bg-gradient-to-br from-[#8ca6e9] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1 shadow-sm p-2 px-4 m-auto rounded-[12px] z-10">
+    <header className="relative w-[90%] flex justify-between items-center bg-black/20 border-[#758bc7] border-1 shadow-sm p-2 px-4 m-auto rounded-[12px] z-10">
       <ul className="flex items-center gap-4">
         <NavList />
       </ul>
 
       <div className="absolute left-1/2 transform -translate-x-1/2">
         <Link href="/">
-          <Image src="/logo.svg" width={156} height={156} alt="Bishman Logo" />
+          <Image src="/bishman_white.svg" width={228} height={228} alt="Bishman Logo" />
         </Link>
       </div>
 
@@ -34,7 +34,7 @@ const Navbar = async () => {
         )}
 
         <Link href="/contacts">
-          <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
+          <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-6 hover:shadow-xl font-normal rounded-[8px] text-[16px]">
             Contact Us
           </Button>
         </Link>

@@ -41,6 +41,6 @@ export type Team = {
   id: number
   name: string
   role: Role
-  // blurb?: string
+  blurb: string
   // image?: string
 }
