@@ -6,8 +6,13 @@ import LogoutButton from './log-out-button'
 import Image from 'next/image'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { JwtPayload } from '@supabase/supabase-js'
 
-const MobileNavbar = ({ user }: { user: any }) => {
+type MobileNavbarProps = {
+  user: JwtPayload | undefined
+}
+
+const MobileNavbar = ({ user }: MobileNavbarProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [profileOpen, setProfileOpen] = useState(false)
 
