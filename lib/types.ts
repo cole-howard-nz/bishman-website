@@ -6,7 +6,7 @@ export type Project = {
   isComplete: boolean
   location: string
   blurb: string
-  // images?: string[]
+  images: string[]
 }
 
 export type Service = {

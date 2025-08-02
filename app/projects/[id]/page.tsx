@@ -28,12 +28,38 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
       </div>
 
       <div className="grid grid-cols-1 gap-2 my-4">
-        <div className='w-full border-[#051123] border-1 rounded-xl bg-[url(/skytower.png)] bg-center bg-cover h-[66dvh]'></div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <div className='w-half border-[#051123] border-1 rounded-xl bg-[url(/skytower.png)] bg-center bg-cover h-[33dvh]'></div>
-          <div className='w-half border-[#051123] border-1 rounded-xl bg-[url(/skytower.png)] bg-center bg-cover h-[33dvh]'></div>
+        <div
+          className='w-full border-[#051123] border-1 rounded-xl h-[66dvh] overflow-hidden'
+        >
+          {project.images && project.images[0] && (
+            <Image
+              src={project.images[0]}
+              alt={project.name}
+              className='object-cover w-full h-full'
+              width={1920}
+              height={1080}
+            />
+          )}
         </div>
+
+        {project.images && project.images.length > 1 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {project.images.slice(1, 3).map((img, idx) => (
+              <div
+                key={idx}
+                className='w-full border-[#051123] border-1 rounded-xl h-[33dvh] overflow-hidden'
+              >
+                <Image
+                  src={img}
+                  alt={`${project.name} ${idx + 2}`}
+                  className='object-cover w-full h-full'
+                  width={960}
+                  height={540}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="text-white space-y-4 my-16">

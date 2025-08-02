@@ -1,78 +1,92 @@
 // Mostly AI generated
 
 import { Client, Project, Role, Service, Team } from "./types";
-
 export const projects: Project[] = [
   {
     id: 1,
-    name: "Website Redesign",
-    startDate: "2025-01-10",
-    finishDate: "2025-02-15",
-    isComplete: true,
-    location: "Auckland, NZ",
-    blurb: "A complete visual and UX overhaul of the company's main website."
+    name: "WQIP Site 6",
+    startDate: "n/a",
+    finishDate: "n/a",
+    isComplete: false,
+    location: "Wyndom Quarter, Auckland",
+    blurb: "Text",
+    images: [
+      "/projects/wqip1.jpg",
+      "/projects/wqip2.jpg",
+      "/projects/wqip3.jpg"
+    ],
   },
   {
     id: 2,
-    name: "Mobile App Development",
-    startDate: "2025-03-01",
+    name: "Munroe Lane Hub",
+    startDate: "n/a",
+    finishDate: "n/a",
     isComplete: false,
-    location: "Wellington, NZ",
-    blurb: "Developing a cross-platform mobile app to support our web services."
+    location: "Albany, Auckland",
+    blurb: "Text",
+    images: [
+      "/projects/munroe1.JPG",
+      "/projects/munroe2.jpeg",
+      "/projects/munroe3.jpeg"
+    ],
   },
   {
     id: 3,
-    name: "Database Migration",
-    startDate: "2025-02-20",
-    finishDate: "2025-03-10",
-    isComplete: true,
-    location: "Christchurch, NZ",
-    blurb: "Migrated legacy data to a modern, scalable PostgreSQL database."
+    name: "University of Auckland RWC",
+    startDate: "n/a",
+    finishDate: "n/a",
+    isComplete: false,
+    location: "Symonds Street, Auckland",
+    blurb: "Text",
+    images: [
+      "/projects/uoa1.jpg",
+      "/projects/uoa2.jpg",
+      "/projects/uoa3.jpg",
+    ],
   },
   {
     id: 4,
-    name: "Marketing Campaign",
-    startDate: "2025-03-15",
+    name: "Aotea Centre",
+    startDate: "n/a",
+    finishDate: "n/a",
     isComplete: false,
-    location: "Remote",
-    blurb: "Launching a targeted campaign across social and search platforms."
+    location: "Aotea Square, Auckland",
+    blurb: "Text",
+    images: [
+      "/projects/aotea1.jpg",
+      "/projects/aotea2.jpg",
+      "/projects/aotea3.jpg"
+    ],
   },
   {
     id: 5,
-    name: "AI Chatbot Integration",
-    startDate: "2025-04-05",
+    name: "135 Albert Street, EV",
+    startDate: "n/a",
+    finishDate: "n/a",
     isComplete: false,
-    location: "Dunedin, NZ",
-    blurb: "Integrating an AI-powered chatbot to handle customer support queries."
+    location: "Albert Street, Auckland",
+    blurb: "Text",
+    images: [
+      "/projects/albert1.jpg",
+      "/projects/albert2.jpg",
+      "/projects/albert3.jpg"
+    ],
   },
   {
     id: 6,
-    name: "Cloud Infrastructure Setup",
-    startDate: "2025-01-15",
-    finishDate: "2025-02-28",
-    isComplete: true,
-    location: "Hamilton, NZ",
-    blurb: "Deployed scalable cloud infrastructure using AWS for better availability."
-  },
-  {
-    id: 7,
-    name: "Employee Training Portal",
-    startDate: "2025-03-22",
+    name: "Fisher & Paykel Building 4",
+    startDate: "n/a",
+    finishDate: "n/a",
     isComplete: false,
-    location: "Tauranga, NZ",
-    blurb: "Developing an internal web portal for staff onboarding and training."
-  },
-  {
-    id: 8,
-    name: "Cybersecurity Audit",
-    startDate: "2025-02-01",
-    finishDate: "2025-02-18",
-    isComplete: true,
-    location: "Napier, NZ",
-    blurb: "Comprehensive audit of internal systems to identify and patch vulnerabilities."
+    location: "East Tāmaki, Auckland",
+    blurb: "Text",
+    images: [
+      "/projects/fap1.jpg",
+      "/projects/fap2.jpg",
+      "/projects/fap3.jpg"
+    ],
   }
 ];
-
 
 export const services: Service[] = [
   {
