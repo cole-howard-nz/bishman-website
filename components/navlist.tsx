@@ -18,14 +18,12 @@ const NavList = () => {
           <Link href={ '/profile' }>
             <div className="p-4 hover:bg-[#284d85] ease-in-out duration-300 hover:rounded-tl-lg hover:rounded-tr-lg cursor-pointer">
               <h4 className="">Company Profile</h4>
-              <p className="text-gray-200 text-sm">Some sentence</p>
             </div>
           </Link>
 
           <Link href={ '/team' }>
             <div className="p-4 hover:bg-[#284d85] ease-in-out duration-300 hover:rounded-bl-lg hover:rounded-br-lg cursor-pointer">
               <h4 className="">Our Team</h4>
-              <p className="text-gray-200 text-sm">Some sentence</p>
             </div>
           </Link>
         </div>

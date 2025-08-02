@@ -25,22 +25,11 @@ export type Client = {
   // image?: string
 }
 
-export enum Role {
-  Management = 'Management',
-  Office = 'Office',
-  Electrician = 'Electrician'
-}
-
-export const RoleDescriptions: Record<Role, string> = {
-  [Role.Management]: 'Leading the team with vision and strategy.',
-  [Role.Office]: 'Supporting operations and communications.',
-  [Role.Electrician]: 'Powering projects with expert hands-on work.',
-}
-
 export type Team = {
   id: number
   name: string
-  role: Role
+  role: string
+  email: string
   blurb: string
   // image?: string
 }

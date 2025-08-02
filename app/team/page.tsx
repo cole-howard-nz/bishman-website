@@ -1,11 +1,8 @@
 import React from 'react'
-import { Role, RoleDescriptions } from '@/lib/types'
-import RoleShowcase from '@/components/role-showcase'
 import { team } from '@/lib/temp-data'
+import TeamMemberTile from '@/components/team-member-tile'
 
 const Team = () => {
-  const roles = Object.values(Role)
-
   return (
     <div className="my-16">
       <div className="my-16 text-center py-10 px-4 bg-gradient-to-b from-[#9bb5f7] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1 text-white rounded-xl shadow-md">
@@ -16,13 +13,11 @@ const Team = () => {
         </p>
       </div>
 
-      {roles.map((role) => {
-        const members = team.filter((member) => member.role === role)
-
-        return (
-          <RoleShowcase key={ role } header={ role } blurb={ RoleDescriptions[role] } team={ members } />
-        )
-      })}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        {team.map((member) => (
+          <TeamMemberTile key={member.id} member={member} />
+        ))}
+      </div>
     </div>
   )
 }
