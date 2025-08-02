@@ -25,9 +25,9 @@ export const projects: Project[] = [
     location: "Albany, Auckland",
     blurb: "Text",
     images: [
-      "/projects/munroe1.JPG",
-      "/projects/munroe2.jpeg",
-      "/projects/munroe3.jpeg"
+      "/projects/munroe1.jpg",
+      "/projects/munroe2.JPEG",
+      "/projects/munroe3.JPEG"
     ],
   },
   {
