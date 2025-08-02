@@ -13,7 +13,7 @@ const CapabilitiesExperience = () => {
           <div className="w-1/2 pl-2">
             <p>
               Bishman Ltd was formed in 1992 and has spent the last 30 years as one of the leaders in the Auckland electrical industry. 
-              Our history is deeper than that with the original business dating back to the early 1970's when the brand first came into existence. 
+              Our history is deeper than that with the original business dating back to the early 1970&apos;s when the brand first came into existence. 
               Our brand today draws on over 50 years of depth and experience the name is as proud today as it was then.
             </p>
           </div>

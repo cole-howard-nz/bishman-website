@@ -22,7 +22,7 @@ const OurBusiness = () => {
 
           <div className="w-1/2 pl-2">
             <p>
-              We are a privately and wholly New Zealand owned company with 30+ year's experience in design, construction, and maintenance electrical services.
+              We are a privately and wholly New Zealand owned company with 30+ year&apos;s experience in design, construction, and maintenance electrical services.
               ur family orientated business aims to raise the bar in the electrical industry by training our own apprentices with the view to professionally develop them into future trades people and leaders. 
               Bishman Ltd are proudly long-standing members of Master Electricians, the voice of industry, for industry.
             </p>
