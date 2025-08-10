@@ -243,31 +243,31 @@ export const team: Team[] = [
 export const company: Company[] = [
   {
     id: 1,
-    name: "",
-    link: 'www.bishman.co.nz',
+    name: "Bishman Limited",
+    link: 'https://www.bishman.co.nz',
     image: '/company/bishman_black.svg'
   },
   {
     id: 2,
-    name: "",
-    link: 'www.bishman.co.nz',
+    name: "Bishman Limited",
+    link: 'https://www.bishman.co.nz',
     image: '/company/bishman_black.svg'
   },
   {
     id: 3,
-    name: "",
-    link: 'www.bishman.co.nz',
+    name: "Bishman Limited",
+    link: 'https://www.bishman.co.nz',
     image: '/company/bishman_black.svg'
   },
   {
     id: 4,
-    name: "",
-    link: 'www.bishman.co.nz',
+    name: "Bishman Limited",
+    link: 'https://www.bishman.co.nz',
     image: '/company/bishman_black.svg'
   },{
     id: 5,
-    name: "",
-    link: 'www.bishman.co.nz',
+    name: "Bishman Limited",
+    link: 'https://www.bishman.co.nz',
     image: '/company/bishman_black.svg'
   }
 ]
