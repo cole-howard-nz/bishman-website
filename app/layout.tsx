@@ -27,12 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased w-[98dvw] py-2 overflow-x-hidden m-auto text-[#1c1d1f] bg-[#bdcdf4] flex flex-col min-h-screen`}>
-        <HeroSection />
-        <section className='flex-grow my-4'>
-          {children}
+      <body className={`${geistSans.className} antialiased py-2 overflow-x-hidden m-auto text-[#1c1d1f] bg-[#bdcdf4] flex flex-col min-h-screen`}>
+        <section className="w-[98dvw] m-auto">
+          <HeroSection />
+          <section className='flex-grow my-4'>
+            {children}
+          </section>
+          <Footer />
         </section>
-        <Footer />
       </body>
     </html>
   );
