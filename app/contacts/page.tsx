@@ -48,9 +48,7 @@ const Contacts = () => {
               <Image alt="Phone" src="/call_end.svg" height={32} width={32} />
               <p>09 270 3644</p>
             </div>
-            <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
-              Call
-            </Button>
+
           </div>
 
           <div className="flex justify-between items-center">
@@ -58,9 +56,7 @@ const Contacts = () => {
               <Image alt="Mail" src="/mail.svg" height={24} width={24} />
               <p>accounts@bishman.nz</p>
             </div>
-            <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
-              Email
-            </Button>
+
           </div>
 
           <div className="flex justify-between items-center">
@@ -68,9 +64,7 @@ const Contacts = () => {
               <Image alt="Location" src="/location.svg" height={24} width={24} />
               <p>2 Hotunui Drive, Mount Wellington, Auckland 1060</p>
             </div>
-            <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm">
-              Copy
-            </Button>
+
           </div>
         </div>
       </div>

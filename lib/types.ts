@@ -31,5 +31,12 @@ export type Team = {
   role: string
   email: string
   blurb: string
-  // image?: string
+  image: string
+}
+
+export type Company = {
+  id: number
+  name: string
+  link: string
+  image: string
 }
