@@ -7,7 +7,7 @@ import useMeasure from 'react-use-measure'
 import { animate, motion, useMotionValue } from 'framer-motion'
 
 const CompanyCarousel = () => {
-  let [ref, { width }] = useMeasure()
+  const [ref, { width }] = useMeasure()
   const xTranslation = useMotionValue(0)
 
   useEffect(() => {
