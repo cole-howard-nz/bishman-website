@@ -1,21 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Clock, Calendar, ArrowRight, Zap, Building, Home } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock, Calendar, ArrowRight } from 'lucide-react';
 import { projects } from '@/lib/temp-data';
-
-const CategoryIcon = ({ category }: { category: string }) => {
-  switch (category) {
-    case 'Commercial':
-      return <Building size={16} className="text-blue-300" />;
-    case 'Residential':
-      return <Home size={16} className="text-green-300" />;
-    case 'Industrial':
-      return <Zap size={16} className="text-orange-300" />;
-    default:
-      return <Building size={16} className="text-blue-300" />;
-  }
-};
 
 const ResponsiveCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -185,7 +172,7 @@ const ResponsiveCarousel = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-            What We Do Best
+            Some of our recent work
           </h2>
           
           <p className="text-slate-300 max-w-4xl mx-auto text-lg leading-relaxed mb-8">
@@ -205,7 +192,7 @@ const ResponsiveCarousel = () => {
       </div>
 
       {/* Main Carousel Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 mx-auto px-6">
         <div className="relative">
           <div 
             ref={carouselRef}
@@ -222,7 +209,6 @@ const ResponsiveCarousel = () => {
               className="flex transition-transform duration-700 ease-out p-2"
               style={{ 
                 transform: `translateX(-${(currentIndex * itemWidth)}%)`,
-                width: `${(projects.length / itemsPerView) * 100}%`
               }}
             >
               {projects.map((project, projectIndex) => (
@@ -255,8 +241,8 @@ const ResponsiveCarousel = () => {
                     </div>
                     
                     {/* Enhanced Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-800/30 to-transparent group-hover:from-slate-900/90 transition-all duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-cyan-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-800/30 to-transparent transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-cyan-900/20 opacity-0 transition-opacity duration-500" />
                     
                     {/* Animated decorative elements */}
                     <div className="absolute top-6 right-6 w-1 h-16 bg-gradient-to-b from-blue-400 via-cyan-400 to-transparent opacity-40 group-hover:opacity-80 group-hover:h-20 transition-all duration-500" />
@@ -281,16 +267,10 @@ const ResponsiveCarousel = () => {
                             <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-300' : 'bg-blue-300'}`} />
                             {project.isComplete ? 'COMPLETED' : 'IN PROGRESS'}
                           </div>
-
-                          {/* Category Badge */}
-                          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-3 py-1.5 flex items-center gap-2">
-                            <CategoryIcon category='Test' />
-                            <span className="text-white text-xs font-medium">Test</span>
-                          </div>
                         </div>
                         
                         {/* Project Title */}
-                        <h2 className={`text-white font-bold leading-tight drop-shadow-xl group-hover:bg-gradient-to-r group-hover:from-blue-200 group-hover:to-cyan-200 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 ${
+                        <h2 className={`text-white font-bold leading-tight drop-shadow-xl transition-all duration-300 ${
                           itemsPerView === 1 
                             ? 'text-3xl md:text-5xl lg:text-6xl' 
                             : itemsPerView === 2 

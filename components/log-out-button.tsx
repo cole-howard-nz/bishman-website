@@ -16,7 +16,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <Image className='cursor-pointer' onClick={ logout } src='/logout.svg' width={ 22 } height={ 22 } alt='Logout'/>
+    <Image className='cursor-pointer' onClick={ logout } src='/logout.svg' width={ 16 } height={ 16 } alt='Logout'/>
   )
 }
 
