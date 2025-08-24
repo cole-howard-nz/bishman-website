@@ -20,6 +20,7 @@ export type Client = {
   id: number
   stars: number
   name: string
+  role: string
   company: string
   blurb: string
   // image?: string
