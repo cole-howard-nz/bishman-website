@@ -3,47 +3,97 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react'
+import { ArrowRight, MessageCircle, Shield, ChevronDown, Menu, X, User, LogOut } from 'lucide-react'
 
 const NavList = () => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false)
+  const [activeItem, setActiveItem] = useState('')
+
   return (
-    <nav className="text-[#ffffff] px-6 py-3 flex gap-6 font-medium z-10">
+    <nav className="flex items-center gap-1">
+      {/* Profile Dropdown */}
       <div className="relative group">
-        <button className="px-4 py-2 rounded-md hover:text-shadow-2xs text-sm transition duration-300">
-          Profile
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#fff]"></span>
+        <button 
+          className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group"
+          onMouseEnter={() => setIsProfileOpen(true)}
+          onMouseLeave={() => setIsProfileOpen(false)}
+        >
+          <span className="text-sm font-medium">Profile</span>
+          <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-300" />
         </button>
 
-        <div className="text-sm absolute left-0 mt-2 w-64 bg-[#152d51] text-[#f0f1f1] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-300">
-          <Link href={ '/profile' }>
-            <div className="p-4 hover:bg-[#284d85] ease-in-out duration-300 hover:rounded-tl-lg hover:rounded-tr-lg cursor-pointer">
-              <h4 className="">Company Profile</h4>
+        {/* Dropdown Menu */}
+        <div 
+          className={`absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${
+            isProfileOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'
+          }`}
+          onMouseEnter={() => setIsProfileOpen(true)}
+          onMouseLeave={() => setIsProfileOpen(false)}
+        >
+          {/* Company Profile */}
+          <a 
+            href="/profile" 
+            className="block p-4 hover:bg-blue-600/20 transition-all duration-300 group/item border-b border-white/5"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <User size={16} className="text-white" />
+              </div>
+              <div>
+                <h4 className="text-white font-medium text-sm group-hover/item:text-blue-300 transition-colors duration-300">
+                  Company Profile
+                </h4>
+                <p className="text-slate-400 text-xs mt-0.5">
+                  Learn about our story
+                </p>
+              </div>
+              <ArrowRight size={16} className="text-slate-600 group-hover/item:text-blue-400 group-hover/item:translate-x-1 transition-all duration-300 ml-auto" />
             </div>
-          </Link>
+          </a>
 
-          <Link href={ '/team' }>
-            <div className="p-4 hover:bg-[#284d85] ease-in-out duration-300 hover:rounded-bl-lg hover:rounded-br-lg cursor-pointer">
-              <h4 className="">Our Team</h4>
+          {/* Our Team */}
+          <a 
+            href="/team" 
+            className="block p-4 hover:bg-blue-600/20 transition-all duration-300 group/item"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <User size={16} className="text-white" />
+              </div>
+              <div>
+                <h4 className="text-white font-medium text-sm group-hover/item:text-cyan-300 transition-colors duration-300">
+                  Our Team
+                </h4>
+                <p className="text-slate-400 text-xs mt-0.5">
+                  Meet our experts
+                </p>
+              </div>
+              <ArrowRight size={16} className="text-slate-600 group-hover/item:text-cyan-400 group-hover/item:translate-x-1 transition-all duration-300 ml-auto" />
             </div>
-          </Link>
+          </a>
         </div>
       </div>
 
-      <button className="px-4 py-2 rounded-md hover:text-shadow-2xs text-sm group transition duration-300">
-        <Link href={ '/projects' }>
-          Projects
-        </Link>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#fff]"></span>
-      </button>
-      
-      <button className="px-4 py-2 rounded-md hover:text-shadow-2xs text-sm group transition duration-300">
-        <Link href={ '/services' }>
-          Services
-        </Link>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#fff]"></span>
-      </button>
+      {/* Projects Link */}
+      <a 
+        href="/projects"
+        className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
+      >
+        <span className="relative z-10 text-sm font-medium">Projects</span>
+        <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
+      </a>
+
+      {/* Services Link */}
+      <a 
+        href="/services"
+        className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
+      >
+        <span className="relative z-10 text-sm font-medium">Services</span>
+        <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
+      </a>
     </nav>
-  );
-};
+  )
+}
 
 export default NavList;

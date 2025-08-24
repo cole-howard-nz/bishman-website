@@ -26,9 +26,14 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
     <header className="relative h-[80px] w-[90%] flex justify-between items-center bg-black/20 shadow-sm p-2 px-4 m-auto rounded-[12px] z-10">
       <div className="hidden [@media(min-width:700px)]:block items-center gap-4">
         <Link href="/contacts">
-          <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-6 hover:shadow-xl font-normal rounded-[8px] text-[16px]">
-            Contact Us
-          </Button>
+          <button className="group relative overflow-hidden bg-gradient-to-br from-[#284d85] to-[#3D70BC] hover:from-[#3D70BC] hover:to-[#4A7BC8] px-8 py-4 rounded-2xl text-white font-semibold text-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 border border-blue-400/20">
+            {/* Shine effect */}
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out" />
+            
+            <div className="relative flex items-center gap-3">
+              <span>Contact Us</span>
+            </div>
+          </button>
         </Link>
       </div>
 

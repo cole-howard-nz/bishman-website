@@ -7,10 +7,10 @@ import { clients, projects, services } from "@/lib/temp-data"
 const Home = () => {
   return (
     <section className="flex flex-col">
-      <CompanyCarousel />
-      <ProjectShowcase header={ 'Some message to showcase these projects' } projects={ projects } />
-      <ServiceShowcase header={ 'Some message to showcase these services' } services={ services } />
-      <ClientShowcase header={ 'Read from our clients' } clients={ clients } />
+      <ProjectShowcase header={ 'PROJECTS' } projects={ projects } />
+      {/* <CompanyCarousel /> */}
+      <ServiceShowcase services={ services } />
+      <ClientShowcase clients={ clients } />
     </section>
   )
 }

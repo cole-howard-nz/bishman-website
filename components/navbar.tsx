@@ -1,12 +1,12 @@
 import React from 'react'
-import DesktopNavbar from './desktop-navbar'
 import MobileNavbarWrapper from './mobile-navbar-wrapper'
+import DesktopNavbarWrapper from './desktop-navbar-wrapper'
 
 const Navbar = () => {
   return (
     <>
       <div className="hidden [@media(min-width:1111px)]:block">
-        <DesktopNavbar />
+        <DesktopNavbarWrapper />
       </div>
       <div className="block [@media(min-width:1111px)]:hidden">
         <MobileNavbarWrapper />

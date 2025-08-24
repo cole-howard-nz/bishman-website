@@ -25,9 +25,9 @@ const CarouselCard = ({ company }: CarouselCardProps) => {
       <Image
         src={company.image}
         alt={company.name}
-        width={400}
-        height={300}
-        className="object-contain max-h-full max-w-full"
+        width={800}
+        height={800}
+        className="object-contain"
       />
 
       <AnimatePresence>
@@ -40,7 +40,7 @@ const CarouselCard = ({ company }: CarouselCardProps) => {
           >
             <Link href={company.link} className="w-full">
               <Button
-                className="w-full bg-[#284d85]/90 hover:bg-[#3D70BC]/80 
+                className="w-full bg-[#284d85]/60 hover:bg-[#3D70BC]/70 
                            ease-in-out duration-200 py-3 sm:py-4 
                            hover:shadow-xl font-normal rounded-[8px] text-sm sm:text-base"
               >
@@ -55,9 +55,8 @@ const CarouselCard = ({ company }: CarouselCardProps) => {
                   <Image
                     alt="See more"
                     src="/see_more.svg"
-                    height={18}
-                    width={18}
-                    className="sm:h-[20px] sm:w-[20px]"
+                    height={32}
+                    width={32}
                   />
                 </div>
               </Button>

@@ -98,6 +98,11 @@ export const services: Service[] = [
     id: 2,
     name: "Switchboard Upgrades",
     blurb: "Upgrade outdated switchboards to meet current safety standards and handle modern load demands.",
+  },
+  {
+    id: 3,
+    name: "Lighting Solutions",
+    blurb: "Design and install energy-efficient lighting systems tailored to your space and needs.",
   }
 ];
 
@@ -106,6 +111,7 @@ export const clients: Client[] = [
     id: 1,
     stars: 5,
     name: "Emma Johnson",
+    role: "Project Manager",
     company: "Skyline Developments",
     blurb: "Exceptional service from start to finish. The team was professional, efficient, and exceeded our expectations.",
   },
@@ -113,6 +119,7 @@ export const clients: Client[] = [
     id: 2,
     stars: 4,
     name: "Liam Patel",
+    role: "CTO",
     company: "NextGen Tech",
     blurb: "Great experience overall. Communication was clear and the project was delivered on time.",
   },
@@ -120,12 +127,14 @@ export const clients: Client[] = [
     id: 3,
     stars: 5,
     name: "Sophie Chen",
+    role: "Interior Designer",
     company: "Chen Interiors",
     blurb: "Highly recommend! Attention to detail and quality of work were outstanding.",
   },
   {
     id: 4,
     stars: 3,
+    role: "Operations Manager",
     name: "Noah Smith",
     company: "Apex Logistics",
     blurb: "Good service but a few delays in the timeline. Would still consider for future work.",
@@ -134,11 +143,67 @@ export const clients: Client[] = [
     id: 5,
     stars: 5,
     name: "Olivia Williams",
+    role: "CEO",
     company: "Greenline Architecture",
     blurb: "Fantastic collaboration. The team brought our vision to life with precision and creativity.",
   },
+  {
+    id: 6,
+    stars: 4,
+    name: "Ethan Davis",
+    role: "Marketing Director",
+    company: "BrightWave Media",
+    blurb: "The project turned out great. A few minor revisions were needed, but the end result was worth it.",
+  },
+  {
+    id: 7,
+    stars: 5,
+    name: "Ava Martinez",
+    role: "Founder",
+    company: "Urban Eats",
+    blurb: "Absolutely loved working with the team. They were responsive, innovative, and delivered beyond expectations.",
+  },
+  {
+    id: 8,
+    stars: 4,
+    name: "James Wilson",
+    role: "Head of Operations",
+    company: "Nova Transport",
+    blurb: "Strong technical expertise and great communication. We had a few challenges but they handled them well.",
+  },
+  {
+    id: 9,
+    stars: 5,
+    name: "Mia Thompson",
+    role: "Creative Director",
+    company: "Thompson Studio",
+    blurb: "An outstanding partnership. Their creativity and professionalism elevated our brand to the next level.",
+  },
+  {
+    id: 10,
+    stars: 3,
+    name: "Benjamin Clark",
+    role: "Procurement Officer",
+    company: "Summit Enterprises",
+    blurb: "The work was solid, but the process could have been smoother. Hoping for improvements in future projects.",
+  },
+  {
+    id: 11,
+    stars: 5,
+    name: "Isabella Garcia",
+    role: "HR Manager",
+    company: "Unity Group",
+    blurb: "They made the process seamless and stress-free. The results were exactly what we needed.",
+  },
+  {
+    id: 12,
+    stars: 4,
+    name: "Daniel Lee",
+    role: "IT Director",
+    company: "Core Systems",
+    blurb: "Very capable team with excellent technical knowledge. Some small hiccups, but overall a strong experience.",
+  },
 ];
-
 
 export const team: Team[] = [
   {

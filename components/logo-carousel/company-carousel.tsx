@@ -30,7 +30,7 @@ const CompanyCarousel = () => {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-nowrap mt-8 items-center gap-8"
+      className="flex flex-nowrap items-center gap-8 mb-8"
       style={{ x: xTranslation }}
     >
       {items.map(c => (
