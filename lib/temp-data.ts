@@ -7,7 +7,7 @@ export const projects: Project[] = [
     name: "WQIP Site 6",
     startDate: "n/a",
     finishDate: "n/a",
-    isComplete: false,
+    isComplete: true,
     location: "Wyndom Quarter, Auckland",
     blurb: "Text",
     images: [

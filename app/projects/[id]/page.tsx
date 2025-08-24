@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { projects } from '@/lib/temp-data'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { ArrowLeft, Clock, Calendar, MapPin, CheckCircle2, Clock3 } from 'lucide-react'
 
 type ProjectPageProps = {
   params: Promise<{
@@ -20,76 +20,211 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
   }
 
   return (
-    <section className="p-2">
-      <div className='mt-16 flex items-center gap-2 text-[#f0f1f1] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] text-3xl font-semibold'>
-        <Link href={'/projects'}>Projects </Link>  
-        <p>&gt;</p>
-        <p>{project.name}</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Animated particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 20 }, (_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-blue-400/20 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-cyan-600/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40" />
       </div>
 
-      <div className="grid grid-cols-1 gap-2 my-4">
-        <div
-          className='w-full border-[#051123] border-1 rounded-xl h-[66dvh] overflow-hidden'
-        >
+      {/* Floating elements */}
+      <div className="absolute top-20 right-32 w-2 h-40 bg-gradient-to-b from-blue-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
+      <div className="absolute bottom-20 left-32 w-2 h-32 bg-gradient-to-t from-cyan-400/20 to-transparent blur-sm animate-pulse hidden lg:block" />
+
+      <div className="relative z-10 pt-24 pb-16 px-4 max-w-7xl mx-auto">
+        {/* Breadcrumb Navigation */}
+        <div className="mb-12">
+          <Link 
+            href="/projects"
+            className="inline-flex items-center gap-3 text-blue-300 hover:text-blue-200 transition-all duration-300 group"
+          >
+            <div className="p-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl group-hover:bg-white/20 transition-all duration-300">
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform duration-300" />
+            </div>
+            <span className="text-lg font-medium">Back to Projects</span>
+          </Link>
+        </div>
+
+        {/* Project Header */}
+        <div className="mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                {project.name}
+              </h1>
+              
+              {/* Status Badge */}
+              <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl backdrop-blur-xl border text-white font-semibold shadow-lg transition-all duration-300 ${
+                project.isComplete 
+                  ? 'bg-gradient-to-r from-green-600/80 to-emerald-600/80 border-green-400/50 shadow-green-500/20' 
+                  : 'bg-gradient-to-r from-blue-600/80 to-cyan-600/80 border-blue-400/50 shadow-blue-500/20'
+              }`}>
+                {project.isComplete ? (
+                  <CheckCircle2 size={20} className="text-green-300" />
+                ) : (
+                  <Clock3 size={20} className="text-blue-300" />
+                )}
+                <span>{project.isComplete ? 'PROJECT COMPLETED' : 'IN PROGRESS'}</span>
+                <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-300' : 'bg-blue-300'}`} />
+              </div>
+            </div>
+
+            {/* Project Metadata */}
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-xl text-slate-200 hover:bg-white/20 transition-all duration-300">
+                <Clock size={18} className="text-blue-300" />
+                <span className="font-medium">{project.startDate}</span>
+              </div>
+              
+              {project.finishDate && project.isComplete && (
+                <div className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-xl text-slate-200 hover:bg-white/20 transition-all duration-300">
+                  <Calendar size={18} className="text-green-300" />
+                  <span className="font-medium">{project.finishDate}</span>
+                </div>
+              )}
+              
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-xl text-slate-200 hover:bg-white/20 transition-all duration-300">
+                <MapPin size={18} className="text-cyan-300" />
+                <span className="font-medium">{project.location}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Animated divider */}
+          <div className="flex justify-center items-center gap-4 mb-12">
+            <div className="w-20 h-px bg-gradient-to-r from-transparent to-blue-400/50" />
+            <div className="w-3 h-3 bg-blue-400/30 rounded-full animate-pulse" />
+            <div className="w-32 h-px bg-gradient-to-r from-blue-400/50 to-blue-400/20" />
+            <div className="w-2 h-2 bg-cyan-400/40 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent to-blue-400/50" />
+          </div>
+        </div>
+
+        {/* Project Images */}
+        <div className="mb-16 space-y-6">
+          {/* Main Image */}
           {project.images && project.images[0] && (
-            <Image
-              src={project.images[0]}
-              alt={project.name}
-              className='object-cover w-full h-full'
-              width={1920}
-              height={1080}
-            />
+            <div className="group relative overflow-hidden rounded-3xl border border-white/20 backdrop-blur-xl shadow-2xl">
+              <div className="aspect-[16/9] lg:aspect-[21/9] relative">
+                <Image
+                  src={project.images[0]}
+                  alt={project.name}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+            </div>
+          )}
+
+          {/* Additional Images Grid */}
+          {project.images && project.images.length > 1 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {project.images.slice(1, 4).map((img, idx) => (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden rounded-2xl border border-white/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  style={{ animationDelay: `${idx * 100}ms` }}
+                >
+                  <div className="aspect-[4/3] relative">
+                    <Image
+                      src={img}
+                      alt={`${project.name} ${idx + 2}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
         </div>
 
-        {project.images && project.images.length > 1 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {project.images.slice(1, 3).map((img, idx) => (
-              <div
-                key={idx}
-                className='w-full border-[#051123] border-1 rounded-xl h-[33dvh] overflow-hidden'
-              >
-                <Image
-                  src={img}
-                  alt={`${project.name} ${idx + 2}`}
-                  className='object-cover w-full h-full'
-                  width={960}
-                  height={540}
-                />
+        {/* Project Description */}
+        <div className="relative">
+          {/* Background card */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-blue-500/5 to-cyan-500/5 rounded-3xl border border-white/20 backdrop-blur-2xl shadow-2xl" />
+          
+          {/* Decorative elements */}
+          <div className="absolute top-6 right-6 w-1 h-20 bg-gradient-to-b from-blue-400 to-cyan-400 opacity-30 rounded-full" />
+          <div className="absolute bottom-6 left-6 w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-30 rounded-full" />
+          
+          <div className="relative p-8 md:p-12 lg:p-16">
+            <div className="mb-8">
+              <div className="inline-block mb-6">
+                <span className="text-blue-400/80 text-sm font-medium tracking-wider uppercase bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
+                  Project Overview
+                </span>
               </div>
-            ))}
+              
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed">
+                About This Project
+              </h2>
+            </div>
+
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-slate-200 text-lg md:text-xl leading-relaxed font-light">
+                {project.blurb}
+              </p>
+            </div>
+
+            {/* Project Details Grid */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
+                <Clock size={24} className="text-blue-400 mb-4" />
+                <h3 className="text-white font-semibold mb-2">Start Date</h3>
+                <p className="text-slate-300">{project.startDate}</p>
+              </div>
+              
+              {project.finishDate && project.isComplete && (
+                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
+                  <Calendar size={24} className="text-green-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2">Completion Date</h3>
+                  <p className="text-slate-300">{project.finishDate}</p>
+                </div>
+              )}
+              
+              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
+                <MapPin size={24} className="text-cyan-400 mb-4" />
+                <h3 className="text-white font-semibold mb-2">Location</h3>
+                <p className="text-slate-300">{project.location}</p>
+              </div>
+            </div>
           </div>
-        )}
-      </div>
-
-      <div className="text-white space-y-4 my-16">
-        <div className="flex items-center justify-between">
-          <h1 className="text-[#f0f1f1] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] text-3xl font-semibold">{project.name}</h1>          
-          { project.isComplete ? 
-            <Button className='rounded-full w-fit cursor-default bg-green-500/60 hover:bg-green-500/60 p-4 px-8 text-lg h-6'>Complete</Button> :
-            <Button className='rounded-full w-fit cursor-default bg-orange-600/60 hover:bg-orange-600/60 p-4 px-8 text-lg h-6'>Ongoing</Button>
-          }
         </div>
 
-        <div className='flex flex-col justify-between bg-gradient-to-br from-[#b2c6f8] via-[#758bc7] to-[#8ca6e9]  border-[#758bc7] border-1 rounded-[12px] p-2'>
-          <p className="pb-8">{project.blurb}</p>
-
-          <section className='flex gap-2'>
-            <div className='flex gap-1 items-center bg-[#284d85] w-fit p-2 px-4 text-gray-100 font-normal rounded-[12px] text-sm'>
-              <Image alt='Clock' src={ '/schedule.svg'} height={18} width={18}/>{ project.startDate }
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <Link 
+            href="/projects"
+            className="inline-flex items-center gap-3 text-blue-300 hover:text-blue-200 transition-all duration-300 group"
+          >
+            <div className="p-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl group-hover:bg-white/20 transition-all duration-300">
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform duration-300" />
             </div>
-            { project.finishDate && 
-              <div className='flex gap-1 items-center bg-[#284d85] w-fit p-2 px-4 text-gray-100 font-normal rounded-[12px] text-sm'>
-                <Image alt='Calendar' src={ '/today.svg'} height={16} width={16}/>{ project.finishDate }
-              </div>
-            }
-            <div className='flex gap-1 items-center bg-[#284d85] w-fit p-2 px-4 text-gray-100 font-normal rounded-[12px] text-sm'>
-              <Image alt='Location' src={ '/location.svg'} height={18} width={18}/>{ project.location }
-            </div>
-          </section>
+            <span className="text-lg font-medium">Back to Projects</span>
+          </Link>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
