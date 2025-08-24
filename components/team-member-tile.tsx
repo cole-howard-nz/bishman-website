@@ -3,7 +3,7 @@
 import { Team } from '@/lib/types'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   Dialog,
   DialogContent,
@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { Mail, User, ArrowRight, Quote } from 'lucide-react'
+import { Mail, ArrowRight, Quote } from 'lucide-react'
 
 interface TeamMemberTileProps {
   member: Team
@@ -22,7 +22,7 @@ interface TeamMemberTileProps {
 const MAX_PREVIEW_LENGTH = 170
 
 const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
-  const [isHovered, setIsHovered] = useState(false)
+  const [_isHovered, setIsHovered] = useState(false)
   
   const preview =
     member.blurb.length > MAX_PREVIEW_LENGTH

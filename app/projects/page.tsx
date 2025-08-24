@@ -12,22 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { 
   Search, 
   Filter, 
-  Calendar, 
-  Clock, 
-  ArrowRight, 
-  CheckCircle2, 
-  Clock3, 
-  MapPin,
-  Quote
 } from 'lucide-react'
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import { Project } from '@/lib/types'
 import { projects } from '@/lib/temp-data'
 import ProjectTile from '@/components/project-tile'

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Building2, Mail } from 'lucide-react'
+import { ArrowRight, Building2 } from 'lucide-react'
 
 const BishmanEdge = () => {
   return (

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { projects } from '@/lib/temp-data'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import { ArrowLeft, Clock, Calendar, MapPin, CheckCircle2, Clock3 } from 'lucide-react'
 
 type ProjectPageProps = {

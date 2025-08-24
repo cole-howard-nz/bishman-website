@@ -140,7 +140,7 @@ const Contacts = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-white">Send Message</h2>
                   </div>
                   <p className="text-slate-300 leading-relaxed">
-                    Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                    Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
                   </p>
                 </div>
 
