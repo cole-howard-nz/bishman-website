@@ -13,26 +13,183 @@ const Footer = () => {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
       
-      <div className="relative flex justify-between items-start p-8 min-h-[320px]">
+      <div className="relative flex flex-col lg:flex-row justify-between items-start p-4 sm:p-6 lg:p-8 min-h-[320px]">
         {/* Left section */}
-        <div className="flex flex-col justify-between h-full min-h-[320px] max-w-md">
+        <div className="flex flex-col justify-between h-full min-h-[280px] lg:min-h-[320px] max-w-md w-full lg:w-auto">
           {/* Logo */}
-          <div className="group">
+          <div className="group mb-6 lg:mb-0">
             <Link href="/" className="inline-block">
               <div className="relative">
                 <Image 
                   src="/bishman_white.svg" 
-                  width={180} 
-                  height={180} 
+                  width={150} 
+                  height={150} 
                   alt="Bishman Logo"
-                  className="transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+                  className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 />
               </div>
             </Link>
           </div>
           
-          {/* Navigation Links */}
-          <div className="absolute right-32 space-y-2 text-sm mb-6">
+          {/* Social Media Buttons - Desktop */}
+          <div className="hidden lg:flex gap-4 mb-6">
+            {/* LinkedIn Button */}
+            <Link 
+              href="https://www.linkedin.com/company/bishman-limited/?originalSubdomain=nz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] border border-blue-500/20 hover:border-blue-400/40"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-white/20 to-blue-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
+              
+              <svg className="w-5 h-5 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </Link>
+            
+            {/* Email Button */}
+            <Link 
+              href="mailto:info@bishman.co.nz"
+              className="group relative overflow-hidden bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_20px_rgba(6,182,212,0.3)] border border-cyan-500/20 hover:border-cyan-400/40"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/0 via-white/20 to-cyan-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
+              
+              <svg className="w-5 h-5 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </Link>
+            
+            {/* Phone Button */}
+            <Link 
+              href="tel:+6495550123"
+              className="group relative overflow-hidden bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_20px_rgba(34,197,94,0.3)] border border-green-500/20 hover:border-green-400/40"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-green-600/0 via-white/20 to-green-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
+              
+              <svg className="w-5 h-5 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </Link>
+          </div>
+          
+          {/* Address and copyright - Desktop */}
+          <div className="hidden lg:block space-y-3 text-sm">
+            <div className="flex items-start gap-3">
+              <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <p className="text-slate-300 hover:text-blue-300 transition-colors duration-300 leading-relaxed">
+                2 Hotunui Drive, Mount Wellington<br />
+                Auckland 1060, New Zealand
+              </p>
+            </div>
+            
+            <p className="text-slate-400 text-xs font-medium tracking-wide">
+              &copy; {new Date().getFullYear()} BISHMAN LIMITED. All rights reserved.
+            </p>
+          </div>
+        </div>
+
+        {/* Navigation Links - Mobile/Tablet */}
+        <div className="w-full lg:hidden my-8">
+          <div className="grid grid-cols-2 gap-4 text-sm mb-8">
+            <Link 
+              href="/profile/company" 
+              className="block text-slate-300 hover:text-blue-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
+            >
+              Company Profile
+            </Link>
+            <Link 
+              href="/profile/team" 
+              className="block text-slate-300 hover:text-cyan-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
+            >
+              Our Team
+            </Link>
+            <Link 
+              href="/projects" 
+              className="block text-slate-300 hover:text-purple-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
+            >
+              Projects
+            </Link>
+            <Link 
+              href="/services" 
+              className="block text-slate-300 hover:text-green-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
+            >
+              Services
+            </Link>
+          </div>
+
+          {/* Social Media Buttons - Mobile */}
+          <div className="flex gap-4 mb-6">
+            {/* LinkedIn Button */}
+            <Link 
+              href="https://www.linkedin.com/company/bishman-limited/?originalSubdomain=nz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] border border-blue-500/20 hover:border-blue-400/40"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-white/20 to-blue-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
+              
+              <svg className="w-5 h-5 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </Link>
+            
+            {/* Email Button */}
+            <Link 
+              href="mailto:info@bishman.co.nz"
+              className="group relative overflow-hidden bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_20px_rgba(6,182,212,0.3)] border border-cyan-500/20 hover:border-cyan-400/40"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/0 via-white/20 to-cyan-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
+              
+              <svg className="w-5 h-5 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </Link>
+            
+            {/* Phone Button */}
+            <Link 
+              href="tel:+6495550123"
+              className="group relative overflow-hidden bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-[0_10px_20px_rgba(34,197,94,0.3)] border border-green-500/20 hover:border-green-400/40"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-green-600/0 via-white/20 to-green-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
+              
+              <svg className="w-5 h-5 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </Link>
+          </div>
+          
+          {/* Address and copyright - Mobile */}
+          <div className="space-y-3 text-sm">
+            <div className="flex items-start gap-3">
+              <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <p className="text-slate-300 hover:text-blue-300 transition-colors duration-300 leading-relaxed">
+                2 Hotunui Drive, Mount Wellington<br />
+                Auckland 1060, New Zealand
+              </p>
+            </div>
+            
+            <p className="text-slate-400 text-xs font-medium tracking-wide">
+              &copy; {new Date().getFullYear()} BISHMAN LIMITED. All rights reserved.
+            </p>
+          </div>
+        </div>
+
+        {/* Right section */}
+        <div className="flex flex-col justify-between items-end h-full min-h-[280px] lg:min-h-[320px] w-full lg:w-auto">
+          {/* Navigation Links - Desktop */}
+          <div className="hidden lg:block absolute right-32 space-y-2 text-sm mb-6">
             <div className="text-lg flex items-center gap-16">
               <Link 
                 href="/profile/company" 
@@ -61,29 +218,8 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Address and copyright */}
-          <div className="space-y-3 text-sm">
-            <div className="flex items-start gap-3">
-              <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <p className="text-slate-300 hover:text-blue-300 transition-colors duration-300 leading-relaxed">
-                2 Hotunui Drive, Mount Wellington<br />
-                Auckland 1060, New Zealand
-              </p>
-            </div>
-            
-            <p className="text-slate-400 text-xs font-medium tracking-wide">
-              &copy; {new Date().getFullYear()} BISHMAN LIMITED. All rights reserved.
-            </p>
-          </div>
-        </div>
-
-        {/* Right section */}
-        <div className="flex flex-col justify-between items-end h-full min-h-[320px]">
           {/* Decorative elements */}
-          <div className="flex flex-col items-end space-y-8 pr-4">
+          <div className="hidden lg:flex flex-col items-end space-y-8 pr-4">
             {/* Auckland Sky Tower inspired element */}
             <div className="relative">
               <div className="w-2 h-24 bg-gradient-to-b from-blue-400 via-cyan-400 to-transparent rounded-full opacity-60 animate-pulse"></div>
@@ -107,14 +243,14 @@ const Footer = () => {
           </div>
           
           {/* CTA Button */}
-          <div>
+          <div className="w-full lg:w-auto mt-auto">
             <Link href="/contacts">
-              <button className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-8 py-4 rounded-2xl text-white font-semibold text-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(59,130,246,0.3)] border border-blue-500/20 hover:border-blue-400/40">
+              <button className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-3 lg:px-8 lg:py-4 rounded-2xl text-white font-semibold text-base lg:text-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(59,130,246,0.3)] border border-blue-500/20 hover:border-blue-400/40 w-full lg:w-auto text-center">
                 {/* Animated background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/0 via-white/20 to-cyan-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
                 
                 {/* Button content */}
-                <div className="relative flex items-center gap-3">
+                <div className="relative flex items-center justify-center gap-3">
                   <span>Get In Touch</span>
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
