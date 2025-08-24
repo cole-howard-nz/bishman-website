@@ -15,7 +15,7 @@ const Footer = () => {
       
       <div className="relative flex justify-between items-start p-8 min-h-[320px]">
         {/* Left section */}
-        <div className="flex flex-col justify-between h-full min-h-[280px] max-w-md">
+        <div className="flex flex-col justify-between h-full min-h-[320px] max-w-md">
           {/* Logo */}
           <div className="group">
             <Link href="/" className="inline-block">
@@ -29,6 +29,36 @@ const Footer = () => {
                 />
               </div>
             </Link>
+          </div>
+          
+          {/* Navigation Links */}
+          <div className="absolute right-32 space-y-2 text-sm mb-6">
+            <div className="text-lg flex items-center gap-16">
+              <Link 
+                href="/profile/company" 
+                className="block text-slate-300 hover:text-blue-300 transition-colors duration-300 py-1"
+              >
+                Company Profile
+              </Link>
+              <Link 
+                href="/profile/team" 
+                className="block text-slate-300 hover:text-cyan-300 transition-colors duration-300 py-1"
+              >
+                Our Team
+              </Link>
+              <Link 
+                href="/projects" 
+                className="block text-slate-300 hover:text-purple-300 transition-colors duration-300 py-1"
+              >
+                Projects
+              </Link>
+              <Link 
+                href="/services" 
+                className="block text-slate-300 hover:text-green-300 transition-colors duration-300 py-1"
+              >
+                Services
+              </Link>
+            </div>
           </div>
           
           {/* Address and copyright */}
@@ -51,7 +81,7 @@ const Footer = () => {
         </div>
 
         {/* Right section */}
-        <div className="flex flex-col justify-between items-end h-full min-h-[280px]">
+        <div className="flex flex-col justify-between items-end h-full min-h-[320px]">
           {/* Decorative elements */}
           <div className="flex flex-col items-end space-y-8 pr-4">
             {/* Auckland Sky Tower inspired element */}
@@ -99,7 +129,7 @@ const Footer = () => {
       {/* Bottom highlight line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
       
-      {/* Optional source link - uncommented and modernized */}
+      {/* Source link */}
       <div className="absolute left-1/2 bottom-3 transform -translate-x-1/2">
         <Link href="https://github.com/cole-howard-nz/bishman-website">
           <div className="group flex items-center gap-2 text-xs text-slate-500 hover:text-blue-400 transition-all duration-300">

@@ -193,7 +193,7 @@ const ClientShowcase = ({ clients }:{ clients: Client[]}) => {
 
       {/* Main Carousel Container */}
       <div 
-        className="relative max-w-7xl mx-auto px-4 md:px-6"
+        className="relative mx-auto px-4 md:px-6"
         onMouseEnter={() => !isDragging && setIsAutoPlaying(false)}
         onMouseLeave={() => !isDragging && setIsAutoPlaying(true)}
       >

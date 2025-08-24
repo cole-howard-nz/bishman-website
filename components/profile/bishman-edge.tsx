@@ -2,38 +2,70 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowRight, Building2, Mail } from 'lucide-react'
 
 const BishmanEdge = () => {
   return (
-    <section className='py-16'>
-      <h2 className='text-[#f0f1f1] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] text-3xl font-semibold pb-2'>Profile</h2>
-      
-      <div className="flex rounded-[12px] p-2 w-full bg-gradient-to-br from-[#b2c6f8] via-[#758bc7] to-[#8ca6e9] border-[#758bc7] border-1">
-        <div className="w-1/2 rounded-[12px] bg-[url(/office.jpg)] bg-center bg-cover bg-no-repeat flex flex-col justify-end p-2">
-          <Link href={ '/projects' }>
-            <Button className='w-fit bg-[#284d85]/70 hover:bg-[#3D70BC]/90 ease-in-out duration-200 p-2 hover:shadow-xl font-normal rounded-[8px] text-sm'>
-              <div className='flex items-center gap-2'>
-                See more<Image alt='See more' src={ '/see_more.svg'} height={20} width={20}/>
-              </div>
-            </Button>
-          </Link>
+    <section className='relative group'>
+      <div className="mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <Building2 className="text-blue-400" size={28} />
+          <h2 className='text-white text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent'>
+            Our Profile
+          </h2>
         </div>
-        
-        <div className="w-1/2 pl-2 flex flex-col justify-between min-h-96 text-[#f0f1f1]">
-          <div className='space-y-4'>
-            <p>
-              Bishman Ltd established in 1992, is a trusted leader in delivering comprehensive electrical maintenance services. We specialise in ensuring that electrical systems remain operational, efficient, and safe through proactive care and consistent solutions. Our commitment is to extend the lifespan of electrical infrastructure, minimise downtime, and optimise system performance.
-            </p>
-            <p>
-            </p>
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full" />
+      </div>
+      
+      <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/8 hover:border-white/20 transition-all duration-500 overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0 rounded-3xl overflow-hidden">
+          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-700" />
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyan-400/8 to-blue-500/10 rounded-full blur-2xl transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-700" />
+        </div>
+
+        <div className="relative flex flex-col lg:flex-row gap-8 items-stretch">
+          {/* Image Section */}
+          <div className="lg:w-1/2">
+            <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden border border-white/20 group-hover:border-blue-400/40 transition-all duration-500">
+              <Image
+                src="/office.jpg"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Bishman Office"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            </div>
           </div>
           
-          <Link href="/contacts">
-            <Button className="bg-[#284d85] hover:bg-[#3D70BC] ease-in-out duration-200 p-4 hover:shadow-xl font-normal rounded-[8px] text-sm w-full">
-              Contact Us
-            </Button>
-          </Link>
+          {/* Content Section */}
+          <div className="lg:w-1/2 flex flex-col justify-between space-y-6">
+            <div className='space-y-6'>
+              <p className="text-slate-200 leading-relaxed group-hover:text-white transition-colors duration-300">
+                Bishman Ltd established in 1992, is a trusted leader in delivering comprehensive electrical maintenance services. We specialise in ensuring that electrical systems remain operational, efficient, and safe through proactive care and consistent solutions.
+              </p>
+              <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                Our commitment is to extend the lifespan of electrical infrastructure, minimise downtime, and optimise system performance across Auckland and beyond.
+              </p>
+            </div>
+            
+            <div className="pt-4">
+              <Link href="/contacts">
+                <Button className="group/contact w-full relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 text-white px-8 py-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/contact:translate-x-[100%] transition-transform duration-700" />
+                  
+                  <div className="relative flex items-center justify-center gap-3">
+                    <span className="font-semibold text-lg">Contact Us</span>
+                    <ArrowRight size={20} className="group-hover/contact:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
+
+        {/* Accent elements */}
+        <div className="absolute top-6 left-6 w-1 h-16 bg-gradient-to-b from-blue-400 via-cyan-400 to-transparent opacity-40 group-hover:opacity-80 group-hover:h-20 transition-all duration-500" />
       </div>
     </section>
   )

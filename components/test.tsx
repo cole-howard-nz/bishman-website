@@ -287,8 +287,8 @@ const ResponsiveCarousel = () => {
                       }`}>
                         {/* Enhanced Date Badges */}
                         <div className={`flex gap-3 ${itemsPerView > 2 ? 'flex-col' : 'flex-wrap'}`}>
-                          {project.finishDate && project.finishDate !== 'n/a' ? (
-                            <>
+                          {project.finishDate && project.isComplete ? (
+                            <div className='gap-3 flex flex-wrap items-end justify-end'>
                               <div className={`bg-slate-800/90 backdrop-blur-xl rounded-xl text-slate-200 border border-blue-400/30 flex items-center gap-2 transition-all duration-300 hover:bg-blue-600/20 hover:border-blue-400/50 hover:scale-105 ${
                                 itemsPerView === 1 ? 'px-4 py-3 text-sm md:text-base' : 'px-3 py-2 text-xs'
                               }`}>
@@ -301,7 +301,7 @@ const ResponsiveCarousel = () => {
                                 <Calendar size={itemsPerView === 1 ? 18 : 16} className="text-green-300" />
                                 <span className="font-medium">Completed {project.finishDate}</span>
                               </div>
-                            </>
+                            </div>
                           ) : (
                             <div className={`bg-slate-800/90 backdrop-blur-xl rounded-xl text-slate-200 border border-cyan-400/30 flex items-center gap-2 transition-all duration-300 hover:bg-cyan-600/20 hover:border-cyan-400/50 hover:scale-105 ${
                               itemsPerView === 1 ? 'px-4 py-3 text-sm md:text-base' : 'px-3 py-2 text-xs'

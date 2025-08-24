@@ -3,7 +3,7 @@
 'use client';
 
 import React, { useState } from 'react'
-import { ArrowRight, ChevronDown, User } from 'lucide-react'
+import { ArrowRight, Briefcase, ChevronDown, User } from 'lucide-react'
 import Link from 'next/link';
 
 const NavList = () => {
@@ -37,7 +37,7 @@ const NavList = () => {
           >
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <User size={16} className="text-white" />
+                <Briefcase size={14} className="text-white" />
               </div>
               <div>
                 <h4 className="text-white font-medium text-sm group-hover/item:text-blue-300 transition-colors duration-300">

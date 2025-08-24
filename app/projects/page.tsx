@@ -1,7 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import ProjectTile from '@/components/project-tile'
-import { projects as allProjects } from '@/lib/temp-data'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
@@ -11,6 +9,28 @@ import {
 } from '@/components/ui/popover'
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { 
+  Search, 
+  Filter, 
+  Calendar, 
+  Clock, 
+  ArrowRight, 
+  CheckCircle2, 
+  Clock3, 
+  MapPin,
+  Quote
+} from 'lucide-react'
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Project } from '@/lib/types'
+import { projects } from '@/lib/temp-data'
+import ProjectTile from '@/components/project-tile'
 
 type StatusFilter = 'All' | 'Complete' | 'Ongoing'
 type SortOrder = 'Newest' | 'Oldest' | 'A-Z' | 'Z-A'
@@ -32,7 +52,7 @@ const Projects = () => {
     }
   }
 
-  const filteredProjects = allProjects
+  const filteredProjects = projects
     .filter(project => {
       const matchesSearch = project.name.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesStatus =
@@ -50,62 +70,154 @@ const Projects = () => {
     })
 
   return (
-    <section className="space-y-4 overflow-x-hidden my-16">
-      <div className="flex flex-col sm:flex-row gap-2 sm:items-center rounded-xl p-1 bg-gradient-to-br from-[#8ca6e9] via-[#758bc7] to-[#4d7aed] border-[#758bc7] border-1">
-        <Input
-          type="text"
-          placeholder="Search for something specific..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-          className="flex-grow text-white/90 placeholder:text-white/80 border-0 rounded-xl"
-        />
+    <div className="min-h-screen my-16 bg-gradient-to-br rounded-[12px] from-slate-900 via-blue-950 to-slate-800 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Animated particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 25 }, (_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-blue-400/20 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            />
+          ))}
+        </div>
         
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button className="bg-[#0f2547] hover:bg-[#152d51]/60 ease-in-out duration-200 px-4 py-2 rounded-lg text-white">
-              Filter
-            </Button>
-          </PopoverTrigger>
+        {/* Gradient overlays for depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-cyan-600/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40" />
+      </div>
 
-          <PopoverContent className="w-full max-w-[300px] bg-[#0f2547] text-white border-none shadow-lg overflow-hidden" align="end">
-            <div className="grid gap-4">
-              <div className="space-y-2">
-                <Label>Status</Label>
-                <Select value={statusFilter} onValueChange={handleStatusChange}>
-                  <SelectTrigger className="bg-[#152d51] border-none text-white">
-                    <SelectValue placeholder="Select status" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-[#152d51] text-white border-none max-w-[300px] w-full">
-                    <SelectItem value="All">All</SelectItem>
-                    <SelectItem value="Complete">Complete</SelectItem>
-                    <SelectItem value="Ongoing">Ongoing</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+      {/* Floating elements inspired by Sky Tower */}
+      <div className="absolute top-20 right-32 w-2 h-40 bg-gradient-to-b from-blue-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
+      <div className="absolute bottom-20 left-32 w-2 h-32 bg-gradient-to-t from-cyan-400/20 to-transparent blur-sm animate-pulse hidden lg:block" />
 
-              <div className="space-y-2">
-                <Label>Sort By</Label>
-                <Select value={sortOrder} onValueChange={handleSortChange}>
-                  <SelectTrigger className="bg-[#152d51] border-none text-white">
-                    <SelectValue placeholder="Sort projects" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-[#152d51] text-white border-none">
-                    <SelectItem value="Newest">Newest</SelectItem>
-                    <SelectItem value="Oldest">Oldest</SelectItem>
-                    <SelectItem value="A-Z">A-Z</SelectItem>
-                    <SelectItem value="Z-A">Z-A</SelectItem>
-                  </SelectContent>
-                </Select>
+      <div className="relative z-10 pt-32 pb-20 px-4 max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="text-blue-400/80 text-sm font-medium tracking-wider uppercase bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
+              Portfolio
+            </span>
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
+            Our Projects
+          </h1>
+          
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            Sentence
+          </p>
+
+          {/* Animated divider */}
+          <div className="flex justify-center items-center gap-4 mt-12 mb-12">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent to-blue-400/50" />
+            <div className="w-3 h-3 bg-blue-400/30 rounded-full animate-pulse" />
+            <div className="w-24 h-px bg-gradient-to-r from-blue-400/50 to-blue-400/20" />
+            <div className="w-2 h-2 bg-cyan-400/40 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+            <div className="w-16 h-px bg-gradient-to-l from-transparent to-blue-400/50" />
+          </div>
+
+          {/* Search and Filter Section */}
+          <div className="mb-8">
+            <div className="flex lg:flex-row gap-4 items-center justify-center max-w-2xl mx-auto">
+              {/* Search Bar */}
+              <div className="relative flex-1 max-w-md w-full">
+                <Input
+                  type="text"
+                  placeholder="Search projects..."
+                  value={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                  className="h-12 bg-white/5 border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:bg-white/10 focus:border-blue-400/50 transition-all backdrop-blur-xl"
+                />
               </div>
+              
+              {/* Filter Popover */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button className="h-12 px-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all backdrop-blur-xl">
+                    <Filter size={18} className="mr-2" />
+                    Filter & Sort
+                  </Button>
+                </PopoverTrigger>
+
+                <PopoverContent className="w-fit bg-slate-900/95 backdrop-blur-2xl border-white/20 rounded-2xl shadow-2xl" align="end">
+                  <div className="space-y-6 p-2">
+                    <div className="space-y-3">
+                      <Label className="text-white font-medium">Project Status</Label>
+                      <Select value={statusFilter} onValueChange={handleStatusChange}>
+                        <SelectTrigger className="bg-white/10 border-white/20 text-white rounded-xl">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="bg-slate-900 border-white/20 rounded-xl">
+                          <SelectItem value="All" className="text-white">All Projects</SelectItem>
+                          <SelectItem value="Complete" className="text-white">Complete</SelectItem>
+                          <SelectItem value="Ongoing" className="text-white">Ongoing</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label className="text-white font-medium">Sort Order</Label>
+                      <Select value={sortOrder} onValueChange={handleSortChange}>
+                        <SelectTrigger className="bg-white/10 border-white/20 text-white rounded-xl">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="bg-slate-900 border-white/20 rounded-xl">
+                          <SelectItem value="Newest" className="text-white">Newest First</SelectItem>
+                          <SelectItem value="Oldest" className="text-white">Oldest First</SelectItem>
+                          <SelectItem value="A-Z" className="text-white">A to Z</SelectItem>
+                          <SelectItem value="Z-A" className="text-white">Z to A</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                </PopoverContent>
+              </Popover>
             </div>
-          </PopoverContent>
-        </Popover>
-      </div>
+          </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-[1fr] m-auto p-2 rounded-[12px] bg-gradient-to-br from-[#b2c6f8] via-[#758bc7] to-[#8ca6e9]  border-[#758bc7] border-1'>
-        { filteredProjects.map(project => <ProjectTile key={ project.id } project={ project } />) }
+          {/* Results Counter */}
+          <div className="mb-6">
+            <p className="text-slate-400">
+              Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
+            </p>
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 justify-items-center w-full">
+          {filteredProjects.map((project: Project, index: number) => (
+            <div
+              key={project.id}
+              className="w-full max-w-md"
+              style={{
+                animationDelay: `${index * 150}ms`
+              }}
+            >
+              <ProjectTile project={project} />
+            </div>
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-16">
+            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/5 flex items-center justify-center backdrop-blur-xl border border-white/10">
+              <Search size={32} className="text-gray-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">No projects found</h3>
+            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+          </div>
+        )}
       </div>
-    </section>
+    </div>
   )
 }
 
