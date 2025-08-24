@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ChevronRight, Sparkles, Zap, Globe, Shield, Rocket, Users, ArrowUpRight, CheckCircle } from 'lucide-react'
+import { Sparkles, Zap, Globe, Shield, Rocket, Users, ArrowUpRight, CheckCircle, LucideProps } from 'lucide-react'
 import Link from 'next/link'
 
-const iconMap: Record<number, React.ComponentType<any>> = {
+const iconMap: Record<number, React.ForwardRefExoticComponent<Omit<LucideProps, "ref">>> = {
   1: Globe,
   2: Shield,
   3: Zap,

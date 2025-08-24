@@ -1,14 +1,11 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { Button } from './ui/button'
-import { createClient } from '@/lib/supabase/server'
 import NavList from './navlist'
-import Link from 'next/link'
-import LogoutButton from './log-out-button'
 import Image from 'next/image'
 import { ArrowRight, LogOut, MessageCircle, Shield } from 'lucide-react'
 import { JwtPayload } from '@supabase/supabase-js'
+import Link from 'next/link'
 
 type DesktopNavbarProps = {
   user: JwtPayload | undefined
@@ -61,10 +58,10 @@ const DesktopNavbar = ({ user }: DesktopNavbarProps) => {
 
         {/* Logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <a href="/" className="block group">
+          <Link href="/">
             {/* Since we can't import the actual logo, we'll create a stylized text logo */}
             <Image src="/bishman_white.svg" width={228} height={228} alt="Bishman Logo" />
-          </a>
+          </Link>
         </div>
 
         {/* Right Side Actions */}

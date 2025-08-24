@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Clock, Calendar, ArrowRight, Play, Pause, Zap, Building, Home } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock, Calendar, ArrowRight, Zap, Building, Home } from 'lucide-react';
 import { projects } from '@/lib/temp-data';
 
 const CategoryIcon = ({ category }: { category: string }) => {
@@ -25,7 +25,7 @@ const ResponsiveCarousel = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [_, setHoveredProject] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const carouselRef = useRef(null);
 
@@ -34,7 +34,7 @@ const ResponsiveCarousel = () => {
     setCurrentImageIndices(projects.map(() => 0));
     const timer = setTimeout(() => setIsVisible(true), 200);
     return () => clearTimeout(timer);
-  }, [projects]);
+  }, []);
 
   // Enhanced responsive items per view
   useEffect(() => {
@@ -49,7 +49,7 @@ const ResponsiveCarousel = () => {
     updateItemsPerView();
     window.addEventListener('resize', updateItemsPerView);
     return () => window.removeEventListener('resize', updateItemsPerView);
-  }, [projects.length]);
+  }, []);
 
   const maxIndex = Math.max(0, projects.length - itemsPerView);
 
@@ -65,7 +65,7 @@ const ResponsiveCarousel = () => {
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, itemsPerView, projects.length, isDragging]);
+  }, [isAutoPlaying, itemsPerView, isDragging]);
 
   // Enhanced background image cycling
   useEffect(() => {
@@ -79,7 +79,7 @@ const ResponsiveCarousel = () => {
     }, 4500);
 
     return () => clearInterval(interval);
-  }, [projects]);
+  }, []);
 
   const goToPrevious = () => {
     setIsAutoPlaying(false);
@@ -99,10 +99,6 @@ const ResponsiveCarousel = () => {
     setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
-  const toggleAutoPlay = () => {
-    setIsAutoPlaying(prev => !prev);
-  };
-
   // Enhanced drag functionality
   const handleMouseDown = (e: { pageX: React.SetStateAction<number>; }) => {
     if (itemsPerView <= 1) return;
@@ -112,7 +108,7 @@ const ResponsiveCarousel = () => {
     setScrollLeft(currentIndex);
   };
 
-  const handleMouseMove = (e: { preventDefault: () => void; pageX: any; }) => {
+  const handleMouseMove = (e: { preventDefault: () => void; pageX: number; }) => {
     if (!isDragging || itemsPerView <= 1) return;
     e.preventDefault();
     const x = e.pageX;

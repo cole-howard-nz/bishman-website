@@ -1,14 +1,7 @@
-import { Project } from '@/lib/types'
 import React from 'react'
-import ProjectTile from './project-tile'
 import Test from './test'
 
-interface ProjectShowcaseProps {
-  header: string
-  projects: Project[]
-}
-
-const ProjectShowcase = ({ header, projects }: ProjectShowcaseProps) => {
+const ProjectShowcase = () => {
   return (
     <div className='w-full py-16 mb-4'>
       <Test />

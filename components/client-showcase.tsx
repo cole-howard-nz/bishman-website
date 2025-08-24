@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Star, Quote, Play, Pause } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 import { Client } from '@/lib/types';
 
 const ClientShowcase = ({ clients }:{ clients: Client[]}) => {
@@ -11,7 +11,7 @@ const ClientShowcase = ({ clients }:{ clients: Client[]}) => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [_hoveredCard, setHoveredCard] = useState<number | null>(null);
   
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const startPosRef = useRef(0);
@@ -63,10 +63,6 @@ const ClientShowcase = ({ clients }:{ clients: Client[]}) => {
     setCurrentIndex(index);
   };
 
-  const toggleAutoPlay = () => {
-    setIsAutoPlaying(prev => !prev);
-  };
-
   // Enhanced drag functionality
   const handleDragStart = (clientX: number) => {
     if (clients.length <= visibleCards) return;
@@ -113,20 +109,20 @@ const ClientShowcase = ({ clients }:{ clients: Client[]}) => {
   };
 
   // Mouse and touch events
-  const handleMouseDown = (e: { preventDefault: () => void; clientX: any; }) => {
+  const handleMouseDown = (e: { preventDefault: () => void; clientX: number; }) => {
     e.preventDefault();
     handleDragStart(e.clientX);
   };
 
-  const handleMouseMove = (e: { clientX: any; }) => {
+  const handleMouseMove = (e: { clientX: number; }) => {
     handleDragMove(e.clientX);
   };
 
-  const handleMouseUp = (e: { clientX: any; }) => {
+  const handleMouseUp = (e: { clientX: number; }) => {
     handleDragEnd(e.clientX);
   };
 
-  const handleMouseLeave = (e: { clientX: any; }) => {
+  const handleMouseLeave = (e: { clientX: number; }) => {
     if (isDragging) {
       handleDragEnd(e.clientX);
     }
@@ -321,7 +317,7 @@ const ClientShowcase = ({ clients }:{ clients: Client[]}) => {
                   {/* Testimonial Text */}
                   <div className="relative">
                     <p className="text-slate-200 leading-relaxed text-sm group-hover:text-white transition-colors duration-300 line-clamp-4">
-                      "{client.blurb}"
+                      &quot;{client.blurb}&quot;
                     </p>
                   </div>
 

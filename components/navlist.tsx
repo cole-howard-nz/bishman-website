@@ -2,13 +2,12 @@
 
 'use client';
 
+import React, { useState } from 'react'
+import { ArrowRight, ChevronDown, User } from 'lucide-react'
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react'
-import { ArrowRight, MessageCircle, Shield, ChevronDown, Menu, X, User, LogOut } from 'lucide-react'
 
 const NavList = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState('')
 
   return (
     <nav className="flex items-center gap-1">
@@ -76,13 +75,13 @@ const NavList = () => {
       </div>
 
       {/* Projects Link */}
-      <a 
+      <Link 
         href="/projects"
         className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
       >
         <span className="relative z-10 text-sm font-medium">Projects</span>
         <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
-      </a>
+      </Link>
 
       {/* Services Link */}
       <a 
