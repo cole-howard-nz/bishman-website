@@ -28,7 +28,7 @@ const OurBusiness = () => {
           {/* Content Section */}
           <div className="lg:w-1/2 flex flex-col justify-center space-y-6 lg:pr-4">
             <div className='space-y-6'>
-              <p className="text-slate-200 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
+              <p className="text-slate-200 leading-relaxed group-hover:text-white transition-colors duration-300">
                 We are a privately and wholly New Zealand owned company with 30+ years experience in design, construction, and maintenance electrical services.
               </p>
               <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
