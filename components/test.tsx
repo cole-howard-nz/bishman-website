@@ -286,7 +286,9 @@ const ResponsiveCarousel = () => {
                         itemsPerView > 2 ? 'flex-col gap-4 items-start' : ''
                       }`}>
                         {/* Enhanced Date Badges */}
-                        <div className={`flex gap-3 ${itemsPerView > 2 ? 'flex-col' : 'flex-wrap'}`}>
+                        <div 
+                          className={`hidden sm:flex gap-3 ${itemsPerView > 2 ? 'flex-col' : 'flex-wrap'}`}
+                        >
                           {project.finishDate && project.isComplete ? (
                             <div className='gap-3 flex flex-wrap items-end justify-end'>
                               <div className={`bg-slate-800/90 backdrop-blur-xl rounded-xl text-slate-200 border border-blue-400/30 flex items-center gap-2 transition-all duration-300 hover:bg-blue-600/20 hover:border-blue-400/50 hover:scale-105 ${

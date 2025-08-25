@@ -97,7 +97,6 @@ const Projects = () => {
           </h1>
           
           <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Sentence
           </p>
 
           {/* Animated divider */}
