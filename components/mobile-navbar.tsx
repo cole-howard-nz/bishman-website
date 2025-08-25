@@ -169,7 +169,9 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                 {/* Header */}
                 <div className="relative p-6 border-b border-white/10">
                   <div className="w-full items-center justify-center flex">
-                    <Image src="/bishman_white.svg" width={160} height={160} alt="Bishman Logo" />
+                    <Link href="/">
+                      <Image src="/bishman_white.svg" width={160} height={160} alt="Bishman Logo" />
+                    </Link>
                   </div>
                 </div>
 

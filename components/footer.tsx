@@ -15,9 +15,9 @@ const Footer = () => {
       
       <div className="relative flex flex-col lg:flex-row justify-between items-start p-4 sm:p-6 lg:p-8 min-h-[320px]">
         {/* Left section */}
-        <div className="flex flex-col justify-between h-full min-h-[280px] lg:min-h-[320px] max-w-md w-full lg:w-auto">
+        <div className="flex flex-col justify-between h-full sm:min-h-[100px] lg:min-h-[320px] max-w-md w-full lg:w-auto">
           {/* Logo */}
-          <div className="group mb-6 lg:mb-0">
+          <div className="group lg:mb-0">
             <Link href="/" className="inline-block">
               <div className="relative">
                 <Image 
@@ -96,7 +96,7 @@ const Footer = () => {
 
         {/* Navigation Links - Mobile/Tablet */}
         <div className="w-full lg:hidden my-8">
-          <div className="grid grid-cols-2 gap-4 text-sm mb-8">
+          <div className="grid grid-cols-2 gap-4 text-sm mb-16">
             <Link 
               href="/profile/company" 
               className="block text-slate-300 hover:text-blue-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
@@ -187,7 +187,7 @@ const Footer = () => {
         </div>
 
         {/* Right section */}
-        <div className="flex flex-col justify-between items-end h-full min-h-[280px] lg:min-h-[320px] w-full lg:w-auto">
+        <div className="flex flex-col justify-between items-end h-full sm:min-h-[100px] lg:min-h-[320px] w-full lg:w-auto mb-4">
           {/* Navigation Links - Desktop */}
           <div className="hidden lg:block absolute right-32 space-y-2 text-sm mb-6">
             <div className="text-lg flex items-center gap-16">
