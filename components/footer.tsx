@@ -98,13 +98,13 @@ const Footer = () => {
         <div className="w-full lg:hidden my-8">
           <div className="grid grid-cols-2 gap-4 text-sm mb-16">
             <Link 
-              href="/profile/company" 
+              href="/company" 
               className="block text-slate-300 hover:text-blue-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
             >
               Company Profile
             </Link>
             <Link 
-              href="/profile/team" 
+              href="/team" 
               className="block text-slate-300 hover:text-cyan-300 transition-colors duration-300 py-2 px-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50"
             >
               Our Team
