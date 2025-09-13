@@ -243,14 +243,14 @@ export const team: Team[] = [
     name: "Arjun Gajanand",
     role: 'Service/Project Manager',
     email: "arjun@bishman.nz",
-    blurb: "Arjun joined Bishman in 2012. Arjun leads a team of dedicated young men in servicing and small projects. Each member of his team is self-contained regarding their ability to solve and complete problems with at times minimal supervision. All the team have vehicles so then able to respond to any emergency / call out in a speedy fashion. His team are on call 24-7 and are contacted after hours thru the main Bishman phone number. Arjun invests an incredible amount of effort into his role, which shows in the success of the department. Arjuns one down fall is that although a NZ'er he actively supports Australia in cricket, this is not appreciated within the company.",
+    blurb: "Arjun joined Bishman in 2012. Arjun leads a team of dedicated young people in servicing and small projects. Each member of his team is self-contained regarding their ability to solve and complete problems with at times minimal supervision. All the team have vehicles so then able to respond to any emergency / call out in a speedy fashion. His team are on call 24-7 and are contacted after hours thru the main Bishman phone number. Arjun invests an incredible amount of effort into his role, which shows in the success of the department. Arjuns one down fall is that although a NZ'er he actively supports Australia in cricket, this is not appreciated within the company.",
     image: '/team/default.jpg'
   },
   {
     id: 6,
     name: "Wendy Schmidt",
     role: 'Office Administration Manager',
-    blurb: "Wendy joined the Bisham team in ???. Wendy is the Office Administration Manager, she organiser’s all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
+    blurb: "Wendy joined the Bisham team in ???. Wendy is the Office Administration Manager, she organiser's all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
     email: "wendy@bishman.nz",
     image: '/team/default.jpg'
   },
