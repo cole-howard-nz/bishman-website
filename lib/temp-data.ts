@@ -251,7 +251,7 @@ export const team: Team[] = [
     name: "Thomas Le Mouton",
     role: 'Project Manager',
     email: "tom@bishman.nz",
-    blurb: "tom@bishman.nz",
+    blurb: "Tom began his journey with Bishman's in 2004 as a teenage apprentice and has steadily progressed to his current role as one of our Project Manager's. Over the years, he has gained extensive experience across a wide range of electrical projects, including high-profile developments such as Vector Arena, UoA School of Medicine, North Shore & Middlemore Hospital's, Silverdale Mall and more recently, Munroe Lane council Building in Albany and Precinct Property Buildings and fitout's in Wynyard Quarter. Thomas is known for his calm and friendly approach, and he thrives in collaborative environments. His dedication to learning and growth has been a key part of his success, and he remains passionate about contributing to impactful projects and fostering strong team dynamics.",
     image: '/team/default.jpg'
   },
   {
@@ -259,14 +259,14 @@ export const team: Team[] = [
     name: "Dwayne Petricevich",
     role: 'Project Manager',
     email: "dwayne@bishman.nz",
-    blurb: "dwayne@bishman.nz",
+    blurb: "Dwayne began his apprenticeship with Bishman in 2009 and has steadily progressed through the company, gaining experience as a registered electrician, site supervisor, and site manager before moving into his current role as project manager. Over the past 16 years he has developed a deep understanding of commercial electrical contracting and is well regarded for his practical, hands-on approach. Dwayne has successfully delivered a wide range of projects, from complex fit-outs to large-scale builds, and his background as a registered electrical inspector ensures that compliance and quality are always at the forefront. He is a key member of the Bishman team, bringing leadership, technical expertise, and a strong focus on client outcomes to every project he manages.",
     image: '/team/default.jpg'
   },
   {
     id: 8,
     name: "Wendy Schmidt",
     role: 'Office Administration Manager',
-    blurb: "wendy@bishman.nz",
+    blurb: "Wendy joined the Bisham team in ???. Wendy is the Office Administration Manager, she organiser’s all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
     email: "wendy@bishman.nz",
     image: '/team/default.jpg'
   },
@@ -274,7 +274,7 @@ export const team: Team[] = [
     id: 9,
     name: "Dorie Santos",
     role: 'Accounts',
-    blurb: "dorie@bishman.nz",
+    blurb: "Dorie joined Bishman in the autumn of 2013. Dorie always works to her potentials, silently, but meticulously. With more than 35 combined years of work experience in accounting, property management, hospitality industry and administration, Dorie is a key member in the accounts team and constantly happy assisting the project managers and everyone.",
     email: "dorie@bishman.nz",
     image: '/team/default.jpg'
   },
@@ -291,7 +291,7 @@ export const team: Team[] = [
     name: "Jasee Wong",
     role: 'CAD Draughting',
     email: "jasee@bishman.nz",
-    blurb: "Jasee joined Bishman in 2018. Jasee completes all the requirements of Bishman regarding CAD and any other drawing, documentation nature",
+    blurb: "Jasee Wong joined Bishman in 2018 and is our CAD Drafting Specialist. Jasee specialises in creating accurate, detailed technical drawings and collaborate with the Bishman team to ensure projects meet the highest standards. Jasee also is involved in the completing essential project handover documents, including Operations & Maintenance (O&M) manuals. Outside of work, Jasee is a cat lover and enjoys reading. Jasee is into tech and is exploring new technology to stay ahead of trends to increase efficiency.",
     image: '/team/default.jpg'
   },
   {
