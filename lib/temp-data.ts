@@ -21,7 +21,7 @@ export const projects: Project[] = [
     name: "Munroe Lane Hub",
     startDate: "n/a",
     finishDate: "n/a",
-    isComplete: false,
+    isComplete: true,
     location: "Albany, Auckland",
     blurb: "Text",
     images: [
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     name: "University of Auckland RWC",
     startDate: "n/a",
     finishDate: "n/a",
-    isComplete: false,
+    isComplete: true,
     location: "Symonds Street, Auckland",
     blurb: "Text",
     images: [
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     name: "Fisher & Paykel Building 4",
     startDate: "n/a",
     finishDate: "n/a",
-    isComplete: false,
+    isComplete: true,
     location: "East Tāmaki, Auckland",
     blurb: "Text",
     images: [
@@ -248,10 +248,10 @@ export const team: Team[] = [
   },
   {
     id: 6,
-    name: "Thomas Le Mouton",
-    role: 'Project Manager',
-    email: "tom@bishman.nz",
-    blurb: "Tom began his journey with Bishman's in 2004 as a teenage apprentice and has steadily progressed to his current role as one of our Project Manager's. Over the years, he has gained extensive experience across a wide range of electrical projects, including high-profile developments such as Vector Arena, UoA School of Medicine, North Shore & Middlemore Hospital's, Silverdale Mall and more recently, Munroe Lane council Building in Albany and Precinct Property Buildings and fitout's in Wynyard Quarter. Thomas is known for his calm and friendly approach, and he thrives in collaborative environments. His dedication to learning and growth has been a key part of his success, and he remains passionate about contributing to impactful projects and fostering strong team dynamics.",
+    name: "Wendy Schmidt",
+    role: 'Office Administration Manager',
+    blurb: "Wendy joined the Bisham team in ???. Wendy is the Office Administration Manager, she organiser’s all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
+    email: "wendy@bishman.nz",
     image: '/team/default.jpg'
   },
   {
@@ -264,10 +264,10 @@ export const team: Team[] = [
   },
   {
     id: 8,
-    name: "Wendy Schmidt",
-    role: 'Office Administration Manager',
-    blurb: "Wendy joined the Bisham team in ???. Wendy is the Office Administration Manager, she organiser’s all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
-    email: "wendy@bishman.nz",
+    name: "Thomas Le Mouton",
+    role: 'Project Manager',
+    email: "tom@bishman.nz",
+    blurb: "Tom began his journey with Bishman's in 2004 as a teenage apprentice and has steadily progressed to his current role as one of our Project Manager's. Over the years, he has gained extensive experience across a wide range of electrical projects, including high-profile developments such as Vector Arena, UoA School of Medicine, North Shore & Middlemore Hospital's, Silverdale Mall and more recently, Munroe Lane council Building in Albany and Precinct Property Buildings and fitout's in Wynyard Quarter. Thomas is known for his calm and friendly approach, and he thrives in collaborative environments. His dedication to learning and growth has been a key part of his success, and he remains passionate about contributing to impactful projects and fostering strong team dynamics.",
     image: '/team/default.jpg'
   },
   {
