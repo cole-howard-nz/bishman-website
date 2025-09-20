@@ -142,7 +142,7 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
           </div>
 
           {/* CTA Button */}
-          <a href={`/projects/${project.id}`}>
+          <a href={`/projects/${project.id}#s`}>
             <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${sizeClasses.button}`}>
               {/* Shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />

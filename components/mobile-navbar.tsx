@@ -203,7 +203,7 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                           className="overflow-hidden"
                         >
                           <div className="mt-2 ml-4 space-y-2">
-                            <Link href="/profile" onClick={closeMenu}>
+                            <Link href="/profile#s" onClick={closeMenu}>
                               <motion.div 
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
                                 whileHover={{ x: 4 }}
@@ -214,7 +214,7 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                                 <span className="text-slate-300 group-hover:text-white text-sm">Company Profile</span>
                               </motion.div>
                             </Link>
-                            <Link href="/team" onClick={closeMenu}>
+                            <Link href="/team#s" onClick={closeMenu}>
                               <motion.div 
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
                                 whileHover={{ x: 4 }}
@@ -233,9 +233,9 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
 
                   {/* Main Navigation Links */}
                   {[
-                    { href: '/projects', label: 'Projects' },
-                    { href: '/services', label: 'Services' },
-                    { href: '/contacts', label: 'Contact Us' }
+                    { href: '/projects#s', label: 'Projects' },
+                    { href: '/services#s', label: 'Services' },
+                    { href: '/contacts#s', label: 'Contact Us' }
                   ].map((item, index) => (
                     <motion.div
                       key={item.href}

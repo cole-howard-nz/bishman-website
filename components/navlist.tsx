@@ -32,7 +32,7 @@ const NavList = () => {
         >
           {/* Company Profile */}
           <a 
-            href="/profile" 
+            href="/profile#s" 
             className="block p-4 hover:bg-blue-600/20 transition-all duration-300 group/item border-b border-white/5"
           >
             <div className="flex items-center gap-3">
@@ -53,7 +53,7 @@ const NavList = () => {
 
           {/* Our Team */}
           <a 
-            href="/team" 
+            href="/team#s" 
             className="block p-4 hover:bg-blue-600/20 transition-all duration-300 group/item"
           >
             <div className="flex items-center gap-3">
@@ -76,7 +76,7 @@ const NavList = () => {
 
       {/* Projects Link */}
       <Link 
-        href="/projects"
+        href="/projects#s"
         className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
       >
         <span className="relative z-10 text-sm font-medium">Projects</span>
@@ -85,7 +85,7 @@ const NavList = () => {
 
       {/* Services Link */}
       <a 
-        href="/services"
+        href="/services#s"
         className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
       >
         <span className="relative z-10 text-sm font-medium">Services</span>
