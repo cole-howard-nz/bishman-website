@@ -1,12 +1,11 @@
-// Mostly AI generated
 
 import { Client, Company, Project, Service, Team } from "./types";
 export const projects: Project[] = [
   {
     id: 1,
     name: "WQIP Site 6",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "May 2021",
+    finishDate: "July 2025",
     isComplete: true,
     location: "Wyndom Quarter, Auckland",
     blurb: "Text",
@@ -19,8 +18,8 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "Munroe Lane Hub",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "March 2021",
+    finishDate: "August 2023",
     isComplete: true,
     location: "Albany, Auckland",
     blurb: "Text",
@@ -33,8 +32,8 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "University of Auckland RWC",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "May 2021",
+    finishDate: "July 2025",
     isComplete: true,
     location: "Symonds Street, Auckland",
     blurb: "Text",
@@ -47,9 +46,9 @@ export const projects: Project[] = [
   {
     id: 4,
     name: "Aotea Centre",
-    startDate: "n/a",
-    finishDate: "n/a",
-    isComplete: false,
+    startDate: "October 2023",
+    finishDate: "March 2025",
+    isComplete: true,
     location: "Aotea Square, Auckland",
     blurb: "Text",
     images: [
@@ -61,8 +60,8 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "135 Albert Street, EV",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "April 2023",
+    finishDate: "November 2023",
     isComplete: false,
     location: "Albert Street, Auckland",
     blurb: "Text",
@@ -75,8 +74,8 @@ export const projects: Project[] = [
   {
     id: 6,
     name: "Fisher & Paykel Building 4",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "April 2018",
+    finishDate: "December 2020",
     isComplete: true,
     location: "East Tāmaki, Auckland",
     blurb: "Text",
@@ -250,7 +249,7 @@ export const team: Team[] = [
     id: 6,
     name: "Wendy Schmidt",
     role: 'Office Administration Manager',
-    blurb: "Wendy joined the Bisham team in ???. Wendy is the Office Administration Manager, she organiser's all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
+    blurb: "Wendy joined the Bisham team in 2019. Wendy is the Office Administration Manager, she organiser's all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
     email: "wendy@bishman.nz",
     image: '/team/default.jpg'
   },
