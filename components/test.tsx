@@ -315,7 +315,7 @@ const ResponsiveCarousel = () => {
                         </div>
 
                         {/* Enhanced CTA Button */}
-                        <a href={`/projects/${project.id}`}>
+                        <a href={`/projects/${project.id}#s`}>
                           <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${
                             itemsPerView === 1 ? 'px-6 py-4 text-base md:text-lg' : 'px-5 py-3 text-sm'
                           }`}>

@@ -52,7 +52,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         {/* Breadcrumb Navigation */}
         <div className="mb-12">
           <Link 
-            href="/projects"
+            href="/projects#s"
             className="inline-flex items-center gap-3 text-blue-300 hover:text-blue-200 transition-all duration-300 group"
           >
             <div className="p-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl group-hover:bg-white/20 transition-all duration-300">
@@ -63,7 +63,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         </div>
 
         {/* Project Header */}
-        <div className="mb-16">
+        <div id='s' className="mb-16">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
@@ -214,7 +214,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <Link 
-            href="/projects"
+            href="/projects#s"
             className="inline-flex items-center gap-3 text-blue-300 hover:text-blue-200 transition-all duration-300 group"
           >
             <div className="p-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl group-hover:bg-white/20 transition-all duration-300">

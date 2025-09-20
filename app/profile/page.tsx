@@ -33,7 +33,7 @@ const Profile = () => {
       <div className="absolute top-32 right-20 w-2 h-48 bg-gradient-to-b from-blue-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
       <div className="absolute bottom-32 left-20 w-2 h-40 bg-gradient-to-t from-cyan-400/20 to-transparent blur-sm animate-pulse hidden lg:block" />
 
-      <div className="relative z-10 pt-32 pb-20 px-4 max-w-7xl mx-auto space-y-20">
+      <div id="s" className="relative z-10 pt-32 pb-20 px-4 max-w-7xl mx-auto space-y-20">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6">

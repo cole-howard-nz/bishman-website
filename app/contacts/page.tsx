@@ -33,7 +33,7 @@ const Contacts = () => {
       <div className="absolute top-20 right-32 w-2 h-40 bg-gradient-to-b from-blue-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
       <div className="absolute bottom-20 left-32 w-2 h-32 bg-gradient-to-t from-cyan-400/20 to-transparent blur-sm animate-pulse hidden lg:block" />
 
-      <div className="relative z-10 pt-32 pb-20 px-4 max-w-7xl mx-auto">
+      <div id="s" className="relative z-10 pt-32 pb-20 px-4 max-w-7xl mx-auto">
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Map Section */}
