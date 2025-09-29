@@ -1,8 +1,7 @@
-import ClientShowcase from "@/components/client-showcase"
 import CompanyCarousel from "@/components/logo-carousel/company-carousel"
 import ProjectShowcase from "@/components/project-showcase"
 import ServiceShowcase from "@/components/service-showcase"
-import { clients, services } from "@/lib/temp-data"
+import { services } from "@/lib/temp-data"
 
 const Home = () => {
   return (
