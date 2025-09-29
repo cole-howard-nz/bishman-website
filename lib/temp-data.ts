@@ -8,7 +8,7 @@ export const projects: Project[] = [
     finishDate: "July 2025",
     isComplete: true,
     location: "Wyndom Quarter, Auckland",
-    blurb: "Text",
+    blurb: "Site 6 marks the 3rd stage of the Wynyard Quarter Innovation Precinct (WQIP), a transformative urban regeneration initiative developed for Precinct Properties. This project continues the vision of converting former industrial land into a vibrant, future-focused hub for innovation, business, and sustainability. Bishman Ltd was proud to partner with Hawkins as the electrical contractor for this development. Our team delivered an electrical installation designed to meet the highest standards of energy efficiency and performance. Key features include DALI dimming, automated switching, daylight harvesting, and a Solar PV system targeting an annual power output of 230,000 kWh. The building is also targeting a 5-Star Green Star and NABERSNZ Base Building Energy rating.",
     images: [
       "/projects/wqip1.jpg",
       "/projects/wqip2.jpg",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     finishDate: "August 2023",
     isComplete: true,
     location: "Albany, Auckland",
-    blurb: "Text",
+    blurb: "6-8 Munroe Lane is a premium commercial office development in Albany, featuring 1.5 basement levels and six floors of A-grade office space. Developed for Asset Plus / Centuria, the building is designed to achieve a 5-Star Green Star rating and includes integrated MCHF works for anchor tenant Auckland Council. Bishman Ltd was proud to support Icon Construction as the electrical contractor for this project. Our team delivered a full electrical installation, including an advanced Zen energy-efficient lighting control system, high-performance LED lighting throughout, and a 1600kVA standby generator integrated with a PLC control system for backup power management. This project showcases our commitment to quality, sustainability, and delivering complex electrical solutions in high-performance commercial environments.",
     images: [
       "/projects/munroe1.jpg",
       "/projects/munroe2.JPEG",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     finishDate: "December 2020",
     isComplete: true,
     location: "East Tāmaki, Auckland",
-    blurb: "Text",
+    blurb: "Fisher & Paykel Building 4 - Electrical Installation: The electrical install for Fisher & Paykel Building 4 showcases Daniell Building's commitment to quality, innovation, and reliability. Our team delivered a tailored solution that ensures efficiency, safety, and long-term performance. At Daniell Building, we provide more than just installations. We partner with clients to deliver future-ready electrical systems that support business growth. Our expertise spans power distribution, intelligent lighting, control systems, and energy-efficient solutions, all backed by a proven track record in delivering large-scale commercial projects on time and to the highest standard.",
     images: [
       "/projects/fap1.jpg",
       "/projects/fap2.jpg",
