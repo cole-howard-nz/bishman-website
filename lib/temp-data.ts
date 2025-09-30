@@ -36,7 +36,7 @@ export const projects: Project[] = [
     finishDate: "July 2025",
     isComplete: true,
     location: "Symonds Street, Auckland",
-    blurb: "Text",
+    blurb: "This is a new award-winning state of the art facilitate in the heart of the University of Auckland Campus consisting of multi-level sports and wellness spaces for the University students to enjoy. The project consists of over 3000 light fittings all interfacing with a smart lighting control system which adds to the beauty of this building. This project certainly came with its challenges but in true Bishman style we produced an installation we are all very proud of and certainly meets the end Clients expectations.",
     images: [
       "/projects/uoa1.jpg",
       "/projects/uoa2.jpg",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     finishDate: "November 2023",
     isComplete: false,
     location: "Albert Street, Auckland",
-    blurb: "Text",
+    blurb: "The levels B2/B3 EV Charger project that has been installed for the Auckland Council head office located at 135 Albert St Auckland CBD office consists of approx. 55 Schneider EV Link 7.KW EV Chargers on level B2 and approx. 62 Schneider EV Link 7.KW EV Chargers all complete with a full head end load management system to control the load required for charging such a large amount of EVs. A full new cable management system was installed to take the new cables that were required to reticulate around the existing carparking levels and a new switchboard with a mains power monitoring to interface with the load management system to assist in the control, once all installed the units were fully tested and commissioned and with the assistance of Schneider were put into use and the load management system worked well with the end Clients needs.",
     images: [
       "/projects/albert1.jpg",
       "/projects/albert2.jpg",
