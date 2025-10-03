@@ -294,14 +294,6 @@ export const team: Team[] = [
     blurb: "Jasee joined Bishman in 2018. Jasee completes all the requirements of Bishman regarding CAD and any other drawing, documentation nature",
     image: '/team/default.jpg'
   },
-  {
-    id: 12,
-    name: "Mark Gummer",
-    role: 'Health & Safety Manager',
-    email: "mark.g@ksm.co.nz",
-    blurb: "mark.g@ksm.co.nz",
-    image: '/team/default.jpg'
-  },
 ];
 
 
@@ -314,9 +306,9 @@ export const company: Company[] = [
   },
   {
     id: 2,
-    name: "Bishman Limited",
-    link: 'https://www.bishman.co.nz',
-    image: '/company/bishman_black.svg'
+    name: " J.A. Russell Ltd",
+    link: 'https://www.jarussell.co.nz',
+    image: '/company/ja_russell.png'
   },
   {
     id: 3,
