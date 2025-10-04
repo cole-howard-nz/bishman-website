@@ -120,29 +120,8 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
 
         {/* Footer */}
         <div className={`flex flex-col items-end gap-4`}>
-          {/* Date Badges */}
-          <div className={`flex gap-3 ${size === 'small' ? 'flex-col' : 'flex-wrap'}`}>
-            {project.finishDate && project.isComplete ? (
-              <div className='gap-3 flex flex-wrap items-end justify-end'>
-                <div className={`bg-slate-800/90 backdrop-blur-xl rounded-xl text-slate-200 border border-blue-400/30 flex items-center gap-2 transition-all duration-300 hover:bg-blue-600/20 hover:border-blue-400/50 hover:scale-105 ${sizeClasses.dateInfo}`}>
-                  <Clock size={sizeClasses.iconSize} className="text-blue-300" />
-                  <span className="font-medium">Started {project.startDate}</span>
-                </div>
-                <div className={`bg-slate-800/90 backdrop-blur-xl rounded-xl text-slate-200 border border-green-400/30 flex items-center gap-2 transition-all duration-300 hover:bg-green-600/20 hover:border-green-400/50 hover:scale-105 ${sizeClasses.dateInfo}`}>
-                  <Calendar size={sizeClasses.iconSize} className="text-green-300" />
-                  <span className="font-medium">Completed {project.finishDate}</span>
-                </div>
-              </div>
-            ) : (
-              <div className={`bg-slate-800/90 backdrop-blur-xl rounded-xl text-slate-200 border border-cyan-400/30 flex items-center gap-2 transition-all duration-300 hover:bg-cyan-600/20 hover:border-cyan-400/50 hover:scale-105 ${sizeClasses.dateInfo}`}>
-                <Clock size={sizeClasses.iconSize} className="text-cyan-300" />
-                <span className="font-medium">Started {project.startDate}</span>
-              </div>
-            )}
-          </div>
-
           {/* CTA Button */}
-          <a href={`/projects/${project.id}`}>
+          <a href={`/projects/${project.id}#s`}>
             <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${sizeClasses.button}`}>
               {/* Shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />

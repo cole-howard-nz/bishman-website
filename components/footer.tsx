@@ -190,13 +190,13 @@ const Footer = () => {
             <div className="text-lg flex items-center gap-16">
               <Link 
                 href="/profile" 
-                className="block text-slate-700 hover:text-sky-700 transition-colors duration-300 py-1"
+                className="block text-slate-700 hover:text-blue-300 transition-colors duration-300 py-1"
               >
                 Company Profile
               </Link>
               <Link 
                 href="/team" 
-                className="block text-slate-700 hover:text-blue-700 transition-colors duration-300 py-1"
+                className="block text-slate-700 hover:text-cyan-300 transition-colors duration-300 py-1"
               >
                 Our Team
               </Link>

@@ -28,15 +28,17 @@ const CompanyCarousel = () => {
   const items = [...company, ...company, ...company, ...company, ...company, ...company]
 
   return (
-    <motion.div
-      ref={ref}
-      className="flex flex-nowrap items-center gap-8 mb-8"
-      style={{ x: xTranslation }}
-    >
-      {items.map(c => (
-        <CarouselCard key={c.id + Math.random()} company={c} />
-      ))}
-    </motion.div>
+    <div className="overflow-hidden w-full">
+      <motion.div
+        ref={ref}
+        className="flex flex-nowrap items-center gap-16"
+        style={{ x: xTranslation }}
+      >
+        {items.map(c => (
+          <CarouselCard key={c.id + Math.random()} company={c} />
+        ))}
+      </motion.div>
+    </div>
   )
 }
 

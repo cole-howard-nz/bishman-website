@@ -31,7 +31,7 @@ const NavList = () => {
           {/* Company Profile */}
           <a 
             href="/profile#s" 
-            className="block p-4 hover:bg-sky-100/60 transition-all duration-300 group/item border-b border-sky-100/50"
+            className="block p-4 hover:bg-blue-600/20 transition-all duration-300 group/item border-b border-white/5"
           >
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-gradient-to-br from-sky-400 to-blue-500 rounded-lg flex items-center justify-center">
@@ -52,7 +52,7 @@ const NavList = () => {
           {/* Our Team */}
           <a 
             href="/team#s" 
-            className="block p-4 hover:bg-blue-100/60 transition-all duration-300 group/item"
+            className="block p-4 hover:bg-blue-600/20 transition-all duration-300 group/item"
           >
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-sky-500 rounded-lg flex items-center justify-center">
@@ -75,18 +75,18 @@ const NavList = () => {
       {/* Projects Link */}
       <Link 
         href="/projects#s"
-        className="relative px-4 py-2.5 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-sky-100/60 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
+        className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
       >
-        <span className="relative z-10 text-sm font-medium">Projects</span>
+        <span className="relative z-10 text-sm font-medium text-slate-700 hover:text-slate-900">Projects</span>
         <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-sky-400 to-blue-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
       </Link>
 
       {/* Services Link */}
       <a 
         href="/services#s"
-        className="relative px-4 py-2.5 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-blue-100/60 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
+        className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
       >
-        <span className="relative z-10 text-sm font-medium">Services</span>
+        <span className="relative z-10 text-sm font-medium text-slate-700 hover:text-slate-900">Services</span>
         <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-sky-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
       </a>
     </nav>

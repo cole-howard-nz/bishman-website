@@ -1,15 +1,14 @@
-// Mostly AI generated
 
 import { Client, Company, Project, Service, Team } from "./types";
 export const projects: Project[] = [
   {
     id: 1,
     name: "WQIP Site 6",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "May 2021",
+    finishDate: "July 2025",
     isComplete: true,
     location: "Wyndom Quarter, Auckland",
-    blurb: "Text",
+    blurb: "Site 6 marks the 3rd stage of the Wynyard Quarter Innovation Precinct (WQIP), a transformative urban regeneration initiative developed for Precinct Properties. This project continues the vision of converting former industrial land into a vibrant, future-focused hub for innovation, business, and sustainability. Bishman Ltd was proud to partner with Hawkins as the electrical contractor for this development. Our team delivered an electrical installation designed to meet the highest standards of energy efficiency and performance. Key features include DALI dimming, automated switching, daylight harvesting, and a Solar PV system targeting an annual power output of 230,000 kWh. The building is also targeting a 5-Star Green Star and NABERSNZ Base Building Energy rating.",
     images: [
       "/projects/wqip1.jpg",
       "/projects/wqip2.jpg",
@@ -19,11 +18,11 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "Munroe Lane Hub",
-    startDate: "n/a",
-    finishDate: "n/a",
-    isComplete: false,
+    startDate: "March 2021",
+    finishDate: "August 2023",
+    isComplete: true,
     location: "Albany, Auckland",
-    blurb: "Text",
+    blurb: "6-8 Munroe Lane is a premium commercial office development in Albany, featuring 1.5 basement levels and six floors of A-grade office space. Developed for Asset Plus / Centuria, the building is designed to achieve a 5-Star Green Star rating and includes integrated MCHF works for anchor tenant Auckland Council. Bishman Ltd was proud to support Icon Construction as the electrical contractor for this project. Our team delivered a full electrical installation, including an advanced Zen energy-efficient lighting control system, high-performance LED lighting throughout, and a 1600kVA standby generator integrated with a PLC control system for backup power management. This project showcases our commitment to quality, sustainability, and delivering complex electrical solutions in high-performance commercial environments.",
     images: [
       "/projects/munroe1.jpg",
       "/projects/munroe2.JPEG",
@@ -33,11 +32,11 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "University of Auckland RWC",
-    startDate: "n/a",
-    finishDate: "n/a",
-    isComplete: false,
+    startDate: "May 2021",
+    finishDate: "July 2025",
+    isComplete: true,
     location: "Symonds Street, Auckland",
-    blurb: "Text",
+    blurb: "This is a new award-winning state of the art facilitate in the heart of the University of Auckland Campus consisting of multi-level sports and wellness spaces for the University students to enjoy. The project consists of over 3000 light fittings all interfacing with a smart lighting control system which adds to the beauty of this building. This project certainly came with its challenges but in true Bishman style we produced an installation we are all very proud of and certainly meets the end Clients expectations.",
     images: [
       "/projects/uoa1.jpg",
       "/projects/uoa2.jpg",
@@ -47,9 +46,9 @@ export const projects: Project[] = [
   {
     id: 4,
     name: "Aotea Centre",
-    startDate: "n/a",
-    finishDate: "n/a",
-    isComplete: false,
+    startDate: "October 2023",
+    finishDate: "March 2025",
+    isComplete: true,
     location: "Aotea Square, Auckland",
     blurb: "Text",
     images: [
@@ -61,11 +60,11 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "135 Albert Street, EV",
-    startDate: "n/a",
-    finishDate: "n/a",
+    startDate: "April 2023",
+    finishDate: "November 2023",
     isComplete: false,
     location: "Albert Street, Auckland",
-    blurb: "Text",
+    blurb: "The levels B2/B3 EV Charger project that has been installed for the Auckland Council head office located at 135 Albert St Auckland CBD office consists of approx. 55 Schneider EV Link 7.KW EV Chargers on level B2 and approx. 62 Schneider EV Link 7.KW EV Chargers all complete with a full head end load management system to control the load required for charging such a large amount of EVs. A full new cable management system was installed to take the new cables that were required to reticulate around the existing carparking levels and a new switchboard with a mains power monitoring to interface with the load management system to assist in the control, once all installed the units were fully tested and commissioned and with the assistance of Schneider were put into use and the load management system worked well with the end Clients needs.",
     images: [
       "/projects/albert1.jpg",
       "/projects/albert2.jpg",
@@ -75,11 +74,11 @@ export const projects: Project[] = [
   {
     id: 6,
     name: "Fisher & Paykel Building 4",
-    startDate: "n/a",
-    finishDate: "n/a",
-    isComplete: false,
+    startDate: "April 2018",
+    finishDate: "December 2020",
+    isComplete: true,
     location: "East Tāmaki, Auckland",
-    blurb: "Text",
+    blurb: "Fisher & Paykel Building 4 - Electrical Installation: The electrical install for Fisher & Paykel Building 4 showcases Daniell Building's commitment to quality, innovation, and reliability. Our team delivered a tailored solution that ensures efficiency, safety, and long-term performance. At Daniell Building, we provide more than just installations. We partner with clients to deliver future-ready electrical systems that support business growth. Our expertise spans power distribution, intelligent lighting, control systems, and energy-efficient solutions, all backed by a proven track record in delivering large-scale commercial projects on time and to the highest standard.",
     images: [
       "/projects/fap1.jpg",
       "/projects/fap2.jpg",
@@ -243,15 +242,15 @@ export const team: Team[] = [
     name: "Arjun Gajanand",
     role: 'Service/Project Manager',
     email: "arjun@bishman.nz",
-    blurb: "Arjun joined Bishman in 2012. Arjun leads a team of dedicated young men in servicing and small projects. Each member of his team is self-contained regarding their ability to solve and complete problems with at times minimal supervision. All the team have vehicles so then able to respond to any emergency / call out in a speedy fashion. His team are on call 24-7 and are contacted after hours thru the main Bishman phone number. Arjun invests an incredible amount of effort into his role, which shows in the success of the department. Arjuns one down fall is that although a NZ'er he actively supports Australia in cricket, this is not appreciated within the company.",
+    blurb: "Arjun joined Bishman in 2012. Arjun leads a team of dedicated young people in servicing and small projects. Each member of his team is self-contained regarding their ability to solve and complete problems with at times minimal supervision. All the team have vehicles so then able to respond to any emergency / call out in a speedy fashion. His team are on call 24-7 and are contacted after hours thru the main Bishman phone number. Arjun invests an incredible amount of effort into his role, which shows in the success of the department. Arjuns one down fall is that although a NZ'er he actively supports Australia in cricket, this is not appreciated within the company.",
     image: '/team/default.jpg'
   },
   {
     id: 6,
-    name: "Thomas Le Mouton",
-    role: 'Project Manager',
-    email: "tom@bishman.nz",
-    blurb: "tom@bishman.nz",
+    name: "Wendy Schmidt",
+    role: 'Office Administration Manager',
+    blurb: "Wendy joined the Bisham team in 2019. Wendy is the Office Administration Manager, she organiser's all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
+    email: "wendy@bishman.nz",
     image: '/team/default.jpg'
   },
   {
@@ -259,22 +258,22 @@ export const team: Team[] = [
     name: "Dwayne Petricevich",
     role: 'Project Manager',
     email: "dwayne@bishman.nz",
-    blurb: "dwayne@bishman.nz",
+    blurb: "Dwayne began his apprenticeship with Bishman in 2009 and has steadily progressed through the company, gaining experience as a registered electrician, site supervisor, and site manager before moving into his current role as project manager. Over the past 16 years he has developed a deep understanding of commercial electrical contracting and is well regarded for his practical, hands-on approach. Dwayne has successfully delivered a wide range of projects, from complex fit-outs to large-scale builds, and his background as a registered electrical inspector ensures that compliance and quality are always at the forefront. He is a key member of the Bishman team, bringing leadership, technical expertise, and a strong focus on client outcomes to every project he manages.",
     image: '/team/default.jpg'
   },
   {
     id: 8,
-    name: "Wendy Schmidt",
-    role: 'Office Administration Manager',
-    blurb: "wendy@bishman.nz",
-    email: "wendy@bishman.nz",
+    name: "Thomas Le Mouton",
+    role: 'Project Manager',
+    email: "tom@bishman.nz",
+    blurb: "Tom began his journey with Bishman's in 2004 as a teenage apprentice and has steadily progressed to his current role as one of our Project Manager's. Over the years, he has gained extensive experience across a wide range of electrical projects, including high-profile developments such as Vector Arena, UoA School of Medicine, North Shore & Middlemore Hospital's, Silverdale Mall and more recently, Munroe Lane council Building in Albany and Precinct Property Buildings and fitout's in Wynyard Quarter. Thomas is known for his calm and friendly approach, and he thrives in collaborative environments. His dedication to learning and growth has been a key part of his success, and he remains passionate about contributing to impactful projects and fostering strong team dynamics.",
     image: '/team/default.jpg'
   },
   {
     id: 9,
     name: "Dorie Santos",
     role: 'Accounts',
-    blurb: "dorie@bishman.nz",
+    blurb: "Dorie joined Bishman in the autumn of 2013. Dorie always works to her potentials, silently, but meticulously. With more than 35 combined years of work experience in accounting, property management, hospitality industry and administration, Dorie is a key member in the accounts team and constantly happy assisting the project managers and everyone.",
     email: "dorie@bishman.nz",
     image: '/team/default.jpg'
   },
@@ -291,7 +290,7 @@ export const team: Team[] = [
     name: "Jasee Wong",
     role: 'CAD Draughting',
     email: "jasee@bishman.nz",
-    blurb: "Jasee joined Bishman in 2018. Jasee completes all the requirements of Bishman regarding CAD and any other drawing, documentation nature",
+    blurb: "Jasee Wong joined Bishman in 2018 and is our CAD Drafting Specialist. Jasee specialises in creating accurate, detailed technical drawings and collaborate with the Bishman team to ensure projects meet the highest standards. Jasee also is involved in the completing essential project handover documents, including Operations & Maintenance (O&M) manuals. Outside of work, Jasee is a cat lover and enjoys reading. Jasee is into tech and is exploring new technology to stay ahead of trends to increase efficiency.",
     image: '/team/default.jpg'
   },
 ];

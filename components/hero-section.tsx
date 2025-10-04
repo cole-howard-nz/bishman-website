@@ -16,14 +16,16 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Link href="/projects" className='absolute bottom-6 left-6 z-10'>
-        <button className='group bg-sky-400/70 hover:bg-sky-500/80 backdrop-blur-xl border border-sky-300/60 hover:border-sky-400/70 rounded-xl px-6 py-3 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-400/30 drop-shadow-[0_2px_8px_rgba(255,255,255,0.4)]'>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 rounded-xl" />
+      <Link href="/projects">
+        <button className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 border border-blue-400/20">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
           
-          <div className='relative flex items-center gap-2'>
-            <span>View what we do</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          <div className="relative flex items-center gap-2">
+            <span className="text-sm font-medium">View what we do</span>
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
           </div>
+
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-sky-400/50 to-blue-500/50 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
         </button>
       </Link>
     </section>

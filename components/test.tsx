@@ -90,7 +90,7 @@ const ResponsiveCarousel = () => {
     setScrollLeft(currentIndex);
   };
 
-  const handleMouseMove = (e: { preventDefault: () => void; pageX: number; }) => {
+  const handleMouseMove = (e: { preventDefault: () => void; pageX: any; }) => {
     if (!isDragging || itemsPerView <= 1) return;
     e.preventDefault();
     const x = e.pageX;
@@ -163,7 +163,7 @@ const ResponsiveCarousel = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 bg-gradient-to-r from-sky-800 via-slate-700 to-blue-800 bg-clip-text text-transparent">
             Some of our recent work
           </h2>
           
@@ -229,11 +229,11 @@ const ResponsiveCarousel = () => {
                       ))}
                     </div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/20 to-transparent transition-all duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-sky-100/30 via-transparent to-blue-100/30 opacity-0 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 via-blue-600/10 to-indigo-600/20 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
-                    <div className="absolute top-6 right-6 w-1 h-16 bg-gradient-to-b from-sky-400 via-blue-400 to-transparent opacity-40 group-hover:opacity-80 group-hover:h-20 transition-all duration-500" />
-                    <div className="absolute bottom-6 left-6 w-12 h-1 bg-gradient-to-r from-transparent via-blue-400 to-sky-400 opacity-0 group-hover:opacity-60 group-hover:w-16 transition-all duration-500" />
+                    <div className="absolute top-6 right-6 w-1 h-16 bg-gradient-to-b from-white via-sky-200 to-transparent opacity-70 group-hover:opacity-100 group-hover:h-20 transition-all duration-500" />
+                    <div className="absolute bottom-6 left-6 w-12 h-1 bg-gradient-to-r from-transparent via-white to-sky-200 opacity-60 group-hover:opacity-90 group-hover:w-16 transition-all duration-500" />
 
                     <div className={`absolute inset-0 flex flex-col justify-between z-10 ${
                       itemsPerView === 1 ? 'p-8 md:p-10 lg:p-12' : 'p-6 md:p-7'
@@ -252,13 +252,16 @@ const ResponsiveCarousel = () => {
                           </div>
                         </div>
 
-                        <h2 className={`text-slate-900 font-bold leading-tight drop-shadow-xl transition-all duration-300 ${
+                        <h2 className={`font-bold leading-tight transition-all duration-300 bg-gradient-to-br from-white via-sky-50 to-white bg-clip-text text-transparent ${
                           itemsPerView === 1 
                             ? 'text-3xl md:text-5xl lg:text-6xl' 
                             : itemsPerView === 2 
                               ? 'text-2xl md:text-3xl' 
                               : 'text-xl md:text-2xl'
-                        }`}>
+                        }`}
+                        style={{
+                          textShadow: '0 4px 20px rgba(255, 255, 255, 0.9), 0 2px 8px rgba(14, 165, 233, 0.4), 0 0 40px rgba(255, 255, 255, 0.3)'
+                        }}>
                           {project.name}
                         </h2>
                       </div>
@@ -266,36 +269,9 @@ const ResponsiveCarousel = () => {
                       <div className={`flex justify-between items-end ${
                         itemsPerView > 2 ? 'flex-col gap-4 items-start' : ''
                       }`}>
-                        <div 
-                          className={`hidden sm:flex gap-3 ${itemsPerView > 2 ? 'flex-col' : 'flex-wrap'}`}
-                        >
-                          {project.finishDate && project.isComplete ? (
-                            <div className='gap-3 flex flex-wrap items-end justify-end'>
-                              <div className={`bg-white/90 backdrop-blur-xl rounded-xl text-slate-700 border border-sky-200/50 flex items-center gap-2 transition-all duration-300 hover:bg-sky-50 hover:border-sky-300/60 hover:scale-105 ${
-                                itemsPerView === 1 ? 'px-4 py-3 text-sm md:text-base' : 'px-3 py-2 text-xs'
-                              }`}>
-                                <Clock size={itemsPerView === 1 ? 18 : 16} className="text-sky-500" />
-                                <span className="font-medium">Started {project.startDate}</span>
-                              </div>
-                              <div className={`bg-white/90 backdrop-blur-xl rounded-xl text-slate-700 border border-green-200/50 flex items-center gap-2 transition-all duration-300 hover:bg-green-50 hover:border-green-300/60 hover:scale-105 ${
-                                itemsPerView === 1 ? 'px-4 py-3 text-sm md:text-base' : 'px-3 py-2 text-xs'
-                              }`}>
-                                <Calendar size={itemsPerView === 1 ? 18 : 16} className="text-green-500" />
-                                <span className="font-medium">Completed {project.finishDate}</span>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className={`bg-white/90 backdrop-blur-xl rounded-xl text-slate-700 border border-blue-200/50 flex items-center gap-2 transition-all duration-300 hover:bg-blue-50 hover:border-blue-300/60 hover:scale-105 ${
-                              itemsPerView === 1 ? 'px-4 py-3 text-sm md:text-base' : 'px-3 py-2 text-xs'
-                            }`}>
-                              <Clock size={itemsPerView === 1 ? 18 : 16} className="text-blue-500" />
-                              <span className="font-medium">Started {project.startDate}</span>
-                            </div>
-                          )}
-                        </div>
-
+                        {/* Enhanced CTA Button */}
                         <a href={`/projects/${project.id}#s`}>
-                          <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-sky-200 to-sky-400 hover:from-sky-300 hover:to-sky-500 border border-sky-300/60 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-sky-300/40 rounded-2xl text-slate-900 hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${
+                          <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${
                             itemsPerView === 1 ? 'px-6 py-4 text-base md:text-lg' : 'px-5 py-3 text-sm'
                           }`}>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />
