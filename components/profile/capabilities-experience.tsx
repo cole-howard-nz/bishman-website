@@ -6,7 +6,7 @@ import { Award, Calendar } from 'lucide-react'
 const CapabilitiesExperience = () => {
   return (
     <section className='relative group'>
-      <div className="mb-8">
+      <div className="">
         <div className="flex items-center gap-3 mb-4">
           <Award className="text-sky-600" size={28} />
           <h2 className='text-slate-800 text-4xl md:text-5xl font-bold bg-clip-text'>
@@ -75,11 +75,11 @@ const CapabilitiesExperience = () => {
 
               {/* Statistics */}
               <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="text-center bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-xl px-4 py-2">
                   <div className="text-2xl font-bold text-sky-600">50+</div>
                   <div className="text-slate-600 text-sm">Years Experience</div>
                 </div>
-                <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="text-center bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-xl px-4 py-2">
                   <div className="text-2xl font-bold text-sky-600">30+</div>
                   <div className="text-slate-600 text-sm">Years as Bishman Ltd</div>
                 </div>

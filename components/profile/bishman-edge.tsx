@@ -7,7 +7,7 @@ import { ArrowRight, Building2 } from 'lucide-react'
 const BishmanEdge = () => {
   return (
     <section className='relative group'>
-      <div className="mb-8">
+      <div className="">
         <div className="flex items-center gap-3 mb-4">
           <Building2 className="text-sky-600" size={28} />
           <h2 className='text-slate-800 text-4xl md:text-5xl font-bold bg-clip-text'>
