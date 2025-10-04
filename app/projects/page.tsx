@@ -83,7 +83,7 @@ const Projects = () => {
       <div className="absolute top-20 right-32 w-2 h-40 bg-gradient-to-b from-sky-400/40 to-transparent blur-sm animate-pulse hidden lg:block" />
       <div className="absolute bottom-20 left-32 w-2 h-32 bg-gradient-to-t from-cyan-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
 
-      <div id="s" className="relative z-10 pt-32 pb-20 px-4 max-w-7xl mx-auto">
+      <div id="s" className="relative z-10 pt-32 pb-20 px-4 max-w-[90rem] mx-auto">
         {/* Header Section */}
         <div className="text-center mb-20">
           <div className="inline-block mb-6">
@@ -176,7 +176,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 justify-items-center w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {filteredProjects.map((project: Project, index: number) => (
             <div
               key={project.id}

@@ -7,7 +7,7 @@ import { ArrowRight, Briefcase, Award } from 'lucide-react'
 const OurBusiness = () => {
   return (
     <section className='relative group'>
-      <div className="mb-8">
+      <div className="">
         <div className="flex items-center gap-3 mb-4">
           <Briefcase className="text-cyan-600" size={28} />
           <h2 className='text-slate-800 text-4xl md:text-5xl font-bold'>
