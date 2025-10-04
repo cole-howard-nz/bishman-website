@@ -7,7 +7,7 @@ export const projects: Project[] = [
     startDate: "May 2021",
     finishDate: "July 2025",
     isComplete: true,
-    location: "Wyndom Quarter, Auckland",
+    location: "Wynyard Quarter, Auckland",
     blurb: "Site 6 marks the 3rd stage of the Wynyard Quarter Innovation Precinct (WQIP), a transformative urban regeneration initiative developed for Precinct Properties. This project continues the vision of converting former industrial land into a vibrant, future-focused hub for innovation, business, and sustainability. Bishman Ltd was proud to partner with Hawkins as the electrical contractor for this development. Our team delivered an electrical installation designed to meet the highest standards of energy efficiency and performance. Key features include DALI dimming, automated switching, daylight harvesting, and a Solar PV system targeting an annual power output of 230,000 kWh. The building is also targeting a 5-Star Green Star and NABERSNZ Base Building Energy rating.",
     images: [
       "/projects/wqip1.jpg",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     finishDate: "July 2025",
     isComplete: true,
     location: "Symonds Street, Auckland",
-    blurb: "This is a new award-winning state of the art facilitate in the heart of the University of Auckland Campus consisting of multi-level sports and wellness spaces for the University students to enjoy. The project consists of over 3000 light fittings all interfacing with a smart lighting control system which adds to the beauty of this building. This project certainly came with its challenges but in true Bishman style we produced an installation we are all very proud of and certainly meets the end Clients expectations.",
+    blurb: "This is a new award-winning state of the art facility in the heart of the University of Auckland Campus consisting of multi-level sports and wellness spaces for the University students to enjoy. The project consists of over 3000 light fittings all interfacing with a smart lighting control system which adds to the beauty of this building. This project certainly came with its challenges but in true Bishman style we produced an installation we are all very proud of and certainly meets the end Clients expectations.",
     images: [
       "/projects/uoa1.jpg",
       "/projects/uoa2.jpg",
