@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Clock, Calendar, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { projects } from '@/lib/temp-data';
 
 const ResponsiveCarousel = () => {
@@ -90,7 +90,7 @@ const ResponsiveCarousel = () => {
     setScrollLeft(currentIndex);
   };
 
-  const handleMouseMove = (e: { preventDefault: () => void; pageX: any; }) => {
+  const handleMouseMove = (e: { preventDefault: () => void; pageX: number; }) => {
     if (!isDragging || itemsPerView <= 1) return;
     e.preventDefault();
     const x = e.pageX;

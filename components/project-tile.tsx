@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Clock, Calendar, ArrowRight } from 'lucide-react';
+import {  ArrowRight } from 'lucide-react';
 import { Project } from '@/lib/types';
 
 interface ProjectTileProps {
