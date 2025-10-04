@@ -31,7 +31,7 @@ const CompanyCarousel = () => {
     <div className="overflow-hidden w-full">
       <motion.div
         ref={ref}
-        className="flex flex-nowrap items-center gap-8 mb-8"
+        className="flex flex-nowrap items-center gap-16"
         style={{ x: xTranslation }}
       >
         {items.map(c => (

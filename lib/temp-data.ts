@@ -293,14 +293,6 @@ export const team: Team[] = [
     blurb: "Jasee Wong joined Bishman in 2018 and is our CAD Drafting Specialist. Jasee specialises in creating accurate, detailed technical drawings and collaborate with the Bishman team to ensure projects meet the highest standards. Jasee also is involved in the completing essential project handover documents, including Operations & Maintenance (O&M) manuals. Outside of work, Jasee is a cat lover and enjoys reading. Jasee is into tech and is exploring new technology to stay ahead of trends to increase efficiency.",
     image: '/team/default.jpg'
   },
-  {
-    id: 12,
-    name: "Mark Gummer",
-    role: 'Health & Safety Manager',
-    email: "mark.g@ksm.co.nz",
-    blurb: "mark.g@ksm.co.nz",
-    image: '/team/default.jpg'
-  },
 ];
 
 
@@ -313,9 +305,9 @@ export const company: Company[] = [
   },
   {
     id: 2,
-    name: "Bishman Limited",
-    link: 'https://www.bishman.co.nz',
-    image: '/company/bishman_black.svg'
+    name: " J.A. Russell Ltd",
+    link: 'https://www.jarussell.co.nz',
+    image: '/company/ja_russell.png'
   },
   {
     id: 3,

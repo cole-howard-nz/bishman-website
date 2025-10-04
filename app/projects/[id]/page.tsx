@@ -20,7 +20,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-sky-50 to-cyan-50 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Animated particles */}
@@ -28,7 +28,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
           {Array.from({ length: 20 }, (_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-blue-400/20 rounded-full animate-pulse"
+              className="absolute w-1 h-1 bg-sky-400/30 rounded-full animate-pulse"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -40,22 +40,22 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         </div>
         
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-cyan-600/5" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-400/10 via-transparent to-cyan-400/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-100/60 via-transparent to-sky-50/40" />
       </div>
 
       {/* Floating elements */}
-      <div className="absolute top-20 right-32 w-2 h-40 bg-gradient-to-b from-blue-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
-      <div className="absolute bottom-20 left-32 w-2 h-32 bg-gradient-to-t from-cyan-400/20 to-transparent blur-sm animate-pulse hidden lg:block" />
+      <div className="absolute top-20 right-32 w-2 h-40 bg-gradient-to-b from-sky-400/40 to-transparent blur-sm animate-pulse hidden lg:block" />
+      <div className="absolute bottom-20 left-32 w-2 h-32 bg-gradient-to-t from-cyan-400/30 to-transparent blur-sm animate-pulse hidden lg:block" />
 
       <div className="relative z-10 pt-24 pb-16 px-4 max-w-7xl mx-auto">
         {/* Breadcrumb Navigation */}
         <div className="mb-12">
           <Link 
             href="/projects#s"
-            className="inline-flex items-center gap-3 text-blue-300 hover:text-blue-200 transition-all duration-300 group"
+            className="inline-flex items-center gap-3 transition-all duration-300 group"
           >
-            <div className="p-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl group-hover:bg-white/20 transition-all duration-300">
+            <div className="p-2 rounded-xl bg-white/80 border border-sky-200 backdrop-blur-xl group-hover:bg-white transition-all duration-300">
               <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform duration-300" />
             </div>
             <span className="text-lg font-medium">Back to Projects</span>
@@ -66,7 +66,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         <div id='s' className="mb-16">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
                 {project.name}
               </h1>
               
@@ -74,34 +74,34 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
               <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl backdrop-blur-xl border text-white font-semibold shadow-lg transition-all duration-300 ${
                 project.isComplete 
                   ? 'bg-gradient-to-r from-green-600/80 to-emerald-600/80 border-green-400/50 shadow-green-500/20' 
-                  : 'bg-gradient-to-r from-blue-600/80 to-cyan-600/80 border-blue-400/50 shadow-blue-500/20'
+                  : 'bg-gradient-to-r from-sky-600/80 to-cyan-600/80 border-sky-400/50 shadow-sky-500/20'
               }`}>
                 {project.isComplete ? (
                   <CheckCircle2 size={20} className="text-green-300" />
                 ) : (
-                  <Clock3 size={20} className="text-blue-300" />
+                  <Clock3 size={20} className="text-sky-300" />
                 )}
                 <span>{project.isComplete ? 'PROJECT COMPLETED' : 'IN PROGRESS'}</span>
-                <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-300' : 'bg-blue-300'}`} />
+                <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-300' : 'bg-sky-300'}`} />
               </div>
             </div>
 
             {/* Project Metadata */}
             <div className="flex flex-wrap gap-3">
-              <div className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-xl text-slate-200 hover:bg-white/20 transition-all duration-300">
-                <Clock size={18} className="text-blue-300" />
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/80 border border-sky-200 rounded-xl backdrop-blur-xl text-slate-700 hover:bg-white transition-all duration-300">
+                <Clock size={18} className="text-sky-600" />
                 <span className="font-medium">{project.startDate}</span>
               </div>
               
               {project.finishDate && project.isComplete && (
-                <div className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-xl text-slate-200 hover:bg-white/20 transition-all duration-300">
-                  <Calendar size={18} className="text-green-300" />
+                <div className="flex items-center gap-2 px-4 py-3 bg-white/80 border border-sky-200 rounded-xl backdrop-blur-xl text-slate-700 hover:bg-white transition-all duration-300">
+                  <Calendar size={18} className="text-green-600" />
                   <span className="font-medium">{project.finishDate}</span>
                 </div>
               )}
               
-              <div className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-xl backdrop-blur-xl text-slate-200 hover:bg-white/20 transition-all duration-300">
-                <MapPin size={18} className="text-cyan-300" />
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/80 border border-sky-200 rounded-xl backdrop-blur-xl text-slate-700 hover:bg-white transition-all duration-300">
+                <MapPin size={18} className="text-cyan-600" />
                 <span className="font-medium">{project.location}</span>
               </div>
             </div>
@@ -109,11 +109,11 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
 
           {/* Animated divider */}
           <div className="flex justify-center items-center gap-4 mb-12">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent to-blue-400/50" />
-            <div className="w-3 h-3 bg-blue-400/30 rounded-full animate-pulse" />
-            <div className="w-32 h-px bg-gradient-to-r from-blue-400/50 to-blue-400/20" />
-            <div className="w-2 h-2 bg-cyan-400/40 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent to-blue-400/50" />
+            <div className="w-20 h-px bg-gradient-to-r from-transparent to-sky-400" />
+            <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
+            <div className="w-32 h-px bg-gradient-to-r from-sky-400 to-sky-300" />
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent to-sky-400" />
           </div>
         </div>
 
@@ -121,7 +121,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         <div className="mb-16 space-y-6">
           {/* Main Image */}
           {project.images && project.images[0] && (
-            <div className="group relative overflow-hidden rounded-3xl border border-white/20 backdrop-blur-xl shadow-2xl">
+            <div className="group relative overflow-hidden rounded-3xl border border-sky-200 backdrop-blur-xl shadow-2xl">
               <div className="aspect-[16/9] lg:aspect-[21/9] relative">
                 <Image
                   src={project.images[0]}
@@ -140,7 +140,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
               {project.images.slice(1, 4).map((img, idx) => (
                 <div
                   key={idx}
-                  className="group relative overflow-hidden rounded-2xl border border-white/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="group relative overflow-hidden rounded-2xl border border-sky-200 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="aspect-[4/3] relative">
@@ -161,51 +161,51 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         {/* Project Description */}
         <div className="relative">
           {/* Background card */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-blue-500/5 to-cyan-500/5 rounded-3xl border border-white/20 backdrop-blur-2xl shadow-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-sky-50/50 to-cyan-50/50 rounded-3xl border border-sky-200 backdrop-blur-2xl shadow-2xl" />
           
           {/* Decorative elements */}
-          <div className="absolute top-6 right-6 w-1 h-20 bg-gradient-to-b from-blue-400 to-cyan-400 opacity-30 rounded-full" />
-          <div className="absolute bottom-6 left-6 w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-30 rounded-full" />
+          <div className="absolute top-6 right-6 w-1 h-20 bg-gradient-to-b from-sky-400 to-cyan-400 opacity-30 rounded-full" />
+          <div className="absolute bottom-6 left-6 w-20 h-1 bg-gradient-to-r from-sky-400 to-cyan-400 opacity-30 rounded-full" />
           
           <div className="relative p-8 md:p-12 lg:p-16">
             <div className="mb-8">
               <div className="inline-block mb-6">
-                <span className="text-blue-400/80 text-sm font-medium tracking-wider uppercase bg-blue-400/10 px-4 py-2 rounded-full border border-blue-400/20">
+                <span className="text-sky-700 text-sm font-medium tracking-wider uppercase bg-sky-100 px-4 py-2 rounded-full border border-sky-300">
                   Project Overview
                 </span>
               </div>
               
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6 leading-relaxed">
                 About This Project
               </h2>
             </div>
 
-            <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-slate-200 text-lg md:text-xl leading-relaxed font-light">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 text-lg md:text-xl leading-relaxed font-light">
                 {project.blurb}
               </p>
             </div>
 
             {/* Project Details Grid */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-                <Clock size={24} className="text-blue-400 mb-4" />
-                <h3 className="text-white font-semibold mb-2">Start Date</h3>
-                <p className="text-slate-300">{project.startDate}</p>
+              <div className="p-6 bg-white/50 rounded-2xl border border-sky-200 backdrop-blur-xl hover:bg-white/80 transition-all duration-300">
+                <Clock size={24} className="text-sky-600 mb-4" />
+                <h3 className="text-slate-800 font-semibold mb-2">Start Date</h3>
+                <p className="text-slate-600">{project.startDate}</p>
               </div>
               
               {project.finishDate && project.isComplete && (
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-                  <Calendar size={24} className="text-green-400 mb-4" />
-                  <h3 className="text-white font-semibold mb-2">Completion Date</h3>
-                  <p className="text-slate-300">{project.finishDate}</p>
+                <div className="p-6 bg-white/50 rounded-2xl border border-sky-200 backdrop-blur-xl hover:bg-white/80 transition-all duration-300">
+                  <Calendar size={24} className="text-green-600 mb-4" />
+                  <h3 className="text-slate-800 font-semibold mb-2">Completion Date</h3>
+                  <p className="text-slate-600">{project.finishDate}</p>
                 </div>
               )}
               
-              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-                <MapPin size={24} className="text-cyan-400 mb-4" />
-                <h3 className="text-white font-semibold mb-2">Location</h3>
-                <p className="text-slate-300">{project.location}</p>
+              <div className="p-6 bg-white/50 rounded-2xl border border-sky-200 backdrop-blur-xl hover:bg-white/80 transition-all duration-300">
+                <MapPin size={24} className="text-cyan-600 mb-4" />
+                <h3 className="text-slate-800 font-semibold mb-2">Location</h3>
+                <p className="text-slate-600">{project.location}</p>
               </div>
             </div>
           </div>
@@ -215,9 +215,9 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         <div className="mt-16 text-center">
           <Link 
             href="/projects#s"
-            className="inline-flex items-center gap-3 text-blue-300 hover:text-blue-200 transition-all duration-300 group"
+            className="inline-flex items-center gap-3 transition-all duration-300 group"
           >
-            <div className="p-2 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl group-hover:bg-white/20 transition-all duration-300">
+            <div className="p-2 rounded-xl bg-white/80 border border-sky-200 backdrop-blur-xl group-hover:bg-white transition-all duration-300">
               <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform duration-300" />
             </div>
             <span className="text-lg font-medium">Back to Projects</span>

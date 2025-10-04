@@ -33,7 +33,7 @@ const CarouselCard = ({ company }: CarouselCardProps) => {
       <AnimatePresence>
         {showOverlay && (
           <motion.div
-            className="absolute inset-0 z-10 flex justify-center items-center p-2"
+            className="absolute inset-0 z-10 flex justify-center items-center p-2 top-32"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
