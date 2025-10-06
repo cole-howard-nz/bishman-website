@@ -299,9 +299,15 @@ export const team: Team[] = [
 export const company: Company[] = [
   {
     id: 1,
-    name: "Bishman Limited",
-    link: 'https://www.bishman.co.nz',
-    image: '/company/bishman_black.svg'
+    name: "Zumtobel",
+    link: 'https://www.zumtobel.com/com-en/index.html',
+    image: '/company/ZUM.gif'
+  },
+  {
+    id: 2,
+    name: "OSL Data",
+    link: 'https://osldata.co.nz',
+    image: '/company/OSL.png'
   },
   {
     id: 2,
@@ -311,19 +317,26 @@ export const company: Company[] = [
   },
   {
     id: 3,
-    name: "Bishman Limited",
-    link: 'https://www.bishman.co.nz',
-    image: '/company/bishman_black.svg'
+    name: "legrand",
+    link: 'https://www.legrand.com/en',
+    image: '/company/legrand.png'
   },
   {
     id: 4,
-    name: "Bishman Limited",
-    link: 'https://www.bishman.co.nz',
-    image: '/company/bishman_black.svg'
-  },{
+    name: "LECO",
+    link: 'https://www.lecoswitchgear.co.nz',
+    image: '/company/LECO.png'
+  },
+  {
     id: 5,
-    name: "Bishman Limited",
-    link: 'https://www.bishman.co.nz',
-    image: '/company/bishman_black.svg'
-  }
+    name: "BDR",
+    link: 'https://www.bdrsecurity.co.nz',
+    image: '/company/BDR.avif'
+  },
+  {
+    id: 6,
+    name: "Atkore",
+    link: 'https://atkore.com',
+    image: '/company/atkore.png'
+  },
 ]
