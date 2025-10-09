@@ -1,27 +1,15 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Zap, ArrowRight, Mail, Clock, Wrench, CheckCircle } from 'lucide-react';
+import { Zap, Clock, Wrench, CheckCircle } from 'lucide-react';
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 200);
     return () => clearTimeout(timer);
   }, []);
-
-  const handleSubmit = () => {
-    if (email && email.includes('@')) {
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setEmail('');
-      }, 3000);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-sky-50 to-cyan-50 relative overflow-hidden">
@@ -110,7 +98,7 @@ const Services = () => {
 
               {/* Description */}
               <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">
-                We're crafting something special to showcase our comprehensive electrical services. 
+                We&apos;re crafting something special to showcase our comprehensive electrical services. 
               </p>
 
               {/* Features Preview */}
