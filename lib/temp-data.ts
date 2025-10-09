@@ -210,7 +210,7 @@ export const team: Team[] = [
     name: "Dean Penney",
     role: 'General Manager / Director',
     email: 'dean@bishman.nz',
-    blurb: "Dean joined the company in 2018 and has taken responsibility for the dayto-day management of Bishman. Dean has a strong background in quantity surveying and has over 30 years industry experience working with several building companies. Dean brings a proven knowledge of project and cost management, tendering, administration, and support with him which is invaluable to the company. He is actively involved with Master Electricians.",
+    blurb: "Dean joined Bishman in 2018 as General Manager, overseeing day-to-day operations. With over 30 years of industry experience and expertise in quantity surveying, project management, and operational leadership, he drives the company's continued success.",
     image: '/team/default.jpg'
   },
   {
@@ -218,7 +218,7 @@ export const team: Team[] = [
     name: "Russell Howard",
     role: 'Commercial Manager / Director',
     email: 'russ@bishman.nz',
-    blurb: "Russ started with Bishman in 1992 when the company was established. Russ maintains a “hands on” style of management and is well versed in the field of electrical contracting. His experienced approach has assisted in the success of many major projects including the Auckland City Hospital, Vector Arena and the Auckland University Medical School. Recently he completed the National bio lab project in Wellington which ran for an incredible 5 years. Russ is a key member of the Bishman team. He now heads our commercial team and is responsible for all estimation and Design department and is responsible for all tenders, budgets, consultant peer reviews and electrical design. With over 30 years’ experience running Projects.",
+    blurb: "Russ has been with Bishman since 1992 and leads the commercial team, overseeing estimation, design, tenders, budgets, and electrical design. With over 30 years of experience, he has delivered major projects such as Auckland City Hospital, Vector Arena, and the National Bio Lab.",
     image: '/team/dad.jpg'
   },
   {
@@ -226,30 +226,30 @@ export const team: Team[] = [
     name: "Regan Caldwell",
     role: 'Contracts Manager',
     email: 'regan@bishman.nz',
-    blurb: "Regan has the distinction of being Bishman's first apprentice qualifying for Registration in 1998. After a period of 7 years in Australia gaining invaluable experience, he returned to NZ and become our 3rd Project Manager. His indepth knowledge of contracting procedures has been put to good use in the successful completion of Data centre projects Ra Ora (for IBM) and Forrester (for ANZ). Regan led our Joint Venture interests. He was also the lead in the rollout of UPS and data services for 164 Countdown stores throughout the North & South Islands. Regan has since completed many projects with high praise from builders and clients. Regan is very technical minded and has a high level of expertise in most fields. If he doesn't know about it, he will make a purpose to track it down and understand the method and workings. Regan as later become vice president of Maste Electrician's. Regan has now just become our first ever Contract Manager with the role now overseeing and assisting the business",
-    image: '/team/default.jpg'
+    blurb: "Regan was Bishman's first registered apprentice in 1998. After gaining experience in Australia, he returned as Project Manager, delivering projects including Ra Ora and Forrester Data Centres and overseeing the rollout of UPS and data services to 164 Countdown stores. He is now Bishman's first Contract Manager and Vice President of Master Electricians.",
+    image: '/team/regan.png'
   },
   {
     id: 4,
     name: "Spencer Snell",
     role: 'Estimator',
     email: 'spencer@bishman.nz',
-    blurb: "Spencer joined Bishman in 2003. He very quickly displayed potential for advancement and became Bishman's 4th Project Manager in 2011. Spencer's first project was the complex construction of the ASB Bank's HQ at North Wharf in Auckland's Wynyard Quarter. This project won the prestigious Master Electricians Powerbase Major Project Award, the Philips Lighting Award and the ETCO Master Electricians Excellence Award for the best overall project in New Zealand for 2015. Spencer was also involved in the Forrester Data Centre for ANZ. He completed the new medical manufacturing facility for F&P in Auckland, this won high notability within the industry, with the standard being of the highest possible. Spencer is an avid user of any spreadsheet and schedule document to monitor and gauge project progress and success. This allows him to track any item within any project, this allows huge visibility and control of the project. Spencer has now joined Russ in the commercial team",
+    blurb: "Spencer joined Bishman in 2003 and became the fourth Project Manager in 2011. He has led award-winning projects including ASB Bank HQ, F&P Medical Manufacturing Facility, and the Forrester Data Centre for ANZ. He now contributes to the commercial team, supporting estimation, design, and project oversight.",
     image: '/team/default.jpg'
   },
   {
     id: 5,
     name: "Arjun Gajanand",
-    role: 'Service/Project Manager',
+    role: 'Service & Project Manager',
     email: "arjun@bishman.nz",
-    blurb: "Arjun joined Bishman in 2012. Arjun leads a team of dedicated young people in servicing and small projects. Each member of his team is self-contained regarding their ability to solve and complete problems with at times minimal supervision. All the team have vehicles so then able to respond to any emergency / call out in a speedy fashion. His team are on call 24-7 and are contacted after hours thru the main Bishman phone number. Arjun invests an incredible amount of effort into his role, which shows in the success of the department. Arjuns one down fall is that although a NZ'er he actively supports Australia in cricket, this is not appreciated within the company.",
+    blurb: "Arjun joined Bishman in 2012 and leads a team of skilled service and project professionals. His team operates 24/7, responding quickly to emergencies, and consistently delivers high-quality results. Arjun's dedication and leadership have been key to the department's success.",
     image: '/team/default.jpg'
   },
   {
     id: 6,
     name: "Wendy Schmidt",
     role: 'Office Administration Manager',
-    blurb: "Wendy joined the Bisham team in 2019. Wendy is the Office Administration Manager, she organiser's all accounts and works along her team in the main office. Wendy is the conduit between the technical team and the administration of the business, organising items and consulting with the Directors, Managers and staff throughout the company dealing with all aspects of the business.",
+    blurb: "Wendy joined Bishman in 2019 as Office Administration Manager. She oversees accounts, coordinates administrative functions, and ensures smooth communication between teams, Directors, and staff, playing a vital role in the company's operations.",
     email: "wendy@bishman.nz",
     image: '/team/default.jpg'
   },
@@ -273,7 +273,7 @@ export const team: Team[] = [
     id: 9,
     name: "Dorie Santos",
     role: 'Accounts',
-    blurb: "Dorie joined Bishman in the autumn of 2013. Dorie always works to her potentials, silently, but meticulously. With more than 35 combined years of work experience in accounting, property management, hospitality industry and administration, Dorie is a key member in the accounts team and constantly happy assisting the project managers and everyone.",
+    blurb: "Dorie has been a valued member of Bishman's accounts team since 2013. With over 35 years of experience in accounting, property management, hospitality, and administration, she provides essential support to project managers and colleagues, ensuring efficient operations.",
     email: "dorie@bishman.nz",
     image: '/team/default.jpg'
   },
@@ -282,7 +282,7 @@ export const team: Team[] = [
     name: "Gerry Boniface",
     role: 'Administration',
     email: "gerry@bishman.nz",
-    blurb: "Gerry joined Bishman in 2020. Gerry handles numerus jobs from all parties within the office. She is instrumental in the pastel care of the apprentices, with constant contact with them and the training parties. Gerry also assists Wendy in the general account areas and give assistance to Arjun with his constant invoicing",
+    blurb: "Gerry joined Bishman in 2020 and supports the office team across accounts, invoicing, and apprentice care. Her versatility and dedication ensure smooth operations and strong support for both staff and project teams.",
     image: '/team/default.jpg'
   },
   {
@@ -290,7 +290,7 @@ export const team: Team[] = [
     name: "Jasee Wong",
     role: 'CAD Draughting',
     email: "jasee@bishman.nz",
-    blurb: "Jasee Wong joined Bishman in 2018 and is our CAD Drafting Specialist. Jasee specialises in creating accurate, detailed technical drawings and collaborate with the Bishman team to ensure projects meet the highest standards. Jasee also is involved in the completing essential project handover documents, including Operations & Maintenance (O&M) manuals. Outside of work, Jasee is a cat lover and enjoys reading. Jasee is into tech and is exploring new technology to stay ahead of trends to increase efficiency.",
+    blurb: "Jasee Wong joined Bishman in 2018 as CAD Drafting Specialist. He produces precise technical drawings, prepares essential project documentation, and leverages emerging technologies to enhance project efficiency and quality.",
     image: '/team/default.jpg'
   },
 ];
@@ -301,7 +301,7 @@ export const company: Company[] = [
     id: 1,
     name: "Zumtobel",
     link: 'https://www.zumtobel.com/com-en/index.html',
-    image: '/company/ZUM.gif'
+    image: '/company/ZUM.png'
   },
   {
     id: 2,
@@ -338,5 +338,29 @@ export const company: Company[] = [
     name: "Atkore",
     link: 'https://atkore.com',
     image: '/company/atkore.png'
+  },
+  {
+    id: 7,
+    name: "Intelligent Environments",
+    link: 'https://www.intelligentenvironments.co.nz',
+    image: '/company/IE.png'
+  },
+  {
+    id: 8,
+    name: "Mechanical Support Systems",
+    link: 'https://www.mechanicalsupport.co.nz',
+    image: '/company/MSS.png'
+  },
+  {
+    id: 9,
+    name: "CMS Electra",
+    link: 'https://cmselectra.com/nz',
+    image: '/company/CMS.png'
+  },
+  {
+    id: 10,
+    name: "Direct Control",
+    link: 'https://www.directcontrol.nz/?utm_source=bishman_website&utm_medium=partner_logo',
+    image: '/company/DC.png'
   },
 ]

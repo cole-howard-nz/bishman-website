@@ -119,7 +119,7 @@ const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
                   <div className="relative">
                     <DialogHeader className="text-center pb-6 border-b border-sky-200">
                       <div className="flex justify-center mb-4">
-                        <div className="w-20 h-20 relative rounded-2xl overflow-hidden border-2 border-sky-200">
+                        <div className="w-36 h-36 relative rounded-2xl overflow-hidden border-2 border-sky-200">
                           <Image
                             src={member.image}
                             fill
@@ -128,8 +128,8 @@ const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
                           />
                         </div>
                       </div>
-                      <DialogTitle className='text-slate-800 text-2xl font-bold mb-2'>{member.name}</DialogTitle>
-                      <DialogDescription className='text-slate-600 text-lg'>
+                      <DialogTitle className='text-slate-800 text-2xl text-center font-bold mb-2'>{member.name}</DialogTitle>
+                      <DialogDescription className='text-slate-600 text-center text-lg'>
                         {member.role}
                       </DialogDescription>
                       <div className="flex items-center justify-center gap-2 mt-2">
