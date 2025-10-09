@@ -29,14 +29,6 @@ const Profile = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-4">
             About Bishman
           </h1>
-
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-sky-400" />
-            <div className="w-2 h-2 bg-sky-500 rounded-full" />
-            <div className="w-24 h-px bg-sky-400" />
-            <div className="w-2 h-2 bg-cyan-400 rounded-full" />
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-sky-400" />
-          </div>
         </div>
 
         <BishmanEdge />

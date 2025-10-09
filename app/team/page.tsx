@@ -49,15 +49,6 @@ const Team = () => {
             These are the passionate individuals behind the Bishman name. From design to development,
             strategy to support, our team works together to build impactful solutions every day.
           </p>
-
-          {/* Animated divider */}
-          <div className="flex justify-center items-center gap-4 mt-12">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-sky-400" />
-            <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-            <div className="w-24 h-px bg-gradient-to-r from-sky-400 to-sky-300" />
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-sky-400" />
-          </div>
         </div>
 
         {/* Team Grid */}

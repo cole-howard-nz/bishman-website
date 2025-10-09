@@ -38,7 +38,7 @@ const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative bg-white/5 backdrop-blur-xl border-2 border-sky-200/50 rounded-3xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 shadow-lg shadow-slate-200 hover:shadow-2xl hover:shadow-sky-500/20 overflow-hidden">
+      <div className="relative bg-white/5 backdrop-blur-xl border-2 border-sky-400/20 rounded-3xl p-8 hover:border-sky-400/40 hover:border-slate/10 transition-all duration-500 hover:scale-105 shadow-lg shadow-slate-200 hover:shadow-2xl hover:shadow-sky-500/20 overflow-hidden">
         {/* Animated background effects */}
         <div className="absolute inset-0 rounded-3xl overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-500/10 to-cyan-500/5 rounded-full blur-3xl transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-700" />
@@ -119,7 +119,7 @@ const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
                   <div className="relative">
                     <DialogHeader className="text-center pb-6 border-b border-sky-200">
                       <div className="flex justify-center mb-4">
-                        <div className="w-20 h-20 relative rounded-2xl overflow-hidden border-2 border-sky-200">
+                        <div className="w-36 h-36 relative rounded-2xl overflow-hidden border-2 border-sky-200">
                           <Image
                             src={member.image}
                             fill
@@ -128,8 +128,8 @@ const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
                           />
                         </div>
                       </div>
-                      <DialogTitle className='text-slate-800 text-2xl font-bold mb-2'>{member.name}</DialogTitle>
-                      <DialogDescription className='text-slate-600 text-lg'>
+                      <DialogTitle className='text-slate-800 text-2xl text-center font-bold mb-2'>{member.name}</DialogTitle>
+                      <DialogDescription className='text-slate-600 text-center text-lg'>
                         {member.role}
                       </DialogDescription>
                       <div className="flex items-center justify-center gap-2 mt-2">

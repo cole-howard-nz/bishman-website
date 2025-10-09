@@ -99,15 +99,6 @@ const Projects = () => {
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-8">
           </p>
 
-          {/* Animated divider */}
-          <div className="flex justify-center items-center gap-4 mt-12 mb-12">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-sky-400" />
-            <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-            <div className="w-24 h-px bg-gradient-to-r from-sky-400 to-sky-300" />
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-sky-400" />
-          </div>
-
           {/* Search and Filter Section */}
           <div className="mb-8">
             <div className="flex lg:flex-row gap-4 items-center justify-center max-w-2xl mx-auto">

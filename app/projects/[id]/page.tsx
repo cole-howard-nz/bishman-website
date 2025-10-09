@@ -106,15 +106,6 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
               </div>
             </div>
           </div>
-
-          {/* Animated divider */}
-          <div className="flex justify-center items-center gap-4 mb-12">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent to-sky-400" />
-            <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-            <div className="w-32 h-px bg-gradient-to-r from-sky-400 to-sky-300" />
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent to-sky-400" />
-          </div>
         </div>
 
         {/* Project Images */}
