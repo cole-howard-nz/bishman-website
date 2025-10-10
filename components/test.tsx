@@ -169,16 +169,6 @@ const ResponsiveCarousel = () => {
           
           <p className="text-slate-600 max-w-4xl mx-auto text-lg leading-relaxed mb-8">
           </p>
-
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-sky-300/70" />
-            <div className="flex gap-2">
-              <div className="w-2 h-2 bg-sky-300/50 rounded-full animate-pulse" />
-              <div className="w-3 h-3 bg-sky-400/60 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }} />
-              <div className="w-2 h-2 bg-blue-300/50 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }} />
-            </div>
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-blue-300/70" />
-          </div>
         </div>
       </div>
 
