@@ -227,7 +227,7 @@ export const team: Team[] = [
     role: 'Contracts Manager',
     email: 'regan@bishman.nz',
     blurb: "Regan was Bishman's first registered apprentice in 1998. After gaining experience in Australia, he returned as Project Manager, delivering projects including Ra Ora and Forrester Data Centres and overseeing the rollout of UPS and data services to 164 Countdown stores. He is now Bishman's first Contract Manager and Vice President of Master Electricians.",
-    image: '/team/regan.png'
+    image: '/team/default.jpg'
   },
   {
     id: 4,
@@ -341,13 +341,13 @@ export const company: Company[] = [
   },
   {
     id: 7,
-    name: "Intelligent Environments",
+    name: "IE",
     link: 'https://www.intelligentenvironments.co.nz',
     image: '/company/IE.png'
   },
   {
     id: 8,
-    name: "Mechanical Support Systems",
+    name: "MSS",
     link: 'https://www.mechanicalsupport.co.nz',
     image: '/company/MSS.png'
   },
