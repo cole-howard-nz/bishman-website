@@ -305,9 +305,9 @@ export const company: Company[] = [
   },
   {
     id: 2,
-    name: "OSL Data",
-    link: 'https://osldata.co.nz',
-    image: '/company/OSL.png'
+    name: "Steve McVeigh",
+    link: '',
+    image: '/company/temp.png'
   },
   {
     id: 2,
@@ -317,9 +317,9 @@ export const company: Company[] = [
   },
   {
     id: 3,
-    name: "legrand",
-    link: 'https://www.legrand.com/en',
-    image: '/company/legrand.png'
+    name: "Steve McVeigh",
+    link: '',
+    image: '/company/temp.png'
   },
   {
     id: 4,
@@ -329,9 +329,9 @@ export const company: Company[] = [
   },
   {
     id: 5,
-    name: "BDR",
-    link: 'https://www.bdrsecurity.co.nz',
-    image: '/company/BDR.avif'
+    name: "Steve McVeigh",
+    link: '',
+    image: '/company/temp.png'
   },
   {
     id: 6,
@@ -341,9 +341,9 @@ export const company: Company[] = [
   },
   {
     id: 7,
-    name: "IE",
-    link: 'https://www.intelligentenvironments.co.nz',
-    image: '/company/IE.png'
+    name: "Steve McVeigh",
+    link: '',
+    image: '/company/temp.png'
   },
   {
     id: 8,
@@ -353,9 +353,9 @@ export const company: Company[] = [
   },
   {
     id: 9,
-    name: "CMS Electra",
-    link: 'https://cmselectra.com/nz',
-    image: '/company/CMS.png'
+    name: "Steve McVeigh",
+    link: '',
+    image: '/company/temp.png'
   },
   {
     id: 10,

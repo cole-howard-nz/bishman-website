@@ -20,7 +20,7 @@ const CompanyCarousel = () => {
     // Animate through exactly one complete set, then loop
     const controls = animate(xTranslation, [0, -oneSetWidth], {
       ease: 'linear',
-      duration: 60,    
+      duration: 200,    
       repeat: Infinity,
       repeatType: 'loop',
       repeatDelay: 0
@@ -51,7 +51,7 @@ const CompanyCarousel = () => {
           </p>
         </div>
       </div>
-      <div className="overflow-w-full">
+      <div className="overflow-hidden w-full">
         <motion.div
           ref={ref}
           className="flex flex-nowrap items-center gap-16"
