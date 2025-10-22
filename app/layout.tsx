@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased py-2 overflow-x-hidden m-auto text-[#1c1d1f] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 flex flex-col min-h-screen`}>
+      <body className={`${geistSans.className} antialiased py-2 overflow-x-hidden m-auto text-[#1c1d1f] bg-gradient-to-br from-blue-50 via-sky-100 to-white flex flex-col min-h-screen`}>
         <section className="w-[98dvw] m-auto">
           <HeroSection />
           <section className='flex-grow my-4'>
