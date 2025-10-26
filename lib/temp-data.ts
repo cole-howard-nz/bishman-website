@@ -211,7 +211,7 @@ export const team: Team[] = [
     role: 'General Manager / Director',
     email: 'dean@bishman.nz',
     blurb: "Dean joined Bishman in 2018 as General Manager, overseeing day-to-day operations. With over 30 years of industry experience and expertise in quantity surveying, project management, and operational leadership, he drives the company's continued success.",
-    image: '/team/default.jpg'
+    image: '/team/dean.jpg'
   },
   {
     id: 2,
@@ -219,7 +219,7 @@ export const team: Team[] = [
     role: 'Commercial Manager / Director',
     email: 'russ@bishman.nz',
     blurb: "Russ has been with Bishman since 1992 and leads the commercial team, overseeing estimation, design, tenders, budgets, and electrical design. With over 30 years of experience, he has delivered major projects such as Auckland City Hospital, Vector Arena, and the National Bio Lab.",
-    image: '/team/dad.jpg'
+    image: '/team/russell.jpg'
   },
   {
     id: 3,
@@ -227,7 +227,7 @@ export const team: Team[] = [
     role: 'Contracts Manager',
     email: 'regan@bishman.nz',
     blurb: "Regan was Bishman's first registered apprentice in 1998. After gaining experience in Australia, he returned as Project Manager, delivering projects including Ra Ora and Forrester Data Centres and overseeing the rollout of UPS and data services to 164 Countdown stores. He is now Bishman's first Contract Manager and Vice President of Master Electricians.",
-    image: '/team/default.jpg'
+    image: '/team/regan.jpg'
   },
   {
     id: 4,
@@ -235,7 +235,7 @@ export const team: Team[] = [
     role: 'Estimator',
     email: 'spencer@bishman.nz',
     blurb: "Spencer joined Bishman in 2003 and became the fourth Project Manager in 2011. He has led award-winning projects including ASB Bank HQ, F&P Medical Manufacturing Facility, and the Forrester Data Centre for ANZ. He now contributes to the commercial team, supporting estimation, design, and project oversight.",
-    image: '/team/default.jpg'
+    image: '/team/spencer.jpg'
   },
   {
     id: 5,
@@ -243,7 +243,7 @@ export const team: Team[] = [
     role: 'Service & Project Manager',
     email: "arjun@bishman.nz",
     blurb: "Arjun joined Bishman in 2012 and leads a team of skilled service and project professionals. His team operates 24/7, responding quickly to emergencies, and consistently delivers high-quality results. Arjun's dedication and leadership have been key to the department's success.",
-    image: '/team/default.jpg'
+    image: '/team/arjun.jpg'
   },
   {
     id: 6,
@@ -259,7 +259,7 @@ export const team: Team[] = [
     role: 'Project Manager',
     email: "dwayne@bishman.nz",
     blurb: "Dwayne began his apprenticeship with Bishman in 2009 and has steadily progressed through the company, gaining experience as a registered electrician, site supervisor, and site manager before moving into his current role as project manager. Over the past 16 years he has developed a deep understanding of commercial electrical contracting and is well regarded for his practical, hands-on approach. Dwayne has successfully delivered a wide range of projects, from complex fit-outs to large-scale builds, and his background as a registered electrical inspector ensures that compliance and quality are always at the forefront. He is a key member of the Bishman team, bringing leadership, technical expertise, and a strong focus on client outcomes to every project he manages.",
-    image: '/team/default.jpg'
+    image: '/team/dwayne.jpg'
   },
   {
     id: 8,
@@ -267,7 +267,7 @@ export const team: Team[] = [
     role: 'Project Manager',
     email: "tom@bishman.nz",
     blurb: "Tom began his journey with Bishman's in 2004 as a teenage apprentice and has steadily progressed to his current role as one of our Project Manager's. Over the years, he has gained extensive experience across a wide range of electrical projects, including high-profile developments such as Vector Arena, UoA School of Medicine, North Shore & Middlemore Hospital's, Silverdale Mall and more recently, Munroe Lane council Building in Albany and Precinct Property Buildings and fitout's in Wynyard Quarter. Thomas is known for his calm and friendly approach, and he thrives in collaborative environments. His dedication to learning and growth has been a key part of his success, and he remains passionate about contributing to impactful projects and fostering strong team dynamics.",
-    image: '/team/default.jpg'
+    image: '/team/thomas.jpg'
   },
   {
     id: 9,
@@ -275,7 +275,7 @@ export const team: Team[] = [
     role: 'Accounts',
     blurb: "Dorie has been a valued member of Bishman's accounts team since 2013. With over 35 years of experience in accounting, property management, hospitality, and administration, she provides essential support to project managers and colleagues, ensuring efficient operations.",
     email: "dorie@bishman.nz",
-    image: '/team/default.jpg'
+    image: '/team/dorie.jpg'
   },
   {
     id: 10,
@@ -283,15 +283,15 @@ export const team: Team[] = [
     role: 'Administration',
     email: "gerry@bishman.nz",
     blurb: "Gerry joined Bishman in 2020 and supports the office team across accounts, invoicing, and apprentice care. Her versatility and dedication ensure smooth operations and strong support for both staff and project teams.",
-    image: '/team/default.jpg'
+    image: '/team/gerry.jpg'
   },
   {
     id: 11,
     name: "Jasee Wong",
     role: 'CAD Draughting',
     email: "jasee@bishman.nz",
-    blurb: "Jasee Wong joined Bishman in 2018 as CAD Drafting Specialist. He produces precise technical drawings, prepares essential project documentation, and leverages emerging technologies to enhance project efficiency and quality.",
-    image: '/team/default.jpg'
+    blurb: "Jasee Wong joined Bishman in 2018 as CAD Drafting Specialist. She produces precise technical drawings, prepares essential project documentation, and leverages emerging technologies to enhance project efficiency and quality.",
+    image: '/team/jasee.jpg'
   },
 ];
 
