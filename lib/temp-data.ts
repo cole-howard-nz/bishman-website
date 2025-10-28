@@ -50,7 +50,7 @@ export const projects: Project[] = [
     finishDate: "March 2025",
     isComplete: true,
     location: "Aotea Square, Auckland",
-    blurb: "Text",
+    blurb: "The Aotea Centre Ribbon Lighting Project was a project that consists of approx. 480 individual colour changing LED strip lights all DMX controlled to create all sorts of light sequences on the newly installed white aluminum fins that stand tall above the front of the Aotea Centre. All light cables were home runs back to approx. 12 control chambers that sit on the roof of the Aotea Centre, this was a challenge as the panels required to be non visible when stood in front of the Aotea Centre. All works and the full installation was outside, so everything had to be perfect and suitable for the outdoor conditions. The Client was very happy with the final results, the colour changing LEDS illuminate/feature most nights outside of the Aotea Centre.",
     images: [
       "/projects/aotea1.jpg",
       "/projects/aotea2.jpg",
@@ -210,7 +210,7 @@ export const team: Team[] = [
     name: "Dean Penney",
     role: 'General Manager / Director',
     email: 'dean@bishman.nz',
-    blurb: "Dean joined Bishman in 2018 as General Manager, overseeing day-to-day operations. With over 30 years of industry experience and expertise in quantity surveying, project management, and operational leadership, he drives the company's continued success.",
+    blurb: "Dean joined Bishman in 2018 as General Manager, overseeing day-to-day operations. With over 30 years of industry experience and expertise in quantity surveying, project management, and operational leadership, he drives the company’s continued success. He is actively involved with Master Electricians.",
     image: '/team/dean.jpg'
   },
   {
@@ -226,7 +226,7 @@ export const team: Team[] = [
     name: "Regan Caldwell",
     role: 'Contracts Manager',
     email: 'regan@bishman.nz',
-    blurb: "Regan was Bishman's first registered apprentice in 1998. After gaining experience in Australia, he returned as Project Manager, delivering projects including Ra Ora and Forrester Data Centres and overseeing the rollout of UPS and data services to 164 Countdown stores. He is now Bishman's first Contract Manager and Vice President of Master Electricians.",
+    blurb: "Regan was Bishman's first registered apprentice in 1998. After gaining experience in Australia, he returned as Project Manager, delivering projects including Ra Ora and Forrester Data Centres and overseeing the rollout of UPS and data services to 164 Countdown stores. Regan is now Bishman's Contracts Manager and is the current President of Master Electricians Auckland Branch.",
     image: '/team/regan.jpg'
   },
   {
@@ -234,7 +234,7 @@ export const team: Team[] = [
     name: "Spencer Snell",
     role: 'Estimator',
     email: 'spencer@bishman.nz',
-    blurb: "Spencer joined Bishman in 2003 and became the fourth Project Manager in 2011. He has led award-winning projects including ASB Bank HQ, F&P Medical Manufacturing Facility, and the Forrester Data Centre for ANZ. He now contributes to the commercial team, supporting estimation, design, and project oversight.",
+    blurb: "Spencer joined Bishman in 2003 and became the fourth Project Manager in 2011. He has led award-winning projects including ASB Bank HQ, F&amp;P Medical Manufacturing Facility, and the Forrester Data Centre for ANZ. He now contributes to the commercial team, supporting estimation, design, and project oversight.",
     image: '/team/spencer.jpg'
   },
   {
@@ -258,7 +258,7 @@ export const team: Team[] = [
     name: "Dwayne Petricevich",
     role: 'Project Manager',
     email: "dwayne@bishman.nz",
-    blurb: "Dwayne began his apprenticeship with Bishman in 2009 and has steadily progressed through the company, gaining experience as a registered electrician, site supervisor, and site manager before moving into his current role as project manager. Over the past 16 years he has developed a deep understanding of commercial electrical contracting and is well regarded for his practical, hands-on approach. Dwayne has successfully delivered a wide range of projects, from complex fit-outs to large-scale builds, and his background as a registered electrical inspector ensures that compliance and quality are always at the forefront. He is a key member of the Bishman team, bringing leadership, technical expertise, and a strong focus on client outcomes to every project he manages.",
+    blurb: "Dwayne began his apprenticeship with Bishman in 2009 and has progressed to Project Manager, bringing over 16 years of commercial electrical contracting experience. Known for his hands-on approach and technical expertise as a registered electrical inspector, he consistently delivers projects to the highest standards, prioritising compliance, quality, and client outcomes.",
     image: '/team/dwayne.jpg'
   },
   {
@@ -266,7 +266,7 @@ export const team: Team[] = [
     name: "Thomas Le Mouton",
     role: 'Project Manager',
     email: "tom@bishman.nz",
-    blurb: "Tom began his journey with Bishman's in 2004 as a teenage apprentice and has steadily progressed to his current role as one of our Project Manager's. Over the years, he has gained extensive experience across a wide range of electrical projects, including high-profile developments such as Vector Arena, UoA School of Medicine, North Shore & Middlemore Hospital's, Silverdale Mall and more recently, Munroe Lane council Building in Albany and Precinct Property Buildings and fitout's in Wynyard Quarter. Thomas is known for his calm and friendly approach, and he thrives in collaborative environments. His dedication to learning and growth has been a key part of his success, and he remains passionate about contributing to impactful projects and fostering strong team dynamics.",
+    blurb: "Tom joined Bishman in 2004 as an apprentice and has progressed to Project Manager, delivering a wide range of high-profile projects including Vector Arena, University of Auckland School of Medicine, and Wynyard Quarter fit-outs. Known for his calm, collaborative approach, Tom combines technical expertise with strong team leadership to ensure successful project delivery.",
     image: '/team/thomas.jpg'
   },
   {
@@ -290,7 +290,7 @@ export const team: Team[] = [
     name: "Jasee Wong",
     role: 'CAD Draughting',
     email: "jasee@bishman.nz",
-    blurb: "Jasee Wong joined Bishman in 2018 as CAD Drafting Specialist. She produces precise technical drawings, prepares essential project documentation, and leverages emerging technologies to enhance project efficiency and quality.",
+    blurb: "Jasee Wong joined Bishman in 2018 as CAD Drafting Specialist. She produces precise technical drawings and completes prepares essential project administrative functions and documentation, leveraging emerging technologies to enhance project efficiency and quality.",
     image: '/team/jasee.jpg'
   },
 ];
