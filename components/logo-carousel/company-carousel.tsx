@@ -20,7 +20,7 @@ const CompanyCarousel = () => {
     // Animate through exactly one complete set, then loop
     const controls = animate(xTranslation, [0, -oneSetWidth], {
       ease: 'linear',
-      duration: 60,    
+      duration: 180,    
       repeat: Infinity,
       repeatType: 'loop',
       repeatDelay: 0
@@ -33,7 +33,7 @@ const CompanyCarousel = () => {
   const items = [...company, ...company, ...company, ...company]
 
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-12 overflow-hidden">
       {/* Header Section */}
       <div className="relative z-10 text-center mb-16 px-8">
         <div className={`transition-all duration-700 opacity-100 translate-y-0`}>
