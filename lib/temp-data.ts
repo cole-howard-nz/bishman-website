@@ -363,4 +363,10 @@ export const company: Company[] = [
     link: 'https://www.directcontrol.nz/?utm_source=bishman_website&utm_medium=partner_logo',
     image: '/company/DC.png'
   },
+  {
+    id: 11,
+    name: "KSM",
+    link: 'https://ksm.co.nz',
+    image: '/company/KSM.png'
+  },
 ]
