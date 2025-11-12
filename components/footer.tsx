@@ -17,8 +17,8 @@ const Footer = () => {
         {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
           
-          {/* Left section - Logo and Address */}
-          <div className="lg:col-span-4 flex lg:flex-col flex-row justify-between gap-8 item-center h">
+          {/* Left section - Logo and Social */}
+          <div className="lg:col-span-4 flex flex-col gap-8">
             <div className="group">
               <Link href="/" className="inline-block">
                 <Image 
@@ -31,70 +31,9 @@ const Footer = () => {
               </Link>
             </div>
             
-            <div className="flex items-center">
-              <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-sky-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-slate-700 hover:text-sky-700 transition-colors duration-300 leading-relaxed text-sm">
-                  2 Hotunui Drive, Mount Wellington<br />
-                  Auckland 1060, New Zealand
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Middle section - Navigation */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <h3 className="text-slate-800 font-semibold text-lg mb-6">Quick Links</h3>
-              <div className="grid grid-cols-2 gap-3">
-                <Link 
-                  href="/profile" 
-                  className="group flex items-center gap-2 text-slate-700 hover:text-sky-700 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-sky-50/50"
-                >
-                  <span className="text-sm">Company Profile</span>
-                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link 
-                  href="/team" 
-                  className="group flex items-center gap-2 text-slate-700 hover:text-blue-700 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-blue-50/50"
-                >
-                  <span className="text-sm">Our Team</span>
-                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link 
-                  href="/projects" 
-                  className="group flex items-center gap-2 text-slate-700 hover:text-indigo-700 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-indigo-50/50"
-                >
-                  <span className="text-sm">Projects</span>
-                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link 
-                  href="/services" 
-                  className="group flex items-center gap-2 text-slate-700 hover:text-sky-700 transition-all duration-300 py-2 px-3 rounded-lg hover:bg-sky-50/50"
-                >
-                  <span className="text-sm">Services</span>
-                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Right section - CTA and Social */}
-          <div className="lg:col-span-3 flex flex-col justify-between items-start lg:items-end gap-8">
-            <div className="w-full">
-              <h3 className="text-slate-800 font-semibold text-lg mb-6 lg:text-right">Connect With Us</h3>
-              <div className="flex gap-3 lg:justify-end">
+              <h3 className="text-slate-800 font-semibold text-lg mb-4">Connect With Us</h3>
+              <div className="flex gap-3">
                 <Link 
                   href="https://www.linkedin.com/company/bishman-limited/?originalSubdomain=nz"
                   target="_blank"
@@ -128,7 +67,55 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            
+          </div>
+
+          {/* Middle section - Navigation */}
+          <div className="lg:col-span-4 flex flex-col">
+            <div>
+              <h3 className="text-slate-800 font-semibold text-lg mb-6">Quick Links</h3>
+              <div className="flex flex-col gap-2">
+                <Link 
+                  href="/profile" 
+                  className="group flex items-center justify-between text-slate-700 hover:text-sky-700 transition-all duration-300 py-3 px-4 rounded-lg hover:bg-sky-50/50 border border-transparent hover:border-sky-200/60"
+                >
+                  <span className="text-sm font-medium">Company Profile</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link 
+                  href="/team" 
+                  className="group flex items-center justify-between text-slate-700 hover:text-blue-700 transition-all duration-300 py-3 px-4 rounded-lg hover:bg-blue-50/50 border border-transparent hover:border-blue-200/60"
+                >
+                  <span className="text-sm font-medium">Our Team</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link 
+                  href="/projects" 
+                  className="group flex items-center justify-between text-slate-700 hover:text-indigo-700 transition-all duration-300 py-3 px-4 rounded-lg hover:bg-indigo-50/50 border border-transparent hover:border-indigo-200/60"
+                >
+                  <span className="text-sm font-medium">Projects</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="group flex items-center justify-between text-slate-700 hover:text-sky-700 transition-all duration-300 py-3 px-4 rounded-lg hover:bg-sky-50/50 border border-transparent hover:border-sky-200/60"
+                >
+                  <span className="text-sm font-medium">Services</span>
+                  <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Right section - Address and CTA */}
+          <div className="lg:col-span-4 flex flex-col justify-between items-end mt-auto gap-8">
             <Link href="/contacts" className="w-full lg:w-auto">
               <button className="group relative overflow-hidden bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 px-8 py-4 rounded-2xl text-white font-semibold text-base transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(56,189,248,0.4)] border border-sky-300/40 w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-white/30 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
