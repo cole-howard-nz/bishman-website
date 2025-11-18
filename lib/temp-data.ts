@@ -234,7 +234,7 @@ export const team: Team[] = [
     name: "Spencer Snell",
     role: 'Estimator',
     email: 'spencer@bishman.nz',
-    blurb: "Spencer joined Bishman in 2003 and became the fourth Project Manager in 2011. He has led award-winning projects including ASB Bank HQ, F&amp;P Medical Manufacturing Facility, and the Forrester Data Centre for ANZ. He now contributes to the commercial team, supporting estimation, design, and project oversight.",
+    blurb: "Spencer joined Bishman in 2003 and became the fourth Project Manager in 2011. He has led award-winning projects including ASB Bank HQ, F&P Medical Manufacturing Facility, and the Forrester Data Centre for ANZ. He now contributes to the commercial team, supporting estimation, design, and project oversight.",
     image: '/team/spencer.jpg'
   },
   {
