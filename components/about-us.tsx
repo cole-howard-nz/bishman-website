@@ -32,7 +32,6 @@ const AboutUs = () => {
               <h2 className="text-4xl font-bold text-slate-900 group-hover:text-sky-700 transition-colors duration-300">
                 About Us
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full group-hover:w-32 transition-all duration-500" />
             </div>
 
             {/* Main intro paragraph */}
