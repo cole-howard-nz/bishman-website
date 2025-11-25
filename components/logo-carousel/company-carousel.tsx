@@ -42,7 +42,7 @@ const CompanyCarousel = () => {
 
   return (
     <div className="w-full py-12 overflow-hidden">
-      <div className="relative z-10 text-center mb-16 px-8">
+      <div className="relative z-10 text-center px-8">
         <div className="transition-all duration-700 opacity-100 translate-y-0">
           <div className="inline-block">
             <span className="text-sky-700 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-sky-100/60 to-blue-100/60 backdrop-blur-xl px-6 py-3 rounded-full border border-sky-200/60 shadow">
