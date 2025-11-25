@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { projects } from '@/lib/temp-data'
 import Link from 'next/link'
-import { ArrowLeft, Clock, Calendar, MapPin, CheckCircle2, Clock3 } from 'lucide-react'
+import { ArrowLeft, Clock, Calendar, MapPin } from 'lucide-react'
 
 type ProjectPageProps = {
   params: Promise<{

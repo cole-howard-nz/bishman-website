@@ -37,15 +37,15 @@ const AboutUs = () => {
 
             {/* Main intro paragraph */}
             <p className="text-slate-700 text-lg font-medium leading-relaxed group-hover:text-slate-800 transition-colors duration-300">
-              At Bishman Ltd, we're more than just an electrical contractor—we're a team of dedicated professionals committed to excellence in every project we undertake.
+              At Bishman Ltd, we&apos;re more than just an electrical contractor. We&apos;re a team of dedicated professionals committed to excellence in every project we undertake.
             </p>
 
             {/* Supporting paragraphs */}
             <p className="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
-              With over 30 years of combined experience, our family-oriented approach sets us apart. We believe in building lasting relationships with our clients, partners, and team members.
+              With over 30 years of combined experience, our family oriented approach sets us apart. We believe in building lasting relationships with our clients, partners, and team members.
             </p>
             <p className="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
-              Our values of integrity, safety, and innovation drive everything we do. From training the next generation of electricians to delivering cutting-edge electrical solutions, we're proud to serve Auckland and contribute to its growth.
+              Our values of integrity, safety, and innovation drive everything we do. From training the next generation of electricians to delivering cutting edge electrical solutions, we&apos;re proud to serve Auckland and contribute to its growth.
             </p>
           </div>
         </div>

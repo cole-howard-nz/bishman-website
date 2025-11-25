@@ -42,10 +42,6 @@ const HeroSlideshow = () => {
     return () => clearInterval(timer)
   }, [isMounted])
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-  }
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
