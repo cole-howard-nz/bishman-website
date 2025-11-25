@@ -235,7 +235,6 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                   {[
                     { href: '/projects#s', label: 'Projects' },
                     { href: '/services#s', label: 'Services' },
-                    { href: '/contacts#s', label: 'Contact Us' }
                   ].map((item, index) => (
                     <motion.div
                       key={item.href}
@@ -260,43 +259,65 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                       </Link>
                     </motion.div>
                   ))}
+                  
                 </div>
 
                 {/* Footer */}
-                {user && (
+                
                   <div className="relative p-6 border-t border-sky-200/50 space-y-3">
-                    <Link href="/panel" onClick={closeMenu}>
-                      <motion.div 
-                        className="group w-full flex items-center gap-3 p-3 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <span className="text-slate-800 font-medium group-hover:text-sky-700 transition-colors duration-300">
-                          Admin Panel
-                        </span>
-                        <ArrowRight 
-                          size={16} 
-                          className="ml-auto text-slate-600 group-hover:text-sky-700 group-hover:translate-x-1 transition-all duration-300" 
-                        />
-                      </motion.div>
-                    </Link>
-                    
-                    <div className="pt-2">
-                      <motion.div 
-                        className="group w-full flex items-center gap-3 p-3 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <span className="text-slate-800 font-medium group-hover:text-sky-700 transition-colors duration-300">
-                          Logout
-                        </span>
-                        <div className='ml-auto'>
-                          <LogoutButton />
+                    {/* Contact Us Button */}
+                    <a href="/contacts#s">
+                      <button className="w-full group relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 border border-blue-400/20">
+                        {/* Animated shine effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                        
+                        {/* Button content */}
+                        <div className="relative flex items-center justify-between gap-2">
+                          <MessageCircle size={18} />
+                          <span className="text-sm font-medium">Contact Us</span>
+                          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                         </div>
-                      </motion.div>
-                    </div>
+          
+                        {/* Glow effect */}
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-sky-400/50 to-blue-500/50 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                      </button>
+                    </a>
+
+                    { user && (
+                      <>
+                        <Link href="/panel" onClick={closeMenu}>
+                          <motion.div 
+                            className="group w-full flex items-center gap-3 p-3 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <span className="text-slate-800 font-medium group-hover:text-sky-700 transition-colors duration-300">
+                              Admin Panel
+                            </span>
+                            <ArrowRight 
+                              size={16} 
+                              className="ml-auto text-slate-600 group-hover:text-sky-700 group-hover:translate-x-1 transition-all duration-300" 
+                            />
+                          </motion.div>
+                        </Link>
+                        
+                        <div className="pt-2">
+                          <motion.div 
+                            className="group w-full flex items-center gap-3 p-3 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <span className="text-slate-800 font-medium group-hover:text-sky-700 transition-colors duration-300">
+                              Logout
+                            </span>
+                            <div className='ml-auto'>
+                              <LogoutButton />
+                            </div>
+                          </motion.div>
+                        </div>
+                      </>
+                    )}
                   </div>
-                )}
               </div>
             </motion.div>
           </>
