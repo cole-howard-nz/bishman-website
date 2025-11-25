@@ -76,13 +76,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                   ? 'bg-gradient-to-r from-green-600/80 to-emerald-600/80 border-green-400/50 shadow-green-500/20' 
                   : 'bg-gradient-to-r from-sky-600/80 to-cyan-600/80 border-sky-400/50 shadow-sky-500/20'
               }`}>
-                {project.isComplete ? (
-                  <CheckCircle2 size={20} className="text-green-300" />
-                ) : (
-                  <Clock3 size={20} className="text-sky-300" />
-                )}
                 <span>{project.isComplete ? 'PROJECT COMPLETED' : 'IN PROGRESS'}</span>
-                <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-300' : 'bg-sky-300'}`} />
               </div>
             </div>
 

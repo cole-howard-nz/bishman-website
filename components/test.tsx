@@ -25,9 +25,7 @@ const ResponsiveCarousel = () => {
   useEffect(() => {
     const updateItemsPerView = () => {
       const width = window.innerWidth;
-      if (width >= 1536) setItemsPerView(Math.min(4, projects.length));
-      else if (width >= 1280) setItemsPerView(Math.min(3, projects.length));
-      else if (width >= 1024) setItemsPerView(Math.min(2, projects.length));
+      if (width >= 1024) setItemsPerView(Math.min(2, projects.length));
       else setItemsPerView(1);
     };
 
@@ -63,6 +61,12 @@ const ResponsiveCarousel = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const truncateText = (text: string, wordLimit: number = 25) => {
+    const words = text.split(' ');
+    if (words.length <= wordLimit) return text;
+    return words.slice(0, wordLimit).join(' ') + '...';
+  };
 
   const goToPrevious = () => {
     setIsAutoPlaying(false);
@@ -132,24 +136,6 @@ const ResponsiveCarousel = () => {
 
   return (
     <div className="rounded-[12px] w-full py-16 relative overflow-hidden">
-      {/* Light Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
-        {Array.from({ length: 25 }, (_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-sky-300/30 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 4}s`
-            }}
-          />
-        ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-100/40 via-transparent to-blue-100/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-white/40" />
-      </div>
-
       {/* Floating elements */}
       <div className="absolute top-20 right-20 w-2 h-32 bg-gradient-to-b from-sky-300/40 to-transparent blur-sm animate-pulse" />
       <div className="absolute bottom-20 left-20 w-2 h-24 bg-gradient-to-t from-blue-300/30 to-transparent blur-sm animate-pulse" style={{ animationDelay: '1s' }} />
@@ -157,15 +143,11 @@ const ResponsiveCarousel = () => {
       {/* Header Section */}
       <div className="relative z-10 text-center mb-16 px-8">
         <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-block mb-6">
+          <div className="inline-block">
             <span className="text-sky-700 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-sky-100/60 to-blue-100/60 backdrop-blur-xl px-6 py-3 rounded-full border border-sky-200/60 shadow">
               Our Latest Projects
             </span>
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 bg-gradient-to-r from-sky-800 via-slate-700 to-blue-800 bg-clip-text text-transparent">
-            Some of our recent work
-          </h2>
           
           <p className="text-slate-600 max-w-4xl mx-auto text-lg leading-relaxed mb-8">
           </p>
@@ -222,9 +204,6 @@ const ResponsiveCarousel = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent transition-all duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 via-blue-600/10 to-indigo-600/20 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
-                    <div className="absolute top-6 right-6 w-1 h-16 bg-gradient-to-b from-white via-sky-200 to-transparent opacity-70 group-hover:opacity-100 group-hover:h-20 transition-all duration-500" />
-                    <div className="absolute bottom-6 left-6 w-12 h-1 bg-gradient-to-r from-transparent via-white to-sky-200 opacity-60 group-hover:opacity-90 group-hover:w-16 transition-all duration-500" />
-
                     <div className={`absolute inset-0 flex flex-col justify-between z-10 ${
                       itemsPerView === 1 ? 'p-8 md:p-10 lg:p-12' : 'p-6 md:p-7'
                     }`}>
@@ -237,7 +216,6 @@ const ResponsiveCarousel = () => {
                               ? 'bg-gradient-to-r from-green-100 to-emerald-100 border-green-300/60 shadow-green-400/20' 
                               : 'bg-gradient-to-r from-sky-100 to-blue-100 border-sky-300/60 shadow-sky-400/20'
                           }`}>
-                            <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-500' : 'bg-sky-500'}`} />
                             {project.isComplete ? 'COMPLETED' : 'IN PROGRESS'}
                           </div>
                         </div>
@@ -245,20 +223,23 @@ const ResponsiveCarousel = () => {
                         <h2 className={`font-bold leading-tight transition-all duration-300 bg-gradient-to-br from-white via-sky-50 to-white bg-clip-text text-transparent ${
                           itemsPerView === 1 
                             ? 'text-3xl md:text-5xl lg:text-6xl' 
-                            : itemsPerView === 2 
-                              ? 'text-2xl md:text-3xl' 
-                              : 'text-xl md:text-2xl'
-                        }`}
-                        style={{
-                          textShadow: '0 4px 20px rgba(255, 255, 255, 0.9), 0 2px 8px rgba(14, 165, 233, 0.4), 0 0 40px rgba(255, 255, 255, 0.3)'
-                        }}>
+                            : 'text-2xl md:text-3xl'
+                        }`}>
                           {project.name}
                         </h2>
+
+                        {project.blurb && (
+                          <p className={`text-white/90 leading-relaxed backdrop-blur-sm bg-slate-900/20 rounded-xl p-4 border border-white/10 ${
+                            itemsPerView === 1 
+                              ? 'text-base md:text-lg' 
+                              : 'text-sm md:text-base'
+                          }`}>
+                            {truncateText(project.blurb)}
+                          </p>
+                        )}
                       </div>
 
-                      <div className={`flex justify-between items-end ${
-                        itemsPerView > 2 ? 'flex-col gap-4 items-start' : ''
-                      }`}>
+                      <div className="flex justify-between items-end">
                         {/* Enhanced CTA Button */}
                         <a href={`/projects/${project.id}#s`}>
                           <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${

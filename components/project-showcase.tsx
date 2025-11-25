@@ -3,7 +3,7 @@ import Test from './test'
 
 const ProjectShowcase = () => {
   return (
-    <div className='w-full py-16 mb-4'>
+    <div className='w-full py-16 mb-4 max-w-7xl mx-auto'>
       <Test />
 
       {/* <h1 className='text-[#f0f1f1] drop-shadow-[0_1.8px_1.8px_rgba(0,0,0,0.6)] text-[72px] font-bold pb-2'>{ header }</h1>

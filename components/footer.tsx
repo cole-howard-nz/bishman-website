@@ -19,7 +19,7 @@ const Footer = () => {
           
           {/* Left section - Logo and Social */}
           <div className="lg:col-span-4 flex flex-col gap-8">
-            <div className="group">
+            {/* <div className="group">
               <Link href="/" className="inline-block">
                 <Image 
                   src="/bishman_black.svg" 
@@ -29,9 +29,9 @@ const Footer = () => {
                   className="lg:w-48 lg:h-48 w-42 h-42 xs:w-32 xs:h-32 transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]"
                 />
               </Link>
-            </div>
+            </div> */}
             
-            <div>
+            <div className='mt-auto mb-auto'>
               <h3 className="text-slate-800 font-semibold text-lg mb-4">Connect With Us</h3>
               <div className="flex gap-3">
                 <Link 
@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
 
           {/* Right section - Address and CTA */}
-          <div className="lg:col-span-4 flex flex-col justify-between items-end mt-auto gap-8">
+          <div className="lg:col-span-4 flex flex-col justify-between items-end mt-auto mb-auto gap-8">
             <Link href="/contacts" className="w-full lg:w-auto">
               <button className="group relative overflow-hidden bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 px-8 py-4 rounded-2xl text-white font-semibold text-base transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(56,189,248,0.4)] border border-sky-300/40 w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-white/30 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
