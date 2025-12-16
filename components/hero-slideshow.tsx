@@ -27,9 +27,9 @@ const slides = [
 ]
 
 const projectPhotos = [
-  "/projects/albert1.jpg",
-  "/projects/albert2.jpg",
-  "/projects/albert3.jpg",
+  "/projects/uoa1.jpg",
+  "/projects/munroe1.jpg",
+  "/projects/wqip1.jpg",
   "/projects/aotea1.jpg",
 ]
 
@@ -96,9 +96,9 @@ const HeroSlideshow = () => {
 
       {/* Content and Controls */}
       <div className='relative z-10 flex flex-col h-full p-6 pt-24'>
-        <div className='flex-1 flex justify-between items-center gap-8 mr-32'>
+        <div className='flex-1 flex justify-between items-center gap-8'>
           {/* Left Content */}
-          <div className='flex-1 flex flex-col justify-center' 
+          <div className='flex-1 flex flex-col justify-center text-white/90 leading-relaxed backdrop-blur-sm bg-slate-900/20 rounded-xl p-4 border border-white/10 max-w-fit' 
             style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)' }}
           >
             <h1 
@@ -115,7 +115,7 @@ const HeroSlideshow = () => {
           </div>
 
           {/* Right Project Slideshow with Side Previews */}
-          <div className='hidden lg:block relative w-[400px] h-[300px]'>
+          <div className='hidden lg:block relative w-[400px] h-[300px] mr-32'>
             {/* Previous Image - Behind and to the left */}
             <div className='absolute -left-32 top-3 w-[400px] h-[280px] rounded-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer z-0'
               onClick={prevProject}

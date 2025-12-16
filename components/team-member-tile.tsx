@@ -147,10 +147,6 @@ const TeamMemberTile = ({ member }: TeamMemberTileProps) => {
             </div>
           )}
         </div>
-
-        {/* Accent elements */}
-        <div className="absolute top-6 left-6 w-1 h-12 bg-gradient-to-b from-sky-400 via-cyan-400 to-transparent opacity-30 group-hover:opacity-80 group-hover:h-16 transition-all duration-500" />
-        <div className="absolute bottom-6 right-6 w-8 h-1 bg-gradient-to-r from-transparent via-sky-400 to-cyan-400 opacity-0 group-hover:opacity-60 group-hover:w-12 transition-all duration-500" />
       </div>
     </motion.div>
   )

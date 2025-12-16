@@ -148,14 +148,11 @@ const ResponsiveCarousel = () => {
               Our Latest Projects
             </span>
           </div>
-          
-          <p className="text-slate-600 max-w-4xl mx-auto text-lg leading-relaxed mb-8">
-          </p>
         </div>
       </div>
 
       {/* Main Carousel Container */}
-      <div className="relative z-10 mx-auto px-6">
+      <div className="relative z-10 mx-auto px-4 md:px-6">
         <div className="relative">
           <div 
             ref={carouselRef}
@@ -169,7 +166,7 @@ const ResponsiveCarousel = () => {
             onTouchEnd={handleTouchEnd}
           >
             <div 
-              className="flex transition-transform duration-700 ease-out p-2"
+              className="flex transition-transform duration-700 ease-out"
               style={{ 
                 transform: `translateX(-${(currentIndex * itemWidth)}%)`,
               }}
@@ -177,15 +174,15 @@ const ResponsiveCarousel = () => {
               {projects.map((project, projectIndex) => (
                 <div 
                   key={project.id} 
-                  className="flex-shrink-0 relative"
+                  className="flex-shrink-0 relative px-2 md:px-3"
                   style={{ width: `${100 / itemsPerView}%` }}
                   onMouseEnter={() => setHoveredProject(projectIndex)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
                   <div className={`relative overflow-hidden group ${
                     itemsPerView === 1 
-                      ? 'h-[500px] md:h-[650px] lg:h-[750px] rounded-3xl mx-0' 
-                      : 'h-[400px] md:h-[450px] lg:h-[500px] rounded-2xl mx-2'
+                      ? 'h-[500px] md:h-[650px] lg:h-[750px] rounded-3xl' 
+                      : 'h-[400px] md:h-[450px] lg:h-[500px] rounded-2xl'
                   }`}>
                     <div className="absolute inset-0">
                       {project.images.map((image, imageIndex) => (
@@ -241,20 +238,18 @@ const ResponsiveCarousel = () => {
 
                       <div className="flex justify-between items-end">
                         {/* Enhanced CTA Button */}
-                        <a href={`/projects/${project.id}#s`}>
-                          <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${
-                            itemsPerView === 1 ? 'px-6 py-4 text-base md:text-lg' : 'px-5 py-3 text-sm'
-                          }`}>
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />
-                            <div className="relative flex items-center gap-3">
-                              <span>View Project</span>
-                              <ArrowRight size={itemsPerView === 1 ? 20 : 18} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
-                            </div>
+                        <button className={`group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 rounded-2xl text-white hover:scale-105 active:scale-95 flex items-center gap-3 font-semibold ${
+                          itemsPerView === 1 ? 'px-6 py-4 text-base md:text-lg' : 'px-5 py-3 text-sm'
+                        }`}>
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />
+                          <div className="relative flex items-center gap-3">
+                            <span>View Project</span>
+                            <ArrowRight size={itemsPerView === 1 ? 20 : 18} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
+                          </div>
 
-                            {/* Glow effect */}
-                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-400/50 to-blue-500/50 blur-lg opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 -z-10" />
-                          </button>
-                        </a>
+                          {/* Glow effect */}
+                          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-400/50 to-blue-500/50 blur-lg opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 -z-10" />
+                        </button>
                       </div>
                     </div>
                   </div>
