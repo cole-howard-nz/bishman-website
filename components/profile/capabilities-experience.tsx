@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Award, Calendar } from 'lucide-react'
+import { Award } from 'lucide-react'
 
 const CapabilitiesExperience = () => {
   return (
