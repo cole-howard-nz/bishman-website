@@ -70,9 +70,6 @@ const OurBusiness = () => {
             </div>
           </div>
         </div>
-
-        {/* Accent elements */}
-        <div className="absolute top-6 right-6 w-1 h-16 bg-gradient-to-b from-cyan-400 via-sky-400 to-transparent opacity-40 group-hover:opacity-80 group-hover:h-20 transition-all duration-500" />
       </div>
     </section>
   )

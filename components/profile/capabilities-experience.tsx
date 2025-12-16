@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Award, Calendar } from 'lucide-react'
+import { Award } from 'lucide-react'
 
 const CapabilitiesExperience = () => {
   return (
@@ -45,26 +45,11 @@ const CapabilitiesExperience = () => {
                 />
               </div>
 
-              {/* Decorative elements */}
-              <div className="absolute top-4 left-4 w-2 h-2 bg-sky-400/60 rounded-full animate-pulse" />
-              <div className="absolute bottom-4 right-4 w-3 h-3 bg-sky-400/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
           </div>
 
           {/* Content Section */}
           <div className="lg:w-1/2 space-y-6">
-            {/* Timeline badges */}
-            <div className="flex flex-wrap gap-3 mb-6">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-full px-4 py-2">
-                <Calendar size={16} className="text-sky-600" />
-                <span className="text-sky-700 text-sm font-medium">Est. 1970s</span>
-              </div>
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-full px-4 py-2">
-                <Calendar size={16} className="text-sky-600" />
-                <span className="text-sky-700 text-sm font-medium">Bishman Ltd 1992</span>
-              </div>
-            </div>
-
             <div className='space-y-6'>
               <p className="text-slate-700 leading-relaxed group-hover:text-slate-800 transition-colors duration-300">
                 Bishman Ltd was formed in 1992 and has spent the last 30 years as one of the leaders in the Auckland electrical industry.
@@ -87,9 +72,6 @@ const CapabilitiesExperience = () => {
             </div>
           </div>
         </div>
-
-        {/* Accent elements */}
-        <div className="absolute top-6 left-6 w-1 h-16 bg-gradient-to-b from-sky-400 via-sky-600 to-transparent opacity-40 group-hover:opacity-80 group-hover:h-20 transition-all duration-500" />
       </div>
     </section>
   )

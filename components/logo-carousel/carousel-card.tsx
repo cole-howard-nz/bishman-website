@@ -1,70 +1,106 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import { Button } from '../ui/button'
+import React, { useRef, useState } from 'react'
+import { motion, useMotionValue, useSpring, AnimatePresence } from 'framer-motion'
 import { Company } from '@/lib/types'
-import { AnimatePresence, motion } from 'framer-motion'
 
 interface CarouselCardProps {
   company: Company
 }
 
 const CarouselCard = ({ company }: CarouselCardProps) => {
-  const [showOverlay, setShowOverlay] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+  const cardRef = useRef<HTMLDivElement>(null)
+  
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  
+  const springConfig = { damping: 35, stiffness: 150, mass: 0.5 }
+  const x = useSpring(mouseX, springConfig)
+  const y = useSpring(mouseY, springConfig)
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!cardRef.current) return
+    const rect = cardRef.current.getBoundingClientRect()
+    const centerX = rect.left + rect.width / 2
+    const centerY = rect.top + rect.height / 2
+    
+    mouseX.set((e.clientX - centerX) * 0.12)
+    mouseY.set((e.clientY - centerY) * 0.12)
+  }
+
+  const handleMouseEnter = () => {
+    setIsHovered(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(false)
+    mouseX.set(0)
+    mouseY.set(0)
+  }
 
   return (
-    <motion.div
-      className="relative flex justify-center items-center 
-           h-[140px] min-w-[120px] sm:h-[180px] sm:min-w-[160px] 
-           md:h-[200px] md:min-w-[200px]"
-      onHoverStart={() => setShowOverlay(true)}
-      onHoverEnd={() => setShowOverlay(false)}
+    <div
+      ref={cardRef}
+      className="relative flex justify-center items-center h-[160px] min-w-[220px] cursor-pointer"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <Image
-        src={company.image}
-        alt={company.name}
-        width={800}
-        height={800}
-        className="object-contain"
-      />
+      <motion.div 
+        className="relative w-full h-full flex items-center justify-center overflow-hidden"
+        style={{ x, y }}
+      >
+        <motion.img
+          src={company.image}
+          alt={company.name}
+          className="object-contain w-[170px] h-[70px]"
+          animate={{ 
+            scale: isHovered ? 0.96 : 1,
+            opacity: isHovered ? 0.35 : 1
+          }}
+          transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
+        />
 
-      <AnimatePresence>
-        {showOverlay && (
-          <motion.div
-            className="absolute inset-0 z-10 flex justify-center items-center p-2 top-32"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <Link href={company.link} className="w-full">
-              <Button
-                className="w-full bg-[#284d85]/60 hover:bg-[#3D70BC]/70 
-                           ease-in-out duration-200 py-3 sm:py-4 
-                           hover:shadow-xl font-normal rounded-[8px] text-sm sm:text-base"
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
+            >
+              <motion.a
+                href={company.link}
+                className="text-slate-700 font-medium text-base tracking-wide flex items-center gap-1.5 px-4 py-2 rounded-lg hover:text-slate-900 transition-colors pointer-events-auto"
+                initial={{ y: 12, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 12, opacity: 0 }}
+                transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
               >
-                <div className="flex items-center gap-2 justify-center">
-                  <motion.p
-                    initial={{ y: 10 }}
-                    animate={{ y: 0 }}
-                    exit={{ y: 10 }}
-                  >
-                    {company.name}
-                  </motion.p>
-                  <Image
-                    alt="See more"
-                    src="/see_more.svg"
-                    height={32}
-                    width={32}
-                  />
-                </div>
-              </Button>
-            </Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+                {company.name}
+                <motion.svg 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ x: -3, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.15, duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </motion.svg>
+              </motion.a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </div>
   )
 }
 

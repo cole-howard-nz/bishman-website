@@ -126,7 +126,7 @@ const Services = () => {
             <p className="text-slate-500 text-sm">
               Need immediate assistance? Contact us directly at{' '}
               <a href="mailto:accounts@bishman.co.nz" className="text-sky-600 hover:text-sky-700 font-medium underline">
-                accounts@bishman.co.nz
+                accounts@bishman.nz
               </a>
             </p>
           </div>

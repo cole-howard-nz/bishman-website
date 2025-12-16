@@ -87,13 +87,8 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
         ))}
       </div>
       
-      {/* Enhanced Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-800/30 to-transparent transition-all duration-500" />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-cyan-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
-      {/* Animated decorative elements */}
-      <div className="absolute top-6 right-6 w-1 h-16 bg-gradient-to-b from-blue-400 via-cyan-400 to-transparent opacity-40 group-hover:opacity-80 group-hover:h-20 transition-all duration-500" />
-      <div className="absolute bottom-6 left-6 w-12 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-blue-400 opacity-0 group-hover:opacity-60 group-hover:w-16 transition-all duration-500" />
       
       {/* Content */}
       <div className={`absolute inset-0 flex flex-col justify-between z-10 ${sizeClasses.padding}`}>
@@ -107,7 +102,6 @@ const ProjectTile: React.FC<ProjectTileProps> = ({
                 ? 'bg-gradient-to-r from-green-600/80 to-emerald-600/80 border-green-400/50 shadow-green-500/20' 
                 : 'bg-gradient-to-r from-blue-600/80 to-cyan-600/80 border-blue-400/50 shadow-blue-500/20'
             }`}>
-              <div className={`w-2 h-2 rounded-full animate-pulse ${project.isComplete ? 'bg-green-300' : 'bg-blue-300'}`} />
               {project.isComplete ? 'COMPLETED' : 'IN PROGRESS'}
             </div>
           </div>
