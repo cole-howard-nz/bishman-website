@@ -105,12 +105,12 @@ const HeroSlideshow = () => {
               key={isMounted ? currentSlide : 'initial'}
               className={`text-white font-semibold text-3xl md:text-5xl max-w-2xl ${isMounted ? 'animate-fade-in' : ''}`}
             >
-              {slides[currentSlide].title}
+              {/* {slides[currentSlide].title} */}
             </h1>
             <p
               className={`text-slate-100 font-medium max-w-2xl md:text-base pt-4 ${isMounted ? 'animate-fade-in' : ''}`}
             >
-              {slides[currentSlide].desc}
+              {/* {slides[currentSlide].desc} */}
             </p>
           </div>
 
