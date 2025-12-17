@@ -1,4 +1,3 @@
-import AboutUs from "@/components/about-us"
 import CompanyCarousel from "@/components/logo-carousel/company-carousel"
 import ProjectShowcase from "@/components/project-showcase"
 
