@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <section className="flex flex-col">
       <CompanyCarousel />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <ProjectShowcase />
       {/* <ServiceShowcase services={ services } /> */}
       {/* <ClientShowcase clients={ clients } /> */}
