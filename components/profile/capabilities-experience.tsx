@@ -25,13 +25,14 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '' }: AnimatedCounterP
       { threshold: 0.1 }
     )
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current)
+    const currentRef = counterRef.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [isVisible])

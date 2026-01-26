@@ -3,16 +3,12 @@
 import React, { useState, useEffect } from 'react'
 import { 
   Zap, 
-  Building2, 
-  Cpu, 
   Shield, 
   Lightbulb, 
-  Cable, 
   Gauge, 
   Settings,
   Network,
   Anchor,
-  Server,
   ThermometerSun,
   CheckCircle2,
   ArrowRight,
@@ -231,7 +227,7 @@ const CoreServicesPage = () => {
                 Request an Electrical Services Consultation
               </h2>
               <p className="text-slate-300 mb-8 text-lg max-w-2xl mx-auto">
-                Let's discuss designing, installing, validating and executing any projects we may have for you
+                Let&apos;s discuss designing, installing, validating and executing any projects we may have for you
               </p>
               <Link href="/contacts#s">
                 <button className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -361,7 +357,7 @@ const CoreServicesPage = () => {
               <div className="lg:sticky lg:top-24 self-start">
                 <div className='space-y-6'>
                   <h3 className="text-4xl md:text-5xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
-                    Why we're the{' '}
+                    Why we&apos;re the{' '}
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
                       best choice
@@ -435,7 +431,7 @@ const CoreServicesPage = () => {
                 </span>
               </h2>
               <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
-                Can't find the answer you're looking for? Please reach out to our friendly team.
+                Can&apos;t find the answer you&apos;re looking for? Please reach out to our friendly team.
               </p>
               <Link href="/contacts#s">
                 <button className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { Award, Building2, Users, Zap, ArrowRight } from 'lucide-react'
+import { Users, Zap, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -26,13 +26,14 @@ const AnimatedCounter = ({ end, suffix = '', duration = 2000 }: { end: number, s
       { threshold: 0.1 }
     )
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current)
+    const currentRef = counterRef.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [isVisible])
