@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Briefcase, ChevronLeft, ChevronRight, Wrench } from 'lucide-react'
+import { Briefcase, Wrench } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -43,16 +43,6 @@ const HeroSlideshow = () => {
 
     return () => clearInterval(timer)
   }, [isMounted])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-    setProgressKey(prev => prev + 1)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-    setProgressKey(prev => prev + 1)
-  }
 
   return (
     <>
