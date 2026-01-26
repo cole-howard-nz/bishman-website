@@ -1,14 +1,14 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Briefcase, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react'
+import { Briefcase, ChevronLeft, ChevronRight, Wrench } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const slides = [
   {
-    title: "Powering New Zealand's Critical Infrastructure",
-    desc: "Delivering reliable electrical design, installation, and maintenance for commercial, industrial, and high demand environments where performance, safety, and uptime matter most.",
+    title: "Trusted Expertise Backed by 30+ Years of Experience",
+    desc: "With proven capability across data centres, healthcare, marina, and government facilities, we bring dependable workmanship and industry-leading technical standards to every job.",
     image: "/landing/one.jpg",
     alt: "Sky Tower Auckland"
   },
@@ -16,13 +16,13 @@ const slides = [
     title: "End to End Electrical Solutions for Complex Projects",
     desc: "From BIM driven planning to precision installation and commissioning, our experienced teams ensure every project is delivered safely, efficiently, and on schedule.",
     image: "/landing/one.jpg",
-    alt: "Renewable energy infrastructure"
+    alt: "Sky Tower Auckland"
   },
   {
     title: "Trusted Expertise Backed by 30+ Years of Experience",
     desc: "With proven capability across data centres, healthcare, marina, and government facilities, we bring dependable workmanship and industry-leading technical standards to every job.",
     image: "/landing/one.jpg",
-    alt: "Network connectivity"
+    alt: "Sky Tower Auckland"
   }
 ]
 
@@ -36,8 +36,6 @@ const HeroSlideshow = () => {
   }, [])
 
   useEffect(() => {
-    if (!isMounted) return
-
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
       setProgressKey(prev => prev + 1)
@@ -86,7 +84,7 @@ const HeroSlideshow = () => {
         <div className="max-w-4xl px-6 pt-32 md:pt-40 lg:px-12">
           <div className="relative">
             <div className="absolute left-0 top-20 w-96 h-96 bg-slate-800 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
-            <div className="absolute right-0 top-40 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+            <div className="absolute right-0 top-40 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
             <div className="absolute left-1/3 top-60 w-96 h-96 bg-slate-800 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
             
             <div className="relative space-y-6">
@@ -101,13 +99,13 @@ const HeroSlideshow = () => {
           </div>
 
           <div className="relative flex flex-wrap gap-4 pt-10 z-20">
-            <Link href="/contacts#s">
+            <Link href="/services#s">
               <button className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 border border-blue-400/20">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 
                 <div className="relative flex items-center gap-2">
-                  <MessageCircle size={18} />
-                  <span className="text-sm font-medium">Contact Us</span>
+                  <Wrench size={18} />
+                  <span className="text-sm font-medium">Our Services</span>
                 </div>
 
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-sky-400/50 to-blue-500/50 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
@@ -116,20 +114,23 @@ const HeroSlideshow = () => {
 
             <Link href="/projects#s">
               <button className="group relative overflow-hidden bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                
                 <div className="relative flex items-center gap-2">
                   <Briefcase size={18} />
                   <span className="text-sm font-medium">View Projects</span>
                 </div>
+
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-slate-400/50 to-slate-500/50 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
               </button>
             </Link>
           </div>
         </div>
       </div>
       
-      {/* Content and Controls */}
-      <div className='z-10 flex flex-col p-6 pt-24 h-full'>
+      {/* Slideshow Content */}
+      <div className='z-10 flex flex-col p-6 pt-24 h-full [@media(max-width:511px)]:hidden'>
         <div className="flex flex-col items-end justify-end mt-auto gap-4">
-          {/* Thumbnail Preview Boxes */}
           <div className="flex gap-2">
             {slides.map((slide, index) => (
               <button
@@ -165,25 +166,6 @@ const HeroSlideshow = () => {
                 )}
               </button>
             ))}
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="flex gap-3">
-            <button
-              onClick={prevSlide}
-              className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft size={20} />
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={20} />
-            </button>
           </div>
         </div>
       </div>

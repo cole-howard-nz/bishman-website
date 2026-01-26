@@ -234,7 +234,7 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                   {/* Main Navigation Links */}
                   {[
                     { href: '/projects#s', label: 'Projects' },
-                    { href: '/services#s', label: 'Services' },
+                    { href: '/services#s', label: 'Core Services' },
                   ].map((item, index) => (
                     <motion.div
                       key={item.href}
