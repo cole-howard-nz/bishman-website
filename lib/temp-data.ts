@@ -369,10 +369,4 @@ export const company: Company[] = [
     link: 'https://ksm.co.nz',
     image: '/company/KSM.png'
   },
-  {
-    id: 12,
-    name: "SHAPE",
-    link: 'https://www.shape.co.nz',
-    image: '/company/SHAPE.png'
-  },
 ]
