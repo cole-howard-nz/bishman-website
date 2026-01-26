@@ -86,7 +86,7 @@ const NavList = () => {
         href="/services#s"
         className="relative px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group overflow-hidden"
       >
-        <span className="relative z-10 text-sm font-medium text-slate-700 hover:text-slate-900">Services</span>
+        <span className="relative z-10 text-sm font-medium text-slate-700 hover:text-slate-900">Core Services</span>
         <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-sky-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
       </a>
     </nav>
