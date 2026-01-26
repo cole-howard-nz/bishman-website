@@ -1,7 +1,77 @@
+'use client'
 
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Award } from 'lucide-react'
+
+interface AnimatedCounterProps {
+  end: number
+  duration?: number
+  suffix?: string
+}
+
+const AnimatedCounter = ({ end, duration = 2000, suffix = '' }: AnimatedCounterProps) => {
+  const [count, setCount] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const counterRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current)
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current)
+      }
+    }
+  }, [isVisible])
+
+  useEffect(() => {
+    if (!isVisible) return
+
+    let startTime: number
+    let animationFrame: number
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+      const currentCount = Math.floor(easeOutQuart * end)
+      
+      setCount(currentCount)
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate)
+      }
+    }
+
+    animationFrame = requestAnimationFrame(animate)
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame)
+      }
+    }
+  }, [isVisible, end, duration])
+
+  return (
+    <div ref={counterRef} className="text-2xl font-bold text-sky-600">
+      {count}{suffix}
+    </div>
+  )
+}
 
 const CapabilitiesExperience = () => {
   return (
@@ -61,11 +131,11 @@ const CapabilitiesExperience = () => {
               {/* Statistics */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="text-center bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-xl px-4 py-2">
-                  <div className="text-2xl font-bold text-sky-600">50+</div>
+                  <AnimatedCounter end={50} suffix="+" duration={2000} />
                   <div className="text-slate-600 text-sm">Years Experience</div>
                 </div>
                 <div className="text-center bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-xl px-4 py-2">
-                  <div className="text-2xl font-bold text-sky-600">30+</div>
+                  <AnimatedCounter end={30} suffix="+" duration={2000} />
                   <div className="text-slate-600 text-sm">Years as Bishman Ltd</div>
                 </div>
               </div>
