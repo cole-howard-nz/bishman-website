@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import LogoutButton from './log-out-button'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, MessageCircle, ArrowRight, User, Briefcase } from 'lucide-react'
+import { Menu, X, ChevronDown, MessageCircle, ArrowRight, User, Briefcase, Zap, Wrench } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { JwtPayload } from '@supabase/supabase-js'
 
@@ -14,6 +14,7 @@ type MobileNavbarProps = {
 const MobileNavbar = ({ user }: MobileNavbarProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [profileOpen, setProfileOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
 
@@ -32,6 +33,7 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
   const closeMenu = () => {
     setIsOpen(false)
     setProfileOpen(false)
+    setServicesOpen(false)
   }
 
   if (!isMounted) return null
@@ -231,34 +233,82 @@ const MobileNavbar = ({ user }: MobileNavbarProps) => {
                     </AnimatePresence>
                   </div>
 
-                  {/* Main Navigation Links */}
-                  {[
-                    { href: '/projects#s', label: 'Projects' },
-                    { href: '/services#s', label: 'Core Services' },
-                  ].map((item, index) => (
-                    <motion.div
-                      key={item.href}
-                      initial={{ x: 50, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: index * 0.1 }}
+                  {/* Projects Link */}
+                  <motion.div
+                    initial={{ x: 50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0 * 0.1 }}
+                  >
+                    <Link href="/projects#s" onClick={closeMenu}>
+                      <motion.div 
+                        className="group w-full flex items-center gap-4 p-4 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <span className="text-slate-800 font-medium group-hover:text-sky-700 transition-colors duration-300">
+                          Projects
+                        </span>
+                        <ArrowRight 
+                          size={16} 
+                          className="ml-auto text-slate-600 group-hover:text-sky-700 group-hover:translate-x-1 transition-all duration-300" 
+                        />
+                      </motion.div>
+                    </Link>
+                  </motion.div>
+
+                  {/* Services Dropdown */}
+                  <div className="mb-2">
+                    <motion.button
+                      onClick={() => setServicesOpen(!servicesOpen)}
+                      className="group w-full flex items-center justify-between p-4 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
+                      whileTap={{ scale: 0.98 }}
                     >
-                      <Link href={item.href} onClick={closeMenu}>
-                        <motion.div 
-                          className="group w-full flex items-center gap-4 p-4 bg-sky-50/60 backdrop-blur-sm border border-sky-200/50 rounded-xl hover:bg-sky-100/70 hover:border-sky-300/60 transition-all duration-300"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
+                      <div className="flex items-center gap-3">
+                        <span className="text-slate-800 font-medium">Services</span>
+                      </div>
+                      <ChevronDown 
+                        className={`text-slate-600 group-hover:text-sky-700 transition-all duration-300 ${servicesOpen ? 'rotate-180' : ''}`} 
+                        size={20} 
+                      />
+                    </motion.button>
+
+                    <AnimatePresence>
+                      {servicesOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
                         >
-                          <span className="text-slate-800 font-medium group-hover:text-sky-700 transition-colors duration-300">
-                            {item.label}
-                          </span>
-                          <ArrowRight 
-                            size={16} 
-                            className="ml-auto text-slate-600 group-hover:text-sky-700 group-hover:translate-x-1 transition-all duration-300" 
-                          />
+                          <div className="mt-2 ml-4 space-y-2">
+                            <Link href="/services/core#s" onClick={closeMenu}>
+                              <motion.div 
+                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-sky-50/70 transition-colors duration-200 group"
+                                whileHover={{ x: 4 }}
+                              >
+                                <div className="w-8 h-8 bg-sky-400/20 rounded-lg flex items-center justify-center">
+                                  <Zap size={14} className="text-sky-600" />
+                                </div>
+                                <span className="text-slate-700 group-hover:text-slate-900 text-sm">Key Services</span>
+                              </motion.div>
+                            </Link>
+                            <Link href="/services/department#s" onClick={closeMenu}>
+                              <motion.div 
+                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-cyan-50/70 transition-colors duration-200 group"
+                                whileHover={{ x: 4 }}
+                              >
+                                <div className="w-8 h-8 bg-cyan-400/20 rounded-lg flex items-center justify-center">
+                                  <Wrench size={14} className="text-cyan-600" />
+                                </div>
+                                <span className="text-slate-700 group-hover:text-slate-900 text-sm">Service Department</span>
+                              </motion.div>
+                            </Link>
+                          </div>
                         </motion.div>
-                      </Link>
-                    </motion.div>
-                  ))}
+                      )}
+                    </AnimatePresence>
+                  </div>
                   
                 </div>
 
