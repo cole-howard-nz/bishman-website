@@ -5,9 +5,6 @@ import {
   Zap, 
   Wrench,
   ArrowRight,
-  Building2,
-  Clock,
-  Shield,
   CheckCircle2
 } from 'lucide-react'
 import Link from 'next/link'
