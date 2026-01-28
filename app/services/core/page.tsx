@@ -53,6 +53,13 @@ const mainServices = [
     description: "Electrical engineering design and CAD draughting capabilities",
     icon: FileText,
     gradient: "from-sky-500 to-cyan-600"
+  },
+  {
+    title: "Services Department",
+    description: "Dedicated on-site team for ongoing maintenance and compliance",
+    icon: Users,
+    gradient: "from-indigo-500 to-purple-600",
+    isDepartment: true
   }
 ]
 
@@ -60,7 +67,7 @@ const mainServices = [
 const relatedServices = [
   {
     title: "Marina Installation",
-    description: "Specialized electrical design for waterfront facilities",
+    description: "Specialised electrical design for waterfront facilities",
     icon: Anchor,
     gradient: "from-blue-500 to-cyan-600"
   },
@@ -179,16 +186,19 @@ const KeyServicesPage = () => {
             <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {mainServices.map((service, index) => {
                 const Icon = service.icon
-                return (
-                  <div
-                    key={index}
-                    className="group/card relative bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-sky-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  >
+                const cardContent = (
+                  <>
                     {/* Icon */}
-                    <div className="mb-4">
+                    <div className="mb-4 flex items-center justify-between">
                       <div className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center group-hover/card:scale-110 transition-transform duration-300 shadow-md`}>
                         <Icon size={28} className="text-white" />
                       </div>
+
+                      {service.isDepartment && (
+                        <span className="bg-indigo-100 text-indigo-700 text-[10px] font-semibold px-2 py-1 rounded-md border border-indigo-200">
+                          Internal Team
+                        </span>
+                      )}
                     </div>
 
                     {/* Title */}
@@ -203,6 +213,23 @@ const KeyServicesPage = () => {
                     <p className="text-slate-600 leading-relaxed text-sm group-hover/card:text-slate-700 transition-colors">
                       {service.description}
                     </p>
+                  </>
+                )
+
+                return service.isDepartment ? (
+                  <Link
+                    key={index}
+                    href="/services/department"
+                    className="group/card relative bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-sky-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 block cursor-pointer"
+                  >
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <div
+                    key={index}
+                    className="group/card relative bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-sky-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  >
+                    {cardContent}
                   </div>
                 )
               })}

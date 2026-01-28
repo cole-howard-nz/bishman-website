@@ -60,7 +60,7 @@ const maintenanceServices = [
   },
   {
     title: "UPS Systems",
-    description: "Preventative maintenance, battery discharge tests, and system optimization",
+    description: "Preventative maintenance, battery discharge tests, and system optimisation",
     icon: Battery,
     gradient: "from-purple-500 to-pink-600",
     frequency: "6-Monthly"
@@ -122,7 +122,7 @@ const benefits = [
   {
     icon: Target,
     title: "Flexible Approach",
-    description: "Open book arrangement providing the flexibility that both organizations require"
+    description: "Arrangements providing the flexibility that both organisations require"
   }
 ]
 
@@ -376,8 +376,6 @@ const ServiceDepartmentPage = () => {
                     'Comprehensive inspection reports',
                     'IQP certification sign-offs',
                     'Monthly cost reporting',
-                    'Materials at cost plus 15% margin',
-                    'Subcontracts at cost plus 15% margin'
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3 bg-white/40 backdrop-blur-sm rounded-lg p-4">
                       <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -409,7 +407,7 @@ const ServiceDepartmentPage = () => {
                 Request a Service Agreement
               </h2>
               <p className="text-slate-300 mb-8 text-lg max-w-2xl mx-auto">
-                Let us create a customized preventative maintenance plan tailored to your facility&apos;s needs
+                Let us create a customised preventative maintenance plan tailored to your facility&apos;s needs
               </p>
               <Link href="/contacts#s">
                 <button className="group/btn relative overflow-hidden bg-gradient-to-r from-cyan-600 to-sky-600 hover:from-cyan-500 hover:to-sky-500 border border-cyan-400/30 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
