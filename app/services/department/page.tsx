@@ -152,7 +152,7 @@ const ServiceDepartmentPage = () => {
         {/* Header */}
         <div id="s" className="text-center mb-16">
           <div className="inline-block mb-6">
-            <span className="text-cyan-700 text-sm font-medium tracking-wider uppercase bg-cyan-100 px-4 py-2 rounded-full border border-cyan-300">
+            <span className="text-sky-700 text-sm font-medium tracking-wider uppercase bg-sky-100 px-4 py-2 rounded-full border border-sky-300">
               Service Department
             </span>
           </div>
@@ -160,7 +160,7 @@ const ServiceDepartmentPage = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
             Ongoing Support &
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
               Preventative Maintenance
             </span>
           </h1>
@@ -175,28 +175,28 @@ const ServiceDepartmentPage = () => {
         <section className='relative group'>
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <Award className="text-cyan-600" size={28} />
+              <Award className="text-sky-600" size={28} />
               <h2 className='text-slate-800 text-4xl md:text-5xl font-bold'>
                 Service Advantages
               </h2>
             </div>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-sky-400 to-cyan-400 rounded-full" />
           </div>
           
           <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/8 hover:border-white/20 transition-all duration-500 overflow-hidden">
             {/* Background effects */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-sky-500/5 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-700" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-sky-400/8 to-cyan-500/10 rounded-full blur-2xl transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-sky-500/10 to-cyan-500/5 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyan-400/8 to-sky-500/10 rounded-full blur-2xl transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-700" />
             </div>
 
             <div className="relative grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon
                 return (
-                  <div key={index} className="flex gap-4 bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-cyan-200/60 transition-all duration-300">
+                  <div key={index} className="flex gap-4 bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-sky-200/60 transition-all duration-300">
                     <div className="flex-shrink-0">
-                      <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-xl flex items-center justify-center shadow-md">
+                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-md">
                         <Icon size={28} className="text-white" />
                       </div>
                     </div>
@@ -240,7 +240,7 @@ const ServiceDepartmentPage = () => {
                   >
                     {/* Frequency badge */}
                     <div className="absolute top-4 right-4">
-                      <span className="bg-cyan-100 text-cyan-700 text-xs font-semibold px-3 py-1 rounded-full border border-cyan-300">
+                      <span className="bg-sky-100 text-sky-700 text-xs font-semibold px-3 py-1 rounded-full border border-sky-300">
                         {service.frequency}
                       </span>
                     </div>
@@ -275,19 +275,19 @@ const ServiceDepartmentPage = () => {
         <section className='relative group'>
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <Wrench className="text-cyan-600" size={28} />
+              <Wrench className="text-sky-600" size={28} />
               <h2 className='text-slate-800 text-4xl md:text-5xl font-bold'>
                 Additional Services
               </h2>
             </div>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-sky-400 to-cyan-400 rounded-full" />
           </div>
           
           <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/8 hover:border-white/20 transition-all duration-500 overflow-hidden">
             {/* Background effects */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-sky-500/5 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-700" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-sky-400/8 to-cyan-500/10 rounded-full blur-2xl transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-sky-500/10 to-cyan-500/5 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyan-400/8 to-sky-500/10 rounded-full blur-2xl transform -translate-x-16 translate-y-16 group-hover:scale-150 transition-transform duration-700" />
             </div>
 
             <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -296,7 +296,7 @@ const ServiceDepartmentPage = () => {
                 return (
                   <div
                     key={index}
-                    className="group/card relative bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-cyan-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                    className="group/card relative bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:border-sky-200/60 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   >
                     {/* Icon */}
                     <div className="mb-4 flex justify-center">
@@ -326,14 +326,14 @@ const ServiceDepartmentPage = () => {
           <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/8 hover:border-white/20 transition-all duration-500 overflow-hidden">
             {/* Background effects */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-sky-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-sky-500/10 to-cyan-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
             </div>
 
             <div className="relative grid lg:grid-cols-2 gap-12 items-center">
               {/* Left - Info */}
               <div className="space-y-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <PhoneCall className="text-cyan-600" size={32} />
+                  <PhoneCall className="text-sky-600" size={32} />
                   <h2 className='text-slate-800 text-3xl md:text-4xl font-bold'>
                     24/7 Emergency Support
                   </h2>
@@ -342,7 +342,7 @@ const ServiceDepartmentPage = () => {
                 <div className="space-y-4">
                   <div className="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl p-5">
                     <div className="flex items-start gap-3">
-                      <Clock className="text-cyan-600 flex-shrink-0 mt-1" size={24} />
+                      <Clock className="text-sky-600 flex-shrink-0 mt-1" size={24} />
                       <div>
                         <h4 className="font-bold text-slate-800 mb-1">Normal Business Hours</h4>
                         <p className="text-slate-600 text-sm">6:30 AM - 5:00 PM</p>
@@ -350,12 +350,12 @@ const ServiceDepartmentPage = () => {
                     </div>
                   </div>
 
-                  <div className="bg-cyan-50 border border-cyan-200 rounded-xl p-5">
+                  <div className="bg-sky-50 border border-sky-200 rounded-xl p-5">
                     <div className="flex items-start gap-3">
-                      <PhoneCall className="text-cyan-600 flex-shrink-0 mt-1" size={24} />
+                      <PhoneCall className="text-sky-600 flex-shrink-0 mt-1" size={24} />
                       <div>
                         <h4 className="font-bold text-slate-800 mb-2">Emergency Contact</h4>
-                        <a href="tel:092703644" className="text-cyan-600 font-semibold text-lg hover:text-cyan-700 transition-colors">
+                        <a href="tel:092703644" className="text-sky-600 font-semibold text-lg hover:text-sky-700 transition-colors">
                           09 270 3644
                         </a>
                         <p className="text-slate-600 text-sm mt-1">Available 24/7 for emergencies</p>
@@ -378,7 +378,7 @@ const ServiceDepartmentPage = () => {
                     'Monthly cost reporting',
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3 bg-white/40 backdrop-blur-sm rounded-lg p-4">
-                      <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                         <CheckCircle2 size={14} className="text-white" />
                       </div>
                       <span className="text-slate-700 text-sm leading-relaxed">{item}</span>
@@ -410,7 +410,7 @@ const ServiceDepartmentPage = () => {
                 Let us create a customised preventative maintenance plan tailored to your facility&apos;s needs
               </p>
               <Link href="/contacts#s">
-                <button className="group/btn relative overflow-hidden bg-gradient-to-r from-cyan-600 to-sky-600 hover:from-cyan-500 hover:to-sky-500 border border-cyan-400/30 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
+                <button className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border border-blue-400/30 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
                   
                   <div className="relative flex items-center gap-2">
