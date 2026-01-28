@@ -14,7 +14,6 @@ import {
   Sun,
   Lightbulb,
   PhoneCall,
-  AlertCircle,
   Award,
   Users,
   Target,
@@ -346,30 +345,7 @@ const ServiceDepartmentPage = () => {
                       <Clock className="text-cyan-600 flex-shrink-0 mt-1" size={24} />
                       <div>
                         <h4 className="font-bold text-slate-800 mb-1">Normal Business Hours</h4>
-                        <p className="text-slate-600 text-sm">7:00 AM - 4:30 PM</p>
-                        <p className="text-slate-600 text-sm mt-2">
-                          <span className="font-semibold">Tradesman:</span> $85/hr
-                          <br />
-                          <span className="font-semibold">Apprentice/TA:</span> $65/hr
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl p-5">
-                    <div className="flex items-start gap-3">
-                      <AlertCircle className="text-orange-600 flex-shrink-0 mt-1" size={24} />
-                      <div>
-                        <h4 className="font-bold text-slate-800 mb-1">After Hours Emergency</h4>
-                        <p className="text-slate-600 text-sm">
-                          Minimum 3-hour callout: <span className="font-semibold">$424.80</span>
-                        </p>
-                        <p className="text-slate-600 text-sm">
-                          After 3rd hour: <span className="font-semibold">$141.60/hr</span>
-                        </p>
-                        <p className="text-slate-600 text-sm mt-2">
-                          Overtime charged at 1.6x normal rate
-                        </p>
+                        <p className="text-slate-600 text-sm">6:30 AM - 5:00 PM</p>
                       </div>
                     </div>
                   </div>
@@ -391,7 +367,7 @@ const ServiceDepartmentPage = () => {
 
               {/* Right - Features */}
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-slate-800 mb-6">What&pos;s Included</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">What&apos;s Included</h3>
                 <div className="space-y-4">
                   {[
                     'All vehicle operating expenses (excluding parking)',

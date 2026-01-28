@@ -10,7 +10,7 @@ interface AnimatedCounterProps {
   suffix?: string
 }
 
-const AnimatedCounter = ({ end, duration = 2000, suffix = '' }: AnimatedCounterProps) => {
+const AnimatedCounter = ({ end, duration = 7000, suffix = '' }: AnimatedCounterProps) => {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef(null)
@@ -132,11 +132,11 @@ const CapabilitiesExperience = () => {
               {/* Statistics */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="text-center bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-xl px-4 py-2">
-                  <AnimatedCounter end={50} suffix="+" duration={2000} />
+                  <AnimatedCounter end={50} suffix="+" />
                   <div className="text-slate-600 text-sm">Years Experience</div>
                 </div>
                 <div className="text-center bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-400/30 rounded-xl px-4 py-2">
-                  <AnimatedCounter end={30} suffix="+" duration={2000} />
+                  <AnimatedCounter end={30} suffix="+"  />
                   <div className="text-slate-600 text-sm">Years as Bishman Ltd</div>
                 </div>
               </div>

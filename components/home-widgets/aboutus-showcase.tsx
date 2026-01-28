@@ -8,10 +8,10 @@ import Image from 'next/image'
 const stats = [
   { value: 30, suffix: '+', label: 'Years Experience' },
   { value: 50, suffix: '+', label: 'Team Members' },
-  { value: 500, suffix: '+', label: 'Projects Completed' }
+  { value: 1500, suffix: '+', label: 'Projects Completed' }
 ]
 
-const AnimatedCounter = ({ end, suffix = '', duration = 2000 }: { end: number, suffix?: string, duration?: number }) => {
+const AnimatedCounter = ({ end, suffix = '', duration = 7000 }: { end: number, suffix?: string, duration?: number }) => {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef<HTMLDivElement>(null)
@@ -166,7 +166,7 @@ const AboutUsShowcase = () => {
                     key={index}
                     className="bg-white/60 backdrop-blur-sm border border-slate-200/50 rounded-xl p-4 text-center hover:bg-white/80 hover:border-sky-200 hover:shadow-md transition-all duration-300"
                   >
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} duration={2000} />
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                     <p className="text-slate-600 text-[10px] font-medium mt-1 leading-tight">{stat.label}</p>
                   </div>
                 ))}
