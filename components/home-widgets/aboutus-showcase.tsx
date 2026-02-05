@@ -104,7 +104,7 @@ const AboutUsShowcase = () => {
                   Bishman Ltd is a privately owned, 100% New Zealand company delivering comprehensive electrical solutions across commercial, industrial, and residential sectors.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  From BIM-driven planning to precision installation and commissioning, our experienced teams ensure every project is delivered safely, efficiently, and on schedule. We specialize in design, construction, and maintenance services backed by 30+ years of industry expertise.
+                  From BIM-driven planning to precision installation and commissioning, our experienced teams ensure every project is delivered safely, efficiently, and on schedule. We specialise in design, construction, and maintenance services backed by 30+ years of industry expertise.
                 </p>
               </div>
 
@@ -143,7 +143,7 @@ const AboutUsShowcase = () => {
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex flex-col sm:flex-row justify-between items-center gap-3 bg-white/95 backdrop-blur-xl border border-white/40 rounded-lg p-3">
                     <p className="text-slate-800 font-medium text-xs text-center sm:text-left">
-                      Trusted by leading organizations across New Zealand
+                      Trusted by leading organisations across New Zealand
                     </p>
 
                     {/* CTA Button */}
