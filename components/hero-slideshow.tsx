@@ -119,7 +119,7 @@ const HeroSlideshow = () => {
       </div>
       
       {/* Slideshow Content */}
-      <div className='z-10 flex flex-col p-6 pt-24 h-full [@media(max-width:511px)]:hidden'>
+      {/* <div className='z-10 flex flex-col p-6 pt-24 h-full [@media(max-width:511px)]:hidden'>
         <div className="flex flex-col items-end justify-end mt-auto gap-4">
           <div className="flex gap-2">
             {slides.map((slide, index) => (
@@ -142,7 +142,6 @@ const HeroSlideshow = () => {
                 />
                 <div className="absolute inset-0 bg-black/30" />
                 
-                {/* Progress bar */}
                 {index === currentSlide && (
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/30 overflow-hidden">
                     <div 
@@ -158,7 +157,7 @@ const HeroSlideshow = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <style jsx>{`
         @keyframes fade-in {
