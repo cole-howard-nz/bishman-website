@@ -215,14 +215,6 @@ export const team: Team[] = [
   },
   {
     id: 2,
-    name: "Russell Howard",
-    role: 'Commercial Manager / Director',
-    email: 'russ@bishman.nz',
-    blurb: "Russ has been with Bishman since 1992 and leads the commercial team, overseeing estimation, design, tenders, budgets, and electrical design. With over 30 years of experience, he has delivered major projects such as Auckland City Hospital, Vector Arena, and the National Bio Lab.",
-    image: '/team/russell.jpg'
-  },
-  {
-    id: 3,
     name: "Regan Caldwell",
     role: 'Contracts Manager',
     email: 'regan@bishman.nz',
@@ -230,7 +222,7 @@ export const team: Team[] = [
     image: '/team/regan.jpg'
   },
   {
-    id: 4,
+    id: 3,
     name: "Spencer Snell",
     role: 'Estimator',
     email: 'spencer@bishman.nz',
@@ -238,7 +230,7 @@ export const team: Team[] = [
     image: '/team/spencer.jpg'
   },
   {
-    id: 5,
+    id: 4,
     name: "Arjun Gajanand",
     role: 'Service & Project Manager',
     email: "arjun@bishman.nz",
@@ -246,7 +238,7 @@ export const team: Team[] = [
     image: '/team/arjun.jpg'
   },
   {
-    id: 6,
+    id: 5,
     name: "Wendy Schmidt",
     role: 'Office Administration Manager',
     blurb: "Wendy joined Bishman in 2019 as Office Administration Manager. She oversees accounts, coordinates administrative functions, and ensures smooth communication between teams, Directors, and staff, playing a vital role in the company's operations.",
@@ -254,7 +246,7 @@ export const team: Team[] = [
     image: '/team/default.jpg'
   },
   {
-    id: 7,
+    id: 6,
     name: "Dwayne Petricevich",
     role: 'Project Manager',
     email: "dwayne@bishman.nz",
@@ -262,7 +254,7 @@ export const team: Team[] = [
     image: '/team/dwayne.jpg'
   },
   {
-    id: 8,
+    id: 7,
     name: "Thomas Le Mouton",
     role: 'Project Manager',
     email: "tom@bishman.nz",
@@ -270,7 +262,7 @@ export const team: Team[] = [
     image: '/team/thomas.jpg'
   },
   {
-    id: 9,
+    id: 8,
     name: "Dorie Santos",
     role: 'Accounts',
     blurb: "Dorie has been a valued member of Bishman's accounts team since 2013. With over 35 years of experience in accounting, property management, hospitality, and administration, she provides essential support to project managers and colleagues, ensuring efficient operations.",
@@ -278,7 +270,7 @@ export const team: Team[] = [
     image: '/team/dorie.jpg'
   },
   {
-    id: 10,
+    id: 9,
     name: "Gerry Boniface",
     role: 'Administration',
     email: "gerry@bishman.nz",
@@ -286,7 +278,7 @@ export const team: Team[] = [
     image: '/team/gerry.jpg'
   },
   {
-    id: 11,
+    id: 10,
     name: "Jasee Wong",
     role: 'CAD Draughting',
     email: "jasee@bishman.nz",
