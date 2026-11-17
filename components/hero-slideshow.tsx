@@ -29,7 +29,7 @@ const slides = [
 const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMounted, setIsMounted] = useState(false)
-  const [progressKey, setProgressKey] = useState(0)
+  const [_, setProgressKey] = useState(0)
 
   useEffect(() => {
     setIsMounted(true)
